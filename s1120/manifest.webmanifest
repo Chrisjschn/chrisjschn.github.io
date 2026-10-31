@@ -1,0 +1,31 @@
+{
+  "name": "Recon Blitz \u2014 1120-S Schedule L, M-1, M-2 and Basis",
+  "short_name": "Recon Blitz",
+  "description": "Bite-size multiple-choice quizzes on the hard half of the 1120-S \u2014 Schedule L, retained earnings, Opening Balance Equity, Schedule M-1 and M-2, the AAA, Schedule K, and shareholder stock and debt basis. Track weak spots and drill them.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#131318",
+  "theme_color": "#4338ca",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

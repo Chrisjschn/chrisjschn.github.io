@@ -1,0 +1,32 @@
+{
+  "celebrate": null,
+  "dance": [
+    { "src": "sack-stankyleg-blue.mp4", "from": "Team Captain" },
+    { "src": "sack-mjfunk-blue.mp4", "from": "Team Captain" },
+    { "src": "sack-dougie-blue.mp4", "from": "Team Captain" },
+    { "src": "sack-dougie-black.mp4", "until": "Team Captain" },
+    { "src": "sack-floss-black.mp4", "until": "Team Captain" },
+    { "src": "sack-helmetoff-black.mp4", "until": "Team Captain" },
+    { "src": "sack-nightnight-black.mp4", "until": "Team Captain" }
+  ],
+  "perfect": [
+    { "src": "team-celebrate.mp4", "until": "Team Captain" },
+    { "src": "perfect-safety-blue.mp4", "from": "Team Captain" },
+    { "src": "perfect-fumble-black.mp4", "from": "Special Teams", "until": "Starter" },
+    { "src": "perfect-picksix-black.mp4", "until": "Team Captain" }
+  ],
+  "levelup": "mvp-levelup.mp4",
+  "champion": null,
+  "levels": {
+    "Practice Squad": "promo-practice-squad.mp4",
+    "Special Teams": "promo-special-teams.mp4",
+    "Starter": "promo-starter.mp4"
+  },
+  "motivate": [
+    { "src": "motivate-playbook-black.mp4", "from": "Practice Squad", "until": "Special Teams" },
+    { "src": "motivate-sled-black.mp4", "until": "Team Captain" },
+    { "src": "motivate-parachute-black.mp4", "until": "Team Captain" },
+    { "src": "motivate-sled-blue.mp4", "from": "Team Captain" },
+    { "src": "motivate-tireflip-blue.mp4", "from": "Team Captain" }
+  ]
+}

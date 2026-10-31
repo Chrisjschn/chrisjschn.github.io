@@ -1,0 +1,31 @@
+{
+  "name": "EA Exam 1 Blitz \u2014 Enrolled Agent Exam Part 1 Quick Quiz",
+  "short_name": "EA Exam 1 Blitz",
+  "description": "Bite-size multiple-choice quizzes for EA Exam Part 1 (Individuals). Track weak spots and drill them.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#131318",
+  "theme_color": "#6b3fa0",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

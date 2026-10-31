@@ -1,0 +1,10 @@
+{
+  "celebrate": null,
+  "dance": [
+    { "src": "sack-floss-black.mp4", "until": "Team Captain" }
+  ],
+  "perfect": [
+    { "src": "perfect-picksix-black.mp4", "until": "Team Captain" }
+  ],
+  "levelup": null
+}
