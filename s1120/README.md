@@ -20,7 +20,7 @@ Blitz Challenge, Quick Blitz, Blitz 60, Tackle Your Problems, Practice by
 Section, My Progress), same XP ladder, same trophies. Only the strings, the
 accent and the bank differ.
 
-Accent is indigo `#4338ca`. Live at `chrisjschn.github.io/Claude-repo/s1120/`.
+Accent is indigo `#4338ca`. Live at `chrisjschn.github.io/s1120/` (and the older `chrisjschn.github.io/Claude-repo/s1120/`).
 
 **Do not edit `data/questions.js` by hand** — it is generated. The source is
 `store/s1120/bank/parts/*.json`; see `store/s1120/README.md` for the build kit.
