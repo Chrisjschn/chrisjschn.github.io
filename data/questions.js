@@ -1132,15 +1132,15 @@ var FAR_QUESTIONS = [
     "section": "assets2",
     "topic": "Dismantling obligation",
     "difficulty": "easy",
-    "q": "A company completes a plant costing $800,000 and is legally required to dismantle it in 20 years at an estimated cost of $150,000. The fair value (present value) of that obligation today is $45,000. At what amount is the plant initially recorded?",
+    "q": "A company must dismantle a new plant in 20 years. The future cost is estimated at $150,000; its present value today is $45,000. How much is added to the plant's recorded cost?",
     "choices": [
-      "$755,000",
-      "$950,000",
-      "$800,000",
-      "$845,000"
+      "$45,000, the obligation's fair value",
+      "$150,000",
+      "Nothing; the cost is expensed when incurred",
+      "$7,500 a year as it accrues"
     ],
-    "answer": 3,
-    "explain": "The asset retirement obligation is recorded at **fair value**, and the same amount is added to the plant's cost: $800,000 + $45,000 = **$845,000**. The undiscounted $150,000 is never booked up front; the liability grows toward it through accretion expense over the 20 years."
+    "answer": 0,
+    "explain": "An asset retirement obligation is recognized at **fair value**, the present value of the expected cost, and the same $45,000 is added to the plant and depreciated with it. The undiscounted $150,000 is never booked up front; the liability grows toward it through accretion expense over the 20 years."
   },
   {
     "id": "assets2-14",
@@ -3920,17 +3920,17 @@ var FAR_QUESTIONS = [
   {
     "id": "govnfp-28",
     "section": "govnfp",
-    "topic": "Endowment investment return",
-    "difficulty": "medium",
-    "q": "During the year, a not-for-profit's endowment earned $200,000 of dividends and interest and had $50,000 of unrealized gains. The NFP paid $30,000 in fees to outside investment managers and incurred $10,000 of salary cost for an employee whose job is directly managing the portfolio. What investment return does it report on the statement of activities?",
+    "topic": "Investment fees",
+    "difficulty": "easy",
+    "q": "A not-for-profit pays $30,000 in fees to outside investment managers. How does it present those fees on the statement of activities?",
     "choices": [
-      "$250,000",
-      "$220,000",
-      "$210,000",
-      "$160,000"
+      "Netted against investment return",
+      "As a management and general expense",
+      "As a program expense",
+      "Disclosed only in the notes"
     ],
-    "answer": 2,
-    "explain": "NFPs present investment return **net** of both external investment expenses and direct internal investment expenses: $200,000 + $50,000 − $30,000 − $10,000 = **$210,000**. $220,000 nets only the outside fees, and $250,000 shows the return gross with the costs buried in management and general — a presentation ASU 2016-14 ended. $160,000 leaves out the unrealized gains, which are part of return for an NFP."
+    "answer": 0,
+    "explain": "Not-for-profits present investment return **net** of external and direct internal investment expenses, so the fees reduce the return line instead of appearing as an expense (ASU 2016-14 ended the gross presentation). Showing them as management and general or program expense overstates both return and expenses, and a note alone is disclosure, not presentation."
   },
   {
     "id": "govnfp-19",
