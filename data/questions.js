@@ -180,7 +180,7 @@ var FAR_QUESTIONS = [
       "Goodwill impairment loss on a reporting unit"
     ],
     "answer": 1,
-    "explain": "OCI holds the PUFIE items: pension adjustments, unrealized gains/losses on AFS debt, foreign currency translation, instrument-specific credit risk on fair-value-option liabilities, and the effective portion of cash flow hedges. Trading security gains go to net income."
+    "explain": "OCI holds the PUFIE items: pension adjustments, unrealized gains and losses on available-for-sale debt, foreign currency translation, instrument-specific credit risk on fair-value-option liabilities, and cash flow hedge gains and losses. Unrealized gains on equity securities go to net income under ASC 321 whatever the holding purpose; equipment sale gains and goodwill impairment are ordinary income items."
   },
   {
     "id": "framework-7",
