@@ -1,6 +1,6 @@
 /* FAR Blitz service worker — cache-first so the app works offline (bump VERSION on deploys). */
 
-var VERSION = 'farblitz-v108';
+var VERSION = 'farblitz-v109';
 var ASSETS = [
   './',
   './index.html',

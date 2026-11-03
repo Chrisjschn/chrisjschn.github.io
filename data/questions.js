@@ -174,10 +174,10 @@ var FAR_QUESTIONS = [
     "difficulty": "easy",
     "q": "Which item is reported in other comprehensive income rather than net income?",
     "choices": [
-      "Unrealized gain on trading securities",
+      "Unrealized gain on equity securities held for trading",
       "Unrealized gain on available-for-sale debt securities",
-      "Gain on sale of equipment",
-      "Goodwill impairment loss"
+      "Gain on the sale of used manufacturing equipment",
+      "Goodwill impairment loss on a reporting unit"
     ],
     "answer": 1,
     "explain": "OCI holds the PUFIE items: pension adjustments, unrealized gains/losses on AFS debt, foreign currency translation, instrument-specific credit risk on fair-value-option liabilities, and the effective portion of cash flow hedges. Trading security gains go to net income."
@@ -186,16 +186,16 @@ var FAR_QUESTIONS = [
     "id": "framework-7",
     "section": "framework",
     "topic": "Comprehensive income",
-    "difficulty": "medium",
-    "q": "Net income is $200,000. The company also has a $30,000 foreign currency translation loss and a $10,000 pension loss in OCI. What is comprehensive income?",
+    "difficulty": "easy",
+    "q": "Net income is $200,000. The only other comprehensive income item for the year is a $30,000 foreign currency translation loss. What is comprehensive income?",
     "choices": [
-      "$240,000",
+      "$170,000",
       "$200,000",
-      "$160,000",
-      "$170,000"
+      "$230,000",
+      "$30,000"
     ],
-    "answer": 2,
-    "explain": "Comprehensive income is net income plus or minus OCI: $200,000 − $30,000 − $10,000 = $160,000. Both OCI items here are losses, so they reduce comprehensive income."
+    "answer": 0,
+    "explain": "Comprehensive income is net income plus or minus other comprehensive income: $200,000 − $30,000 = $170,000. The translation loss sits in OCI, so it reduces the total. $200,000 ignores OCI altogether, $230,000 treats the loss as a gain, and $30,000 is the OCI item alone, not comprehensive income."
   },
   {
     "id": "framework-8",
@@ -217,15 +217,15 @@ var FAR_QUESTIONS = [
     "section": "framework",
     "topic": "Working capital",
     "difficulty": "easy",
-    "q": "A company has cash $50,000, receivables $30,000, inventory $20,000, equipment $80,000, and accounts payable $40,000. What is working capital?",
+    "q": "A company pays $80,000 cash for equipment it will use in its factory for many years. What happens to its working capital?",
     "choices": [
-      "$140,000",
-      "$100,000",
-      "$20,000",
-      "$60,000"
+      "It decreases by $80,000",
+      "It is unchanged",
+      "It increases by $80,000",
+      "It decreases only as the equipment is depreciated"
     ],
-    "answer": 3,
-    "explain": "Working capital is current assets minus current liabilities: ($50,000 + $30,000 + $20,000) − $40,000 = $60,000. Equipment is noncurrent and is excluded — the classic trap."
+    "answer": 0,
+    "explain": "Working capital is current assets minus current liabilities. Cash, a current asset, falls by $80,000, while the equipment is a noncurrent asset that never enters the computation, so working capital drops by the full amount. Nothing offsets the outflow, and later depreciation touches no current asset or liability."
   },
   {
     "id": "framework-10",
@@ -275,32 +275,32 @@ var FAR_QUESTIONS = [
   {
     "id": "framework-13",
     "section": "framework",
-    "topic": "Change in estimate",
+    "topic": "Useful life revision",
     "difficulty": "medium",
-    "q": "Equipment cost $100,000 with a 10-year life, no salvage, straight-line. After 2 years, remaining useful life is revised to 4 years. What is Year 3 depreciation?",
+    "q": "A company now expects a machine with no salvage value to last four more years instead of the six remaining under its original estimate. How does it account for the change?",
     "choices": [
-      "$10,000",
-      "$20,000",
-      "$25,000",
-      "$8,000"
+      "Depreciate the current carrying amount over the four remaining years",
+      "Restate prior years' depreciation using the shorter total life",
+      "Record a catch-up charge now, then depreciate over the four remaining years",
+      "Keep the original schedule and disclose the revision in the notes"
     ],
-    "answer": 1,
-    "explain": "A change in estimate is applied prospectively: remaining book value of $80,000 ($100,000 − $20,000 taken) is spread over the new 4-year remaining life = $20,000 per year."
+    "answer": 0,
+    "explain": "A revised useful life is a change in **estimate**, applied prospectively: the remaining carrying amount is spread over the four years now expected. Prior years are never restated, because the old estimate was reasonable when made, and a catch-up charge would dump past periods' expense into the current year."
   },
   {
     "id": "framework-14",
     "section": "framework",
     "topic": "Error correction",
     "difficulty": "medium",
-    "q": "In Year 2, a company discovers that Year 1 depreciation expense was materially understated, by $20,000. The tax rate is 25%. What is the adjustment to beginning Year 2 retained earnings?",
+    "q": "This year a company discovers that last year's issued statements overstated depreciation by $20,000, a material error. The tax rate is 25%. What adjustment is made to beginning retained earnings?",
     "choices": [
-      "$20,000 decrease",
-      "$5,000 decrease",
-      "No adjustment; correct prospectively",
+      "$15,000 increase",
+      "$20,000 increase",
+      "$5,000 increase",
       "$15,000 decrease"
     ],
-    "answer": 3,
-    "explain": "A material error is corrected as a prior period adjustment to beginning retained earnings, net of tax: $20,000 × (1 − 0.25) = $15,000 decrease. Prospective treatment is for changes in estimate, not errors."
+    "answer": 0,
+    "explain": "A material error in issued statements is a **prior-period adjustment**: beginning retained earnings rises by the after-tax effect, $20,000 × (1 − 25%) = $15,000. The full $20,000 ignores the related tax effect, $5,000 is only that tax effect, and the direction is up because last year's income was understated."
   },
   {
     "id": "framework-15",
@@ -400,9 +400,9 @@ var FAR_QUESTIONS = [
     "q": "Under ASC 606, a promised good or service is a separate performance obligation when what condition is met?",
     "choices": [
       "It is distinct and separately identifiable in the contract",
-      "It is billed on a separate invoice line",
-      "It is delivered at the start of the contract",
-      "It takes more than one period to provide"
+      "It is billed to the customer on a separate invoice line",
+      "It is delivered to the customer at the start of the contract",
+      "It takes more than one reporting period to provide"
     ],
     "answer": 0,
     "explain": "A promise is a separate performance obligation only if it is distinct — capable of standing alone and separately identifiable within the contract. Separate invoicing is irrelevant."
@@ -440,32 +440,32 @@ var FAR_QUESTIONS = [
   {
     "id": "revenue-6",
     "section": "revenue",
-    "topic": "Rebate estimation",
+    "topic": "Volume rebates",
     "difficulty": "medium",
-    "q": "A seller charges $100 per unit, dropping retroactively to $90 per unit if a customer exceeds 1,000 units this year. The seller expects the threshold to be met and sells 100 units. Revenue?",
+    "q": "A seller's unit price drops retroactively once a customer's annual purchases pass a threshold the seller expects to be met. At what price does it record sales made before the threshold is reached?",
     "choices": [
-      "$9,000",
-      "$10,000",
-      "$9,500",
-      "$1,000"
+      "The reduced price, because the rebate is expected to apply",
+      "The full price, reversing revenue later if the rebate is earned",
+      "The full price, with the expected rebate accrued as an expense",
+      "No revenue until the year's purchase volume is known"
     ],
     "answer": 0,
-    "explain": "Since the volume rebate is expected to apply, revenue is recognized at the expected price: 100 units × $90 = $9,000. Booking $100 per unit would overstate revenue and risk a reversal."
+    "explain": "The rebate is **variable consideration**, so the seller estimates it and records sales at the price it expects to keep. Booking the full price overstates revenue and invites a reversal, a rebate reduces revenue rather than creating an expense, and revenue does not wait for the uncertainty to resolve."
   },
   {
     "id": "revenue-7",
     "section": "revenue",
-    "topic": "SSP allocation",
+    "topic": "Estimating standalone prices",
     "difficulty": "medium",
-    "q": "A bundle sells for $80. Standalone selling prices are $60 for the product and $40 for the service. How much revenue is allocated to the product?",
+    "q": "A product's standalone selling price is not directly observable. Under ASC 606, when may the seller estimate it with the residual approach?",
     "choices": [
-      "$60",
-      "$40",
-      "$48",
-      "$32"
+      "When the price is highly variable or uncertain",
+      "Whenever the product is sold only as part of a bundle",
+      "When the product is the last item delivered in the contract",
+      "Whenever the seller's cost and margin are unknown"
     ],
-    "answer": 2,
-    "explain": "Allocate by relative standalone selling price: $60 / $100 × $80 = $48. Using the full $60 standalone price ignores the required proportional allocation of the bundle discount."
+    "answer": 0,
+    "explain": "The **residual approach** (the total transaction price less the observable standalone prices of the other promises) is allowed only when the price is highly variable or uncertain. Bundling alone and delivery order do not qualify; otherwise the seller uses an adjusted market assessment or expected cost plus a margin."
   },
   {
     "id": "revenue-8",
@@ -490,9 +490,9 @@ var FAR_QUESTIONS = [
     "q": "Which condition supports recognizing revenue over time rather than at a point in time under ASC 606?",
     "choices": [
       "The customer consumes the benefit as the entity performs",
-      "The contract lasts longer than one year",
-      "The customer pays in monthly installments",
-      "The goods ship FOB shipping point"
+      "The contract term runs for longer than one year",
+      "The customer pays for the work in monthly installments",
+      "The goods are shipped FOB shipping point to the customer"
     ],
     "answer": 0,
     "explain": "Over-time recognition applies when the customer simultaneously receives and consumes benefits as the entity performs (or other control-based criteria). Contract length and payment timing are irrelevant."
@@ -500,17 +500,17 @@ var FAR_QUESTIONS = [
   {
     "id": "revenue-10",
     "section": "revenue",
-    "topic": "Percentage of completion",
+    "topic": "Measuring progress",
     "difficulty": "medium",
-    "q": "A contract has a $500,000 price and $400,000 of total expected costs. Costs incurred to date are $100,000. Under the cost-to-cost method, revenue recognized to date is?",
+    "q": "A contractor has incurred one-quarter of the total costs it expects on a fixed-price $500,000 contract. Under the cost-to-cost method, how much revenue has it recognized to date?",
     "choices": [
-      "$100,000",
       "$125,000",
-      "$25,000",
-      "$500,000"
+      "$500,000",
+      "$375,000",
+      "$0"
     ],
-    "answer": 1,
-    "explain": "Progress is $100,000 / $400,000 = 25% complete, so revenue to date is 25% × $500,000 = $125,000. Recognizing only costs incurred confuses revenue with the completion input."
+    "answer": 0,
+    "explain": "Cost-to-cost measures progress as costs incurred divided by total expected costs, here 25%, so cumulative revenue is 25% × $500,000 = **$125,000**. Revenue is not held until completion, and $375,000 is the share of the contract still to be performed, not the work done so far."
   },
   {
     "id": "revenue-11",
@@ -530,47 +530,47 @@ var FAR_QUESTIONS = [
   {
     "id": "revenue-12",
     "section": "revenue",
-    "topic": "Agent revenue",
+    "topic": "Ticket platform revenue",
     "difficulty": "easy",
-    "q": "A ticketing platform, acting as an agent, sells a concert ticket for $200 and remits $170 to the venue, keeping $30. How much revenue does the platform report?",
+    "q": "A ticketing platform sells tickets for a venue that sets the $200 price and is responsible for the concert. The platform collects the $200 and keeps a $30 fee. How much revenue does it report?",
     "choices": [
+      "$30",
       "$200",
       "$170",
-      "$0 until the concert takes place",
-      "$30"
+      "$0 until the concert takes place"
     ],
-    "answer": 3,
-    "explain": "An agent reports revenue net — only its $30 fee or commission. Reporting the gross $200 would be correct only if the platform were the principal controlling the ticket."
+    "answer": 0,
+    "explain": "The venue sets the price and must put on the concert, so it controls the ticket; the platform is an **agent** reporting revenue net: its $30 fee. The gross $200 is the principal's revenue, $170 is only cash remitted, and the platform's service ends at the sale, not the concert."
   },
   {
     "id": "revenue-13",
     "section": "revenue",
     "topic": "Contract balances",
     "difficulty": "medium",
-    "q": "A contractor delivers machine 1, but payment becomes due only after machine 2 is delivered next month. What does the contractor record for machine 1?",
+    "q": "A contractor delivers the first of two machines. Payment for both becomes due only when the second machine is delivered next month. What does the contractor record for the first machine?",
     "choices": [
-      "Contract asset",
-      "Accounts receivable",
-      "Contract liability",
-      "Refund liability"
+      "A contract asset",
+      "An account receivable",
+      "A contract liability",
+      "A refund liability"
     ],
     "answer": 0,
-    "explain": "A right to consideration conditioned on something other than the passage of time (here, delivering machine 2) is a contract asset. It becomes a receivable once the right is unconditional."
+    "explain": "Revenue is earned on the first machine, but the right to payment is **conditional** on something other than the passage of time (delivering the second machine), so it is a contract asset. It becomes a receivable once unconditional; a contract liability arises only when the customer pays first."
   },
   {
     "id": "revenue-14",
     "section": "revenue",
     "topic": "Gift card breakage",
     "difficulty": "medium",
-    "q": "A retailer sells $10,000 of gift cards and expects 10% will never be redeemed. Customers redeem $4,500, which is 50% of expected redemptions. Breakage revenue recognized to date?",
+    "q": "A retailer sells gift cards and expects, based on experience, that some balances will never be redeemed. When does it recognize that expected breakage as revenue?",
     "choices": [
-      "$1,000",
-      "$450",
-      "$500",
-      "$0"
+      "In proportion to the pattern of customer redemptions",
+      "At the point of sale, because the breakage is expected",
+      "Only when the chance of redemption becomes remote",
+      "Only when the unredeemed cards legally expire"
     ],
-    "answer": 2,
-    "explain": "Expected breakage of $1,000 is recognized in proportion to the redemption pattern: 50% × $1,000 = $500. Recognizing the full $1,000 upfront is the trap."
+    "answer": 0,
+    "explain": "When a retailer expects to be entitled to breakage, it recognizes the expected amount in **proportion to the pattern** of rights exercised by customers, not at the sale date. Waiting until redemption is remote applies only when breakage is not expected, and unclaimed-property laws can rule breakage out altogether."
   },
   {
     "id": "revenue-15",
@@ -594,8 +594,8 @@ var FAR_QUESTIONS = [
     "difficulty": "medium",
     "q": "A retailer's TV sale carries a legally required two-year warranty covering only defects in materials and workmanship; the customer also buys an optional three-year extended warranty. How is each accounted for?",
     "choices": [
-      "Both are separate performance obligations with deferred revenue",
-      "The required warranty is accrued as a cost; the extended warranty is a separate performance obligation recognized over its term",
+      "Both are separate performance obligations, each with revenue deferred over its coverage period",
+      "The required warranty is a cost accrual; the extended warranty is a performance obligation earned over its term",
       "Both are accrued as warranty cost at the date of sale",
       "The required warranty is expensed as claims arrive; the extended warranty is revenue at the point of sale"
     ],
@@ -665,17 +665,17 @@ var FAR_QUESTIONS = [
   {
     "id": "revenue-21",
     "section": "revenue",
-    "topic": "Sales commission",
-    "difficulty": "medium",
-    "q": "On 1 April Year 1, Nimbus Co. signs a four-year service contract that begins the same day; no renewal is expected. It pays its salesperson a $24,000 commission that was owed only because the contract was signed, and it expects to recover the cost through the contract. Services transfer evenly over the term. How much commission expense does Nimbus recognize in calendar Year 1?",
+    "topic": "Sales commissions",
+    "difficulty": "easy",
+    "q": "A company pays its salesperson a commission that was owed only because a customer signed a four-year service contract, and it expects to recover the cost. How does the company account for the commission?",
     "choices": [
-      "$4,500",
-      "$6,000",
-      "$24,000",
-      "$19,500"
+      "Capitalize it and amortize it as the services transfer",
+      "Expense it immediately as a selling cost",
+      "Capitalize it and expense it when the contract ends",
+      "Deduct it from the revenue recognized at signing"
     ],
     "answer": 0,
-    "explain": "An incremental, recoverable cost of obtaining a contract is capitalized and amortized in step with the transfer of the services: $24,000 ÷ 48 months × 9 months = **$4,500**. Expensing the whole $24,000 is allowed only under the practical expedient for amortization periods of one year or less; $6,000 ignores the April start, and $19,500 is the asset left on the balance sheet at year end."
+    "explain": "An **incremental**, recoverable cost of obtaining a contract is capitalized and amortized in step with the transfer of the services, here over four years. Immediate expensing is allowed only under the practical expedient for amortization periods of one year or less, and a commission never reduces revenue."
   },
   {
     "id": "assets1-1",
@@ -697,15 +697,15 @@ var FAR_QUESTIONS = [
     "section": "assets1",
     "topic": "Adjusted cash balance",
     "difficulty": "easy",
-    "q": "The bank statement shows $50,000. Deposits in transit are $8,000 and outstanding checks are $3,000. What is the true cash balance?",
+    "q": "The bank statement shows a $50,000 balance, and $8,000 of checks the company has recorded have not yet cleared the bank. With no other reconciling items, what is the correct cash balance?",
     "choices": [
-      "$45,000",
-      "$61,000",
-      "$39,000",
-      "$55,000"
+      "$42,000",
+      "$58,000",
+      "$50,000",
+      "$8,000"
     ],
-    "answer": 3,
-    "explain": "True cash = bank balance + deposits in transit − outstanding checks: $50,000 + $8,000 − $3,000 = $55,000. Reversing the adjustments — subtracting deposits in transit and adding outstanding checks — gives the $45,000 trap."
+    "answer": 0,
+    "explain": "Outstanding checks have reduced the company's books but not the bank's, so they are **subtracted** from the bank balance: $50,000 − $8,000 = $42,000. Adding them ($58,000) reverses the adjustment, $50,000 leaves the bank's figure uncorrected, and $8,000 is the adjustment itself; deposits in transit are the item added."
   },
   {
     "id": "assets1-3",
@@ -757,15 +757,15 @@ var FAR_QUESTIONS = [
     "section": "assets1",
     "topic": "Notes receivable",
     "difficulty": "easy",
-    "q": "On October 1, a company accepts a $100,000, 6% note due in one year. How much interest revenue is accrued at December 31?",
+    "q": "At the start of October, a company accepts a one-year note receivable that will pay $6,000 of interest at maturity. What interest revenue does it accrue at its December year-end?",
     "choices": [
+      "$1,500",
       "$6,000",
       "$4,500",
-      "$1,500",
       "$3,000"
     ],
-    "answer": 2,
-    "explain": "Interest accrues only for October through December: $100,000 × 6% × 3/12 = $1,500."
+    "answer": 0,
+    "explain": "Interest is earned as time passes, so the three months from October through December belong to this year: $6,000 × 3/12 = $1,500, recorded as interest receivable. Waiting for the cash at maturity would push this year's revenue into next year, and $4,500 counts the nine months still to come."
   },
   {
     "id": "assets1-7",
@@ -817,15 +817,15 @@ var FAR_QUESTIONS = [
     "section": "assets1",
     "topic": "Weighted average cost",
     "difficulty": "medium",
-    "q": "Beginning inventory is 100 units at $10. A purchase adds 100 units at $12, and the company then sells 100 units. Under the periodic weighted-average method, what is COGS?",
+    "q": "Prices rose steadily during the year. Compared with FIFO and LIFO, where does cost of goods sold under the weighted-average method fall?",
     "choices": [
-      "$1,000",
-      "$1,200",
-      "$1,100",
-      "$2,200"
+      "Between the FIFO and LIFO amounts",
+      "Below both the FIFO and LIFO amounts",
+      "Above both the FIFO and LIFO amounts",
+      "Equal to the FIFO amount"
     ],
-    "answer": 2,
-    "explain": "Weighted-average cost = ($1,000 + $1,200) ÷ 200 units = $11 per unit, so COGS = 100 × $11 = $1,100. FIFO would give $1,000 and LIFO $1,200; weighted average blends both layers."
+    "answer": 0,
+    "explain": "Weighted average blends every layer into one unit cost, so with rising prices it lands between FIFO, which charges the oldest, cheapest costs to sales, and LIFO, which charges the newest, dearest. It cannot fall below FIFO or above LIFO: an average of the layers sits inside their range."
   },
   {
     "id": "assets1-11",
@@ -847,15 +847,15 @@ var FAR_QUESTIONS = [
     "section": "assets1",
     "topic": "Gross profit method",
     "difficulty": "medium",
-    "q": "Sales are $200,000 and gross profit is 30% of sales. Goods available for sale cost $180,000. What is estimated ending inventory under the gross profit method?",
+    "q": "A company estimates inventory with the gross profit method. Sales for the period were $200,000, and gross profit is normally 30% of sales. What is estimated cost of goods sold?",
     "choices": [
-      "$60,000",
       "$140,000",
-      "$20,000",
-      "$40,000"
+      "$60,000",
+      "$153,846",
+      "$46,154"
     ],
-    "answer": 3,
-    "explain": "Estimated COGS = $200,000 × 70% = $140,000. Ending inventory = goods available $180,000 − COGS $140,000 = $40,000. $60,000 is gross profit and $140,000 is COGS — neither is the inventory left on hand."
+    "answer": 0,
+    "explain": "Cost of goods sold is the part of sales that is not gross profit: $200,000 × 70% = $140,000. $60,000 is the gross profit itself, and $153,846 treats 30% as a markup on cost rather than a share of sales; subtracting the estimate from goods available gives ending inventory."
   },
   {
     "id": "assets1-13",
@@ -982,45 +982,45 @@ var FAR_QUESTIONS = [
     "section": "assets2",
     "topic": "Straight-line depreciation",
     "difficulty": "easy",
-    "q": "Equipment cost $50,000 with a $5,000 salvage value and a 5-year life. What is annual straight-line depreciation?",
+    "q": "Equipment cost $50,000 and is expected to sell for $5,000 at the end of its useful life. What total depreciation is recorded over that life under the straight-line method?",
     "choices": [
-      "$10,000",
-      "$5,000",
       "$45,000",
-      "$9,000"
+      "$50,000",
+      "$55,000",
+      "$5,000"
     ],
-    "answer": 3,
-    "explain": "Straight-line = (cost − salvage) ÷ life = ($50,000 − $5,000) ÷ 5 = $9,000 per year. The trap is forgetting to subtract salvage value."
+    "answer": 0,
+    "explain": "Depreciation allocates the **depreciable base**, cost less salvage value, over the useful life: $50,000 − $5,000 = $45,000 in total, whatever the method. Depreciating the full $50,000 ignores the value recovered at disposal, $55,000 adds the salvage instead of removing it, and $5,000 is the part never depreciated."
   },
   {
     "id": "assets2-4",
     "section": "assets2",
-    "topic": "DDB depreciation",
+    "topic": "Double-declining balance",
     "difficulty": "medium",
-    "q": "Equipment cost $80,000, salvage value $8,000, 4-year life. What is Year 1 double-declining-balance depreciation?",
+    "q": "Equipment with a salvage value is depreciated by the double-declining-balance method. How does the salvage value affect the annual computation?",
     "choices": [
-      "$40,000",
-      "$36,000",
-      "$20,000",
-      "$18,000"
+      "Ignored in the computation; it only sets a floor for book value",
+      "Subtracted from cost first; the rate applies to the depreciable base",
+      "Ignored entirely; book value may end below it",
+      "Subtracted from book value each year; the rate applies to the remainder"
     ],
     "answer": 0,
-    "explain": "DDB rate = 2 ÷ 4 = 50%, applied to cost ignoring salvage: $80,000 × 50% = $40,000. Deducting salvage first gives $36,000, which is wrong for DDB."
+    "explain": "Double-declining-balance applies twice the straight-line rate to **book value**, not to cost less salvage, so salvage stays out of the computation; it only sets a floor, and depreciation stops once book value reaches it. Deducting salvage first is the straight-line habit; depreciating below salvage is never allowed."
   },
   {
     "id": "assets2-5",
     "section": "assets2",
     "topic": "Units of production",
     "difficulty": "easy",
-    "q": "A truck cost $60,000 with $10,000 salvage value and a 100,000-mile expected life. It was driven 20,000 miles this year. What is units-of-production depreciation?",
+    "q": "A company depreciates a delivery truck by the units-of-production method. How is the depreciation rate per mile computed?",
     "choices": [
-      "$12,000",
-      "$10,000",
-      "$50,000",
-      "$8,000"
+      "(Cost − salvage value) ÷ total miles expected over the truck's life",
+      "Cost ÷ total miles expected over the truck's life",
+      "(Cost − salvage value) ÷ miles driven in the current year",
+      "Cost ÷ miles driven in the current year"
     ],
-    "answer": 1,
-    "explain": "Rate = ($60,000 − $10,000) ÷ 100,000 miles = $0.50 per mile; 20,000 miles × $0.50 = $10,000. Unlike DDB, salvage value is used in units-of-production."
+    "answer": 0,
+    "explain": "Units of production spreads the **depreciable base**, cost less salvage, over the total activity expected, giving a rate per mile that is multiplied by each year's miles. Leaving out salvage overstates the base, and dividing by one year's miles would expense the whole base in a single year."
   },
   {
     "id": "assets2-6",
@@ -1042,90 +1042,90 @@ var FAR_QUESTIONS = [
     "section": "assets2",
     "topic": "Impairment loss",
     "difficulty": "medium",
-    "q": "A machine's carrying amount is $100,000, undiscounted future cash flows are $90,000, and fair value is $70,000. What impairment loss is recognized?",
+    "q": "A machine held and used fails the recoverability test: its carrying amount exceeds the undiscounted future cash flows. How is the impairment loss measured?",
     "choices": [
-      "$10,000",
-      "$20,000",
-      "$0",
-      "$30,000"
+      "Carrying amount less fair value",
+      "Carrying amount less undiscounted future cash flows",
+      "Carrying amount less fair value less costs to sell",
+      "Undiscounted future cash flows less fair value"
     ],
-    "answer": 3,
-    "explain": "Cash flows ($90,000) are below carrying amount ($100,000), so the asset is impaired. The loss is carrying amount minus fair value: $100,000 − $70,000 = $30,000 — not the $10,000 cash-flow shortfall."
+    "answer": 0,
+    "explain": "Once the carrying amount is not recoverable, the loss is its excess over **fair value**; the undiscounted cash flows only decide whether a loss exists and never measure it. Costs to sell are deducted only for assets held for sale, and the reduced carrying amount becomes the asset's new cost."
   },
   {
     "id": "assets2-19",
     "section": "assets2",
-    "topic": "Capitalized interest amount",
+    "topic": "Capitalized interest rate",
     "difficulty": "medium",
-    "q": "A company is building a warehouse for its own use; weighted-average accumulated expenditures for the year are $400,000. It has a $300,000 loan taken specifically to finance the warehouse, at 8%, and other borrowings of $1,000,000 at 10%, all outstanding the full year. How much interest is capitalized?",
+    "q": "A company constructing a building for its own use has a specific construction loan and other general borrowings. Its weighted-average accumulated expenditures exceed the construction loan. What rate applies to the excess?",
     "choices": [
-      "$124,000",
-      "$32,000",
-      "$40,000",
-      "$34,000"
+      "The weighted-average rate on its other outstanding borrowings",
+      "The construction loan's own rate, applied to the whole base",
+      "The rate on whichever other borrowing has the highest cost",
+      "No rate; interest on the excess is expensed as incurred"
     ],
-    "answer": 3,
-    "explain": "Apply the construction loan's rate to the expenditures it funds and the general-debt rate to the excess: $300,000 × 8% + $100,000 × 10% = **$34,000**. Actual interest of $124,000 is only the ceiling, and one rate on the whole $400,000 ignores which debt funds which dollars."
+    "answer": 0,
+    "explain": "Avoidable interest is layered: the specific loan's rate covers the expenditures it funds and the **weighted-average** rate on other debt covers the excess, capped at interest actually incurred. Using the construction loan's rate on everything assumes a loan larger than exists, and expensing the excess understates the building's cost."
   },
   {
     "id": "assets2-24",
     "section": "assets2",
     "topic": "Cost of land",
     "difficulty": "medium",
-    "q": "A company buys a site with an old building for $500,000, intending to raze the building and construct a new plant. It pays $20,000 to demolish the old building and receives $5,000 for salvaged materials, pays $10,000 in title and legal fees, $15,000 to grade the site, and $30,000 to build a parking lot and fencing. At what amount is the land recorded?",
+    "q": "A company buys a site with an old building, which it immediately razes to construct a new plant. Which cost is included in the recorded cost of the land?",
     "choices": [
-      "$570,000",
-      "$540,000",
-      "$525,000",
-      "$545,000"
+      "Razing the old building, net of salvage proceeds",
+      "Paving a parking lot and fencing the site",
+      "Excavating the foundation for the new plant",
+      "Architect's fees for designing the new plant"
     ],
-    "answer": 1,
-    "explain": "Land includes everything spent to get it ready for its intended use, including razing an old building the buyer never meant to keep, net of salvage: $500,000 + $20,000 − $5,000 + $10,000 + $15,000 = **$540,000**. The $30,000 parking lot and fencing are **land improvements** — a separate, depreciable asset — because they wear out; land does not."
+    "answer": 0,
+    "explain": "Land includes every cost of readying the site for its intended use, so razing a building the buyer never meant to keep, net of salvage, is land. Parking lots and fences wear out, so they are depreciable **land improvements**; excavation and design fees are costs of the new building."
   },
   {
     "id": "assets2-20",
     "section": "assets2",
-    "topic": "Asset exchange with cash paid",
+    "topic": "Exchange with cash paid",
     "difficulty": "medium",
-    "q": "A company trades in equipment with a carrying amount of $30,000 and a fair value of $36,000, and pays $10,000 cash, for a new machine with a fair value of $46,000. The exchange lacks commercial substance. At what amount is the new machine recorded?",
+    "q": "In an exchange lacking commercial substance, a company trades in equipment whose fair value exceeds its carrying amount and also pays cash. At what amount does it record the new asset?",
     "choices": [
-      "$36,000",
-      "$46,000",
-      "$40,000",
-      "$30,000"
+      "The old asset's carrying amount plus the cash paid",
+      "The old asset's fair value, ignoring the cash paid",
+      "The new asset's fair value",
+      "The old asset's carrying amount, ignoring the cash paid"
     ],
-    "answer": 2,
-    "explain": "Without commercial substance, a company that pays cash defers its gain, so the new asset takes the old carrying amount plus the cash: $30,000 + $10,000 = **$40,000**. $46,000 is the commercial-substance answer that books the $6,000 gain; a loss, by contrast, would be recognized either way."
+    "answer": 0,
+    "explain": "Without commercial substance the exchange is measured at **carrying amount**, so the payer of cash records the new asset at the old asset's carrying amount plus the cash and defers its gain. Fair value, and the gain it brings, requires commercial substance; a loss would be recognized either way."
   },
   {
     "id": "assets2-21",
     "section": "assets2",
     "topic": "Held-and-used impairment",
     "difficulty": "easy",
-    "q": "A machine held and used has a carrying amount of $200,000. Its expected undiscounted future cash flows are $210,000, their present value is $182,000, and its fair value is $170,000 (costs to sell would be $6,000). What impairment loss is recognized?",
+    "q": "A machine held and used has a fair value below its carrying amount, but the undiscounted cash flows expected from using it exceed the carrying amount. What does the company record?",
     "choices": [
-      "$18,000",
-      "$0",
-      "$30,000",
-      "$36,000"
+      "No impairment loss",
+      "An impairment loss down to fair value",
+      "An impairment loss down to the present value of the cash flows",
+      "An unrealized loss in other comprehensive income"
     ],
-    "answer": 1,
-    "explain": "Recoverability comes first: undiscounted cash flows of $210,000 exceed the $200,000 carrying amount, so there is **no impairment** and fair value never enters the picture. $30,000 skips that test, $18,000 runs it on discounted cash flows instead of undiscounted ones, and costs to sell ($36,000) belong to assets held for sale."
+    "answer": 0,
+    "explain": "Recoverability comes first: when the undiscounted cash flows from use and disposal cover the carrying amount, there is no impairment and fair value never enters the picture. Writing down to fair value skips that test, discounted cash flows are the wrong measure, and OCI is for securities, not plant assets."
   },
   {
     "id": "assets2-22",
     "section": "assets2",
     "topic": "Patent amortization",
-    "difficulty": "medium",
-    "q": "On April 1, a calendar-year company buys a patent for $120,000 and starts using it that day. The patent has 16 years of remaining legal life, but the company expects it to provide benefits for only 8 years. There is no residual value, and it amortizes straight-line. What is amortization expense for the year of purchase?",
+    "difficulty": "easy",
+    "q": "A company buys a patent that has 16 years of legal life remaining but is expected to provide benefits for only 8 years. Over what period is it amortized?",
     "choices": [
-      "$11,250",
-      "$15,000",
-      "$7,500",
-      "$5,625"
+      "8 years",
+      "16 years",
+      "20 years",
+      "No set period; it is tested for impairment instead"
     ],
     "answer": 0,
-    "explain": "A patent is amortized over the **shorter** of its remaining legal life and its useful life to the company, starting when it is put to use: $120,000 ÷ 8 × 9/12 = **$11,250**. The 16-year legal life gives $7,500 a year, and $15,000 ignores that only nine months have passed."
+    "explain": "A finite-lived intangible is amortized over its **useful life**, which can never exceed the remaining legal life and is shorter here, so 8 years. The 16-year legal term is only a ceiling, 20 years ignores the time already elapsed, and only indefinite-lived intangibles such as goodwill go unamortized."
   },
   {
     "id": "assets2-23",
@@ -1222,30 +1222,30 @@ var FAR_QUESTIONS = [
     "section": "assets2",
     "topic": "Purchased software cost",
     "difficulty": "easy",
-    "q": "A company buys an inventory-management software package for its own use for $500,000. It also pays the vendor $40,000 to install and test the software and $25,000 to train employees on it, and pays a consultant $30,000 to convert data from the old system into the new format (no new software is written). At what amount is the software recorded as an intangible asset?",
+    "q": "A company buys an accounting software package for its own use. Besides the purchase price, which cost is capitalized as part of the software asset?",
     "choices": [
-      "$595,000",
-      "$565,000",
-      "$540,000",
-      "$570,000"
+      "Fees to install and test the software",
+      "Training employees on the new system",
+      "Converting data from the old system",
+      "Evaluating competing packages before the purchase"
     ],
-    "answer": 2,
-    "explain": "Capitalize the purchase price plus the costs to get the software ready for use: $500,000 + $40,000 = **$540,000**. Training and data conversion are expensed as incurred even when a vendor or consultant performs them (only software developed or bought to convert or access the old data is capitalized); the asset is then amortized, normally straight-line, over its useful life and tested for impairment like any other long-lived asset."
+    "answer": 0,
+    "explain": "Internal-use software is recorded at its purchase price plus the costs of getting it ready for use, including installation and testing. Training and data conversion are expensed even when the vendor does the work, and preliminary project stage costs, such as evaluating alternatives, are expensed as incurred."
   },
   {
     "id": "assets2-26",
     "section": "assets2",
     "topic": "Software amortization",
     "difficulty": "easy",
-    "q": "On September 1, Year 1, a calendar-year company buys internal-use software for $360,000 with an estimated useful life of five years and no residual value. Installation and all substantial testing are completed on November 1, Year 1, but the company waits until December 1, Year 1, to move its staff onto the new system. What amortization expense does it report for Year 1?",
+    "q": "A company buys internal-use software in September, completes all substantial testing in November, and moves its staff onto the system in December. When does amortization of the software begin?",
     "choices": [
-      "$24,000",
-      "$6,000",
-      "$72,000",
-      "$12,000"
+      "November, when substantial testing is complete",
+      "September, when the software is purchased",
+      "December, when the staff begin using it",
+      "January, the start of the next fiscal year"
     ],
-    "answer": 3,
-    "explain": "Amortization begins when the software is **ready for its intended use** — after all substantial testing is completed — regardless of when the company actually starts using it: $360,000 ÷ 5 years × 2/12 = **$12,000**. Counting from the purchase date ($24,000) or the go-live date ($6,000) uses the wrong start; from here on the software is a long-lived asset tested for impairment under ASC 360."
+    "answer": 0,
+    "explain": "Amortization of internal-use software starts when it is **ready for its intended use**, once all substantial testing is complete, even if staff have not moved over. Purchase comes before the asset can serve its purpose, and waiting for go-live or next year delays expense that belongs to this period."
   },
   {
     "id": "assets2-27",
@@ -1267,15 +1267,15 @@ var FAR_QUESTIONS = [
     "section": "assets2",
     "topic": "Cloud implementation costs",
     "difficulty": "medium",
-    "q": "A calendar-year company enters a cloud computing arrangement that is a service contract: a three-year noncancellable hosting term that begins on April 1, Year 1, when the hosted software is ready for its intended use (its go-live date), plus an option to renew for two more years that the company is reasonably certain to exercise. Before go-live, the company spent $200,000 configuring and integrating the software, $30,000 training staff, and $20,000 evaluating vendors before selecting one. The software has an expected useful life of eight years. What amortization of implementation costs does the company recognize in Year 1?",
+    "q": "A cloud computing arrangement is a service contract, not a software license. Over what period does the customer amortize the implementation costs it capitalizes?",
     "choices": [
-      "$30,000",
-      "$50,000",
-      "$37,500",
-      "$18,750"
+      "The hosting term plus renewals it is reasonably certain to exercise",
+      "The noncancellable hosting term, excluding any renewal options",
+      "The hosted software's expected useful life",
+      "The period for which the hosting fees have been prepaid"
     ],
     "answer": 0,
-    "explain": "Only the $200,000 of configuration and integration is capitalized — training and vendor selection are expensed — and it is amortized from the date it is ready for its intended use (go-live here) over the **term of the hosting arrangement**, which includes the renewal the company is reasonably certain to exercise: $200,000 ÷ 5 years × 9/12 = **$30,000**. The eight-year useful life is irrelevant because the company holds a service, not a license; the amortization is reported in the same income-statement line as the hosting fees (not with depreciation), the unamortized balance sits with prepaid hosting fees, and the cash paid is an operating outflow."
+    "explain": "ASU 2018-15 ties capitalized implementation costs to the **hosting term**, including renewal periods the customer is reasonably certain to exercise, because the customer holds a service, not software it controls. The software's useful life applies only to a license, and stopping at the noncancellable term ignores a reasonably certain renewal."
   },
   {
     "id": "invest-1",
@@ -1297,15 +1297,15 @@ var FAR_QUESTIONS = [
     "section": "invest",
     "topic": "AFS debt securities",
     "difficulty": "easy",
-    "q": "A company holds available-for-sale debt securities with no credit loss. It does not intend to sell them and is not more likely than not to be required to sell them before recovery of amortized cost. Where do unrealized holding gains and losses go each period?",
+    "q": "A company holds available-for-sale debt securities with no credit loss, and it neither intends nor expects to be required to sell them. Where do unrealized holding gains and losses go each period?",
     "choices": [
       "Other comprehensive income",
       "Net income",
       "Retained earnings",
-      "No entry is made until sale"
+      "Nowhere until the securities are sold"
     ],
     "answer": 0,
-    "explain": "AFS debt is carried at fair value, with unrealized gains and losses parked in OCI. The accumulated amount moves to net income when the security is sold, or earlier if the company comes to intend to sell a security below amortized cost, or more likely than not will be required to sell it before recovering that cost: its basis is then written down through earnings. A credit loss would also go to earnings, through an allowance."
+    "explain": "AFS debt sits at fair value, with unrealized gains and losses accumulated in **OCI** until the security is sold and they move to net income. Earnings take them sooner only for a credit loss, a decision to sell or a likely forced sale; retained earnings is never their home."
   },
   {
     "id": "invest-3",
@@ -1400,17 +1400,17 @@ var FAR_QUESTIONS = [
   {
     "id": "invest-9",
     "section": "invest",
-    "topic": "Equity method carrying",
+    "topic": "Equity method carrying amount",
     "difficulty": "medium",
-    "q": "An equity-method investment cost $300,000. The investor's share of investee income is $40,000, and it received $15,000 of dividends. What is the year-end carrying amount?",
+    "q": "An investor's share of its equity-method investee's income for the year is $40,000, and it receives $15,000 of dividends from the investee. By how much does the investment account change?",
     "choices": [
-      "$340,000",
-      "$355,000",
-      "$325,000",
-      "$300,000"
+      "Up $25,000",
+      "Up $55,000",
+      "Up $40,000",
+      "Down $15,000"
     ],
-    "answer": 2,
-    "explain": "Carrying amount = $300,000 + $40,000 share of income - $15,000 dividends = $325,000. Adding dividends instead of subtracting them is the common trap."
+    "answer": 0,
+    "explain": "Under the equity method the investment grows by the investor's share of investee income and shrinks by dividends, which are a return of the investment: $40,000 − $15,000 = **up $25,000**. Adding the dividends ($55,000) treats them as income, the classic trap, and $40,000 ignores the distribution entirely."
   },
   {
     "id": "invest-10",
@@ -1432,15 +1432,15 @@ var FAR_QUESTIONS = [
     "section": "invest",
     "topic": "Fair value of land",
     "difficulty": "medium",
-    "q": "A company uses a parcel of land as an employee parking lot, a use worth $2,500,000. Residential development of the parcel is legally permissible, physically possible and financially feasible, and residential developers — the market with the greatest volume and level of activity for such land, which the company can access — would pay $4,000,000 for it, with $150,000 of transaction costs to sell there. Buyers in a smaller market the company can also access would pay $4,300,000. The company intends to keep the parking lot. Under ASC 820, what is the land's fair value?",
+    "q": "A company uses land as a parking lot. Residential development is legally permissible and feasible, and developers would pay more for the land than its parking-lot value. On what basis is its fair value measured?",
     "choices": [
-      "$2,500,000",
-      "$4,000,000",
-      "$4,300,000",
-      "$3,850,000"
+      "Residential development, as a market participant would use it",
+      "The parking lot, because the company intends to keep using it",
+      "Residential development, net of the costs to sell to a developer",
+      "A blend of the two uses, weighted by the likelihood of sale"
     ],
-    "answer": 1,
-    "explain": "A nonfinancial asset is measured at its **highest and best use** from a market participant's perspective — residential development, not the company's own parking-lot use — at the price in the **principal market**, the one with the greatest volume and activity, even when another accessible market would pay more: **$4,000,000**. The most advantageous market is used only when no principal market exists, and the company's intention to keep the lot is irrelevant. Transaction costs help identify the most advantageous market but never reduce the measurement, so $3,850,000 is wrong too."
+    "answer": 0,
+    "explain": "A nonfinancial asset is measured at its **highest and best use** from a market participant's view: legally permissible, physically possible, financially feasible and value-maximizing. The owner's plans are irrelevant, fair value is one market price, not a blend, and transaction costs help identify the market but never reduce the measurement."
   },
   {
     "id": "invest-12",
@@ -1475,17 +1475,17 @@ var FAR_QUESTIONS = [
   {
     "id": "invest-14",
     "section": "invest",
-    "topic": "AFS measurement",
+    "topic": "AFS sale decision",
     "difficulty": "medium",
-    "q": "An available-for-sale debt security has an amortized cost of $80,000 and a year-end fair value of $75,000, with no credit loss. The company does not intend to sell it and is not more likely than not to be required to sell it before recovery. Where does the $5,000 decline go?",
+    "q": "An available-for-sale debt security's fair value has fallen below its amortized cost for reasons unrelated to credit. The company has now decided to sell the security. How is the decline reported?",
     "choices": [
-      "Net income as an impairment",
-      "Retained earnings",
-      "Other comprehensive income as an unrealized loss",
-      "Nowhere; AFS securities stay at cost"
+      "In earnings, as a write-down of the amortized cost basis",
+      "In other comprehensive income until the sale closes",
+      "In earnings, through an allowance for credit losses",
+      "Nowhere until the sale, when a realized loss is recorded"
     ],
-    "answer": 2,
-    "explain": "With no credit loss and no intended or likely forced sale, an AFS fair value decline is an unrealized loss in OCI. A credit-related portion would run through earnings via an allowance under ASC 326-30, the AFS impairment model; CECL (ASC 326-20) covers debt carried at amortized cost, such as HTM securities, not AFS."
+    "answer": 0,
+    "explain": "Once the company **intends to sell** (or more likely than not must sell before recovery), the security's amortized cost is written down to fair value through earnings, whatever caused the decline. OCI applies only while the company can and will hold, and the allowance covers only credit-related declines."
   },
   {
     "id": "invest-15",
@@ -1494,8 +1494,8 @@ var FAR_QUESTIONS = [
     "difficulty": "medium",
     "q": "How may an equity security without a readily determinable fair value be measured?",
     "choices": [
-      "Cost less impairment, adjusted for observable prices of that issuer's identical or similar securities",
-      "Amortized cost using the effective interest method, like a held-to-maturity bond",
+      "Cost less impairment, adjusted for observable prices of that issuer's identical or similar shares",
+      "Amortized cost under the effective interest method, as for a held-to-maturity debt security",
       "The investee's most recent book value per share times the shares held",
       "The equity method, regardless of the investor's ownership percentage"
     ],
@@ -1537,15 +1537,15 @@ var FAR_QUESTIONS = [
     "section": "invest",
     "topic": "AFS credit losses",
     "difficulty": "medium",
-    "q": "An available-for-sale debt security's fair value falls below amortized cost, partly from credit deterioration. The company does not intend to sell it and is not more likely than not to be required to sell it before recovery. How is the decline reported?",
+    "q": "An available-for-sale debt security's fair value falls below amortized cost, partly because of credit deterioration. The company does not intend to sell it and is unlikely to be forced to. How is the decline reported?",
     "choices": [
-      "Entirely in other comprehensive income until sold",
-      "The credit portion through an allowance in earnings; the remainder in other comprehensive income",
-      "Entirely in earnings as an impairment write-down of the security's basis",
-      "The credit portion in other comprehensive income; the remainder through an allowance in earnings"
+      "Credit portion in earnings via an allowance; the rest in OCI",
+      "Entirely in OCI until the security is sold",
+      "Entirely in earnings as a write-down of the basis",
+      "Credit portion in OCI; the rest in earnings via an allowance"
     ],
-    "answer": 1,
-    "explain": "For AFS debt, credit losses go through earnings via an allowance, capped at the amount by which fair value is below amortized cost; non-credit declines stay in OCI. If the company instead intended to sell, or would more likely than not be required to sell it before recovery, the whole decline would be written down through earnings. The allowance model also lets recoveries reverse through earnings."
+    "answer": 0,
+    "explain": "AFS debt uses an **allowance** for the credit-related part of the decline, charged to earnings and capped at the gap between fair value and amortized cost; the non-credit part stays in OCI. A full write-down through earnings happens only when the company intends, or will likely be required, to sell."
   },
   {
     "id": "invest-19",
@@ -1567,30 +1567,30 @@ var FAR_QUESTIONS = [
     "section": "invest",
     "topic": "Income approach",
     "difficulty": "medium",
-    "q": "A company measures the fair value of a license with the income approach. The license should produce net cash inflows of $110,000 at the end of Year 1 and $121,000 at the end of Year 2, then expire. Market participants would require a 10% annual return on such an asset; the company's own incremental borrowing rate is 8%. What is the license's fair value?",
+    "q": "A company measures a license's fair value under the income approach by discounting its expected cash flows. Which discount rate does ASC 820 require?",
     "choices": [
-      "$200,000",
-      "$205,590",
-      "$231,000",
-      "$210,000"
+      "The return market participants would require on the asset",
+      "The company's own incremental borrowing rate",
+      "The risk-free rate for the license's remaining life",
+      "The company's internal hurdle rate for new projects"
     ],
     "answer": 0,
-    "explain": "A present-value technique discounts the expected cash flows at the rate **market participants** would demand: $110,000 ÷ 1.10 + $121,000 ÷ 1.10² = $100,000 + $100,000 = **$200,000**. The company's own 8% borrowing rate is an entity-specific assumption, not a market-participant one (it gives $205,590); $231,000 is the undiscounted total, and $210,000 discounts Year 2 for only one period."
+    "explain": "Fair value is a market-based measurement, so present-value techniques use the rate **market participants** would demand for the asset's risk. The company's borrowing rate and hurdle rate are entity-specific assumptions, and a risk-free rate fits only cash flows that have already been adjusted for risk."
   },
   {
     "id": "invest-21",
     "section": "invest",
     "topic": "Cost approach",
     "difficulty": "easy",
-    "q": "A company measures the fair value of a specialized machine using the cost approach. It built the machine four years ago for $700,000, and the carrying amount is now $420,000. A new machine of equivalent utility would cost $900,000 today, and a market participant would reduce that figure by $350,000 for the machine's physical wear and outdated technology. What is the fair value under the cost approach?",
+    "q": "A company measures the fair value of a specialized machine using the cost approach under ASC 820. What amount does this approach produce?",
     "choices": [
-      "$900,000",
-      "$420,000",
-      "$700,000",
-      "$550,000"
+      "Current cost to replace its service capacity, less obsolescence",
+      "Original cost less accumulated book depreciation",
+      "Original cost adjusted for inflation since purchase",
+      "Present value of the cash flows the machine will generate"
     ],
-    "answer": 3,
-    "explain": "The cost approach starts from what it would cost a market participant today to replace the asset's service capacity — current replacement cost of $900,000 — and adjusts it for **obsolescence**: $900,000 − $350,000 = **$550,000**. Obsolescence covers physical deterioration and functional and economic obsolescence and is broader than book depreciation, so the $420,000 carrying amount and the $700,000 historical cost play no part."
+    "answer": 0,
+    "explain": "The cost approach asks what a market participant would pay today to replace the asset's **service capacity**: current replacement cost adjusted for physical, functional and economic obsolescence. Historical cost and book depreciation are the company's own records, not market measures, and discounting future cash flows is the income approach."
   },
   {
     "id": "liab-1",
@@ -1612,15 +1612,15 @@ var FAR_QUESTIONS = [
     "section": "liab",
     "topic": "Accrued wages",
     "difficulty": "easy",
-    "q": "Employees earn $50,000 of wages per 5-day week. The year ends after employees have worked 3 unpaid days. What accrued wages liability is reported?",
+    "q": "Employees earn $10,000 of wages per day. At year end they have worked three days since the last payday, and the next payday is next week. What accrued wages liability is reported?",
     "choices": [
       "$30,000",
       "$50,000",
-      "$20,000",
+      "$10,000",
       "$0 until the next payday"
     ],
     "answer": 0,
-    "explain": "Accrue wages earned but unpaid: 3/5 of $50,000 = $30,000. Waiting until payday violates accrual accounting."
+    "explain": "Wages earned but unpaid are accrued: 3 days × $10,000 = **$30,000**. $10,000 counts only one day, $50,000 accrues a full week not yet worked, and waiting for payday is cash-basis accounting, which GAAP does not allow."
   },
   {
     "id": "liab-3",
@@ -1687,15 +1687,15 @@ var FAR_QUESTIONS = [
     "section": "liab",
     "topic": "Warranty expense",
     "difficulty": "easy",
-    "q": "Sales are $500,000 and warranty costs are expected to run 2% of sales. Actual claims paid this year were $4,000. What is warranty expense for the year?",
+    "q": "A company expects warranty claims on this year's sales but has paid only part of them by year end. What warranty expense does it report for the year?",
     "choices": [
-      "$4,000",
-      "$6,000",
-      "$10,000",
-      "$14,000"
+      "The full estimated cost of claims on the year's sales",
+      "Only the claims actually paid during the year",
+      "The estimated cost less the claims already paid",
+      "Nothing until customers file their claims"
     ],
-    "answer": 2,
-    "explain": "Expense the full estimate in the year of sale: 2% x $500,000 = $10,000. Claims paid reduce the warranty liability, not the expense."
+    "answer": 0,
+    "explain": "Warranty cost is a loss contingency that is probable and estimable, so the **full estimated cost** of claims on the year's sales is expensed in the year of sale, matched to the revenue. Claims paid reduce the warranty liability, not the expense; waiting for claims is cash-basis accounting."
   },
   {
     "id": "liab-8",
@@ -1730,17 +1730,17 @@ var FAR_QUESTIONS = [
   {
     "id": "liab-10",
     "section": "liab",
-    "topic": "Effective interest expense",
+    "topic": "Bond interest expense",
     "difficulty": "easy",
-    "q": "Bonds with $100,000 face and a 9% stated rate were issued on January 1 for $95,000 when the market rate was 10%. Interest is paid annually on December 31. What is year-1 interest expense under the effective-interest method?",
+    "q": "A company issued bonds at a discount and uses the effective-interest method. How is each period's interest expense computed?",
     "choices": [
-      "$9,500",
-      "$10,000",
-      "$5,000",
-      "$9,000"
+      "Carrying amount times the market rate at issuance",
+      "Face amount times the stated rate on the bonds",
+      "Face amount times the market rate at issuance",
+      "Carrying amount times the stated rate on the bonds"
     ],
     "answer": 0,
-    "explain": "Effective interest expense = carrying value x market rate = $95,000 x 10% = $9,500. The $9,000 cash coupon (face x stated rate) is the trap, and face x market rate ($10,000) is a second one; the $500 difference is the discount amortization."
+    "explain": "Under the effective-interest method, expense is the bond's **carrying amount** times the effective (market) rate at issuance, so expense grows as a discount bond's carrying amount rises toward face. Face times the stated rate is only the cash coupon; the difference between the two is the discount amortization."
   },
   {
     "id": "liab-11",
@@ -1760,17 +1760,17 @@ var FAR_QUESTIONS = [
   {
     "id": "liab-12",
     "section": "liab",
-    "topic": "Notes payable interest",
+    "topic": "Accrued interest",
     "difficulty": "easy",
-    "q": "A $200,000, 9% note payable was issued on May 1. What accrued interest payable is reported at December 31?",
+    "q": "A calendar-year company issued a note payable on May 1. It accrues interest of $1,500 a month, none yet paid. What interest payable is reported at year end?",
     "choices": [
-      "$18,000",
       "$12,000",
+      "$18,000",
       "$6,000",
       "$0 until the note matures"
     ],
-    "answer": 1,
-    "explain": "Accrue 8 months of interest, May through December: $200,000 × 9% × 8/12 = $12,000. Using the full year's $18,000 ignores that only eight months have passed."
+    "answer": 0,
+    "explain": "Interest accrues for the months the note has been outstanding, May through December: 8 × $1,500 = **$12,000**. $18,000 charges a full year, $6,000 counts the four months before the note existed, and waiting until the note matures ignores accrual accounting."
   },
   {
     "id": "liab-13",
@@ -1865,107 +1865,107 @@ var FAR_QUESTIONS = [
   {
     "id": "liab-19",
     "section": "liab",
-    "topic": "Renegotiated loan terms",
+    "topic": "Renegotiated debt",
     "difficulty": "medium",
-    "q": "On January 1, Year 2, a company not in financial difficulty owes $2,000,000 on a nonconvertible term loan. It negotiates new terms with the same lender and pays the lender a $30,000 fee to obtain them; no other costs are incurred. Including that fee, the present value of the cash flows under the new terms, discounted at the loan's original effective interest rate, is 6% less than the present value of the remaining cash flows under the original terms. How is the change accounted for?",
+    "q": "A borrower not in financial difficulty renegotiates its term loan with the same lender. When is the change accounted for as an extinguishment rather than a modification?",
     "choices": [
-      "As an extinguishment; the old loan is derecognized and the $30,000 fee is included in the gain or loss on extinguishment",
-      "As a modification; the $30,000 fee is expensed as incurred and interest keeps accruing at the loan's original effective rate",
-      "As a modification; the $30,000 fee reduces the loan's carrying amount and is amortized to interest expense at a new effective rate",
-      "As an extinguishment; the new loan is recorded at fair value and the $30,000 fee is capitalized as an issuance cost of the new loan"
+      "When the present value of the new cash flows differs from the old by 10% or more",
+      "Whenever the interest rate or the maturity date is changed",
+      "When the fair value of the new debt differs from the old by 10% or more",
+      "Only when part of the principal is forgiven by the lender"
     ],
-    "answer": 2,
-    "explain": "For a borrower not in financial difficulty and a loan with no conversion feature, a change in terms is an extinguishment when the present value of the new cash flows, at the original effective rate, differs from the present value of the remaining old cash flows by **10% or more**; a 6% difference is a modification, so no gain or loss is recognized. In a modification, fees paid to the lender are netted against the debt and amortized as interest at a new effective rate while third-party costs are expensed as incurred — the pairing reverses under extinguishment accounting, where lender fees go into the gain or loss and third-party costs are capitalized against the new debt."
+    "answer": 0,
+    "explain": "An extinguishment requires a **10% or greater** difference between the present value of the new cash flows and that of the old, discounted at the original effective rate; anything less is a modification with no gain or loss. Fair value uses current rates, and a changed rate alone proves nothing."
   },
   {
     "id": "liab-20",
     "section": "liab",
     "topic": "Bond retirement",
     "difficulty": "medium",
-    "q": "On June 30, Year 3, a company retires $1,000,000 face amount of its bonds by paying $950,000 plus $30,000 of interest accrued since the last interest payment date. On that date the bonds carry $24,000 of unamortized discount and $6,000 of unamortized issue costs. What gain or loss on extinguishment does the company recognize?",
+    "q": "A company retires its bonds before maturity. To measure the gain or loss on extinguishment, what carrying amount is compared with the reacquisition price?",
     "choices": [
-      "$20,000 gain",
-      "$26,000 gain",
-      "$50,000 gain",
-      "$10,000 loss"
+      "Face less unamortized discount and unamortized issue costs",
+      "Face less unamortized discount; issue costs were expensed at issuance",
+      "Face less unamortized discount plus interest accrued since the last payment",
+      "Face alone; the discount and issue costs are written off to expense"
     ],
     "answer": 0,
-    "explain": "Carrying amount is face less both the unamortized discount and the unamortized issue costs: $1,000,000 − $24,000 − $6,000 = $970,000; less the $950,000 reacquisition price leaves a **$20,000 gain** in income from continuing operations. The $30,000 settles interest already accrued as a liability, so it is not part of the reacquisition price; $26,000 forgets that issue costs reduce the carrying amount, and $50,000 compares face to price."
+    "explain": "Net carrying amount is face adjusted for unamortized discount or premium **and** unamortized issue costs, which are netted against the liability; the gain or loss is that amount less the reacquisition price. Accrued interest paid at retirement settles a separate liability and is not part of the price."
   },
   {
     "id": "liab-21",
     "section": "liab",
-    "topic": "Troubled debt restructuring (debtor)",
+    "topic": "Troubled debt restructuring",
     "difficulty": "medium",
-    "q": "A company in financial difficulty owes a bank a $1,000,000 note on which $90,000 of interest is accrued and unpaid. Because of the company's difficulty, the bank agrees to forgive the accrued interest, reduce the principal to $900,000, and cut the interest rate to 5%, payable at the end of each of the next three years, with the $900,000 due at the end of Year 3. What gain on restructuring does the company recognize?",
+    "q": "A company in financial difficulty persuades its lender to reduce the principal and interest rate on its note. When does the company recognize a gain on the restructuring?",
     "choices": [
-      "$190,000",
-      "$55,000",
-      "$100,000",
-      "$0"
+      "When the carrying amount exceeds the total undiscounted future payments under the new terms",
+      "When the carrying amount exceeds the present value of the new payments at the original rate",
+      "When the principal is reduced, for the amount of principal forgiven",
+      "Only once every payment under the new terms has been made"
     ],
-    "answer": 1,
-    "explain": "The debtor compares the carrying amount, including accrued interest ($1,090,000), with the total **undiscounted** payments under the new terms: $900,000 + 3 × $45,000 = $1,035,000, so the payable is written down to $1,035,000 and a **$55,000** gain is recognized; every later payment, including the $45,000 labeled interest, then reduces the liability and no interest expense is recorded. Had the future payments equaled or exceeded $1,090,000, there would be no gain and the debtor would simply impute a new, lower effective rate. $190,000 ignores the interest still to be paid, and $100,000 counts only the principal cut."
+    "answer": 0,
+    "explain": "The debtor compares the carrying amount, including accrued interest, with the **undiscounted** total of future payments; any excess is an immediate gain, and the liability is written down to that total. If payments equal or exceed the carrying amount there is no gain; instead a lower effective rate is imputed."
   },
   {
     "id": "liab-22",
     "section": "liab",
     "topic": "Loan covenant test",
     "difficulty": "easy",
-    "q": "A loan agreement requires a company to maintain a current ratio of at least 1.5 at each December 31. At December 31 the company has cash of $90,000, accounts receivable of $150,000, inventory of $150,000, prepaid insurance of $30,000, and a $150,000 note receivable from an officer due in three years. Its liabilities are accounts payable of $170,000, accrued wages of $30,000, the $100,000 installment of long-term debt due next year, and $500,000 of long-term debt due later. Is the covenant met?",
+    "q": "A loan covenant requires a minimum current ratio at year end. Which liability is included in the current liabilities used for that ratio?",
     "choices": [
-      "Yes; the current ratio is 2.10",
-      "Yes; the current ratio is 1.90",
-      "No; the current ratio is 0.80",
-      "No; the current ratio is 1.40"
+      "The installment of long-term debt due within the next year",
+      "The installments of long-term debt due in later years",
+      "A deferred tax liability expected to reverse next year",
+      "Short-term debt refinanced on a long-term basis before the statements are issued"
     ],
-    "answer": 3,
-    "explain": "Current ratio = current assets ÷ current liabilities = ($90,000 + $150,000 + $150,000 + $30,000) ÷ ($170,000 + $30,000 + $100,000) = $420,000 ÷ $300,000 = **1.40**, below the required 1.5, so the covenant is not met; whether the lender can then call the loan, and whether the debt must be reclassified as current, depends on the agreement and any waiver. The officer's note is noncurrent because it is due in three years, the installment due next year is a current liability, and dropping inventory and prepaids gives the quick ratio (0.80), which is a different covenant."
+    "answer": 0,
+    "explain": "Current liabilities are obligations **due within one year** or the operating cycle, so next year's installment of long-term debt is current while the later installments stay noncurrent. Deferred tax liabilities are always noncurrent, and short-term debt refinanced long term before the statements are issued is reclassified as noncurrent."
   },
   {
     "id": "liab-23",
     "section": "liab",
-    "topic": "Covenant violation at year-end",
+    "topic": "Covenant violation",
     "difficulty": "medium",
-    "q": "A company's $2,000,000 note payable is repayable in $400,000 installments each December 31 from Year 2 through Year 6. At December 31, Year 1, the company is in violation of the note's working-capital covenant, which makes the entire balance immediately callable; the agreement has no grace period. On February 20, Year 2, the lender waives its right to call the note for any violation of that covenant through December 31, Year 3. The Year 1 financial statements are issued on March 15, Year 2. What amount of the note is reported as a current liability at December 31, Year 1?",
+    "q": "A company violates a covenant at year end, making its long-term installment note callable. Before the statements are issued, the lender waives its call right for more than a year. How is the note classified?",
     "choices": [
-      "$2,000,000",
-      "$0",
-      "$400,000",
-      "$800,000"
+      "As if there were no violation: only the installment due within a year is current",
+      "Entirely current, because the violation existed at the balance sheet date",
+      "Entirely noncurrent, because the lender can no longer call the note",
+      "The installments due within the waiver period are current; the rest noncurrent"
     ],
-    "answer": 2,
-    "explain": "A violation at the balance sheet date that makes debt callable forces current classification **unless**, before the statements are issued, the lender waives its right to call for more than one year from the balance sheet date (or the violation will probably be cured within a stated grace period). This waiver runs two years, so the note is classified as if no violation had occurred: only the **$400,000** installment due within twelve months is current and the remaining $1,600,000 is noncurrent. Had the waiver covered only six months, the entire $2,000,000 would be current."
+    "answer": 0,
+    "explain": "Debt callable because of a year-end covenant violation is current **unless** the lender, before the statements are issued, waives the call right for more than a year from that date. It qualifies, so the note is classified normally: next year's installment current, the rest noncurrent, regardless of the waiver's length."
   },
   {
     "id": "liab-24",
     "section": "liab",
     "topic": "One-time termination benefits",
     "difficulty": "medium",
-    "q": "On October 1, Year 1, management, having committed to a plan that meets all the criteria for a plan of termination, tells 40 plant employees that they will be terminated on March 31, Year 2, and that each will receive a $12,000 one-time termination benefit if they keep working until then. That required service runs well beyond the 60-day legal notice period, all 40 are expected to stay, and the company has no ongoing severance plan. Ignoring the time value of money, what liability for the termination benefits does the company report at December 31, Year 1?",
+    "q": "A company tells employees they will be terminated in six months, well beyond the legal notice period, and will get a one-time benefit if they work until then. How is the liability recognized?",
     "choices": [
-      "$240,000",
-      "$480,000",
-      "$0",
-      "$120,000"
+      "Ratably over the six months of required service",
+      "In full on the date the plan is communicated to the employees",
+      "In full on the date management commits to the termination plan",
+      "Ratably over the legal notice period rather than the six months"
     ],
     "answer": 0,
-    "explain": "Because the employees must render service beyond the minimum retention period to earn the benefit, the liability is measured at the communication date and recognized **ratably over the future service period**: 40 × $12,000 = $480,000 over the six months from October 1 to March 31, so 3/6 = **$240,000** at December 31. The full $480,000 would be recognized at communication only if no service beyond the minimum retention period were required; nothing is recognized on management's commitment to the plan alone."
+    "explain": "Because employees must work beyond the **minimum retention period** to earn the benefit, the liability is measured at the communication date but recognized ratably over the future service period, not the notice period. Full recognition at communication applies only when no such service is required; commitment alone creates no liability."
   },
   {
     "id": "liab-25",
     "section": "liab",
-    "topic": "Contract termination fee",
+    "topic": "Contract termination cost",
     "difficulty": "easy",
-    "q": "On December 1, Year 1, management commits to a plan to exit a product line. The plan requires ending an advertising services contract that runs through Year 3; the contract can be ended early only by giving the agency 30 days' written notice and paying a $90,000 termination fee. The company gives notice on January 20, Year 2; the agency's services end on February 19, Year 2; the fee is paid on March 5, Year 2. When is the liability for the $90,000 fee recognized?",
+    "q": "As part of an exit plan, a company will end a service contract early by giving the required notice and paying a termination fee. When is the liability for the fee recognized?",
     "choices": [
-      "December 1, Year 1, when management commits to the exit plan",
-      "January 20, Year 2, when the company gives the termination notice",
-      "February 19, Year 2, when the agency stops providing services",
-      "March 5, Year 2, when the fee is paid"
+      "When the company gives the termination notice",
+      "When management commits to the exit plan",
+      "When the services under the contract stop",
+      "When the termination fee is paid"
     ],
-    "answer": 1,
-    "explain": "A liability for the cost of terminating a contract before the end of its term is recognized, at fair value, when the entity terminates the contract under its terms — here, by giving the required notice on **January 20, Year 2**. A plan or commitment alone creates no liability under ASC 420, and the cease-use date matters only for costs that keep running under a contract the company has stopped using."
+    "answer": 0,
+    "explain": "ASC 420 recognizes the cost of terminating a contract early when the entity **terminates the contract under its terms**, here by giving notice. Commitment to a plan creates no liability, the cease-use date applies only to a contract still running but no longer used, and payment merely settles the liability."
   },
   {
     "id": "leases-1",
@@ -2047,15 +2047,15 @@ var FAR_QUESTIONS = [
     "section": "leases",
     "topic": "ROU asset measurement",
     "difficulty": "medium",
-    "q": "A lessee's lease liability is $50,000. It also pays $2,000 of initial direct costs and receives a $1,000 lease incentive. What is the initial right-of-use asset?",
+    "q": "At the commencement date, how does a lessee measure the right-of-use asset relative to the lease liability?",
     "choices": [
-      "$50,000",
-      "$53,000",
-      "$51,000",
-      "$47,000"
+      "Liability plus initial direct costs and prepaid rent, minus incentives received",
+      "Liability plus initial direct costs and incentives received",
+      "Liability minus initial direct costs and incentives received",
+      "Liability plus prepaid rent only; direct costs and incentives are expensed"
     ],
-    "answer": 2,
-    "explain": "ROU asset = lease liability plus initial direct costs minus incentives received: $50,000 + $2,000 − $1,000 = $51,000. Subtracting both items gives $47,000; adding both gives $53,000 — incentives reduce the asset, direct costs increase it."
+    "answer": 0,
+    "explain": "ROU asset = lease liability plus initial direct costs and any lease payments made at or before commencement (prepaid rent), **minus** lease incentives received. Incentives are cash the lessor gives back, so they lower the asset; adding them, or subtracting direct costs, reverses the signs."
   },
   {
     "id": "leases-7",
@@ -2122,45 +2122,45 @@ var FAR_QUESTIONS = [
     "section": "leases",
     "topic": "Uneven lease payments",
     "difficulty": "easy",
-    "q": "An operating lease requires payments of $10,000 in year 1 and $25,000 in each of years 2 and 3. What is year 1 lease expense?",
+    "q": "A three-year operating lease has total payments of $60,000; the year-1 payment is only $10,000. What is the lessee's year-1 lease expense?",
     "choices": [
-      "$10,000",
       "$20,000",
+      "$10,000",
       "$25,000",
       "$30,000"
     ],
-    "answer": 1,
-    "explain": "Operating lease expense is straight-line: total payments of $60,000 over 3 years equals $20,000 per year, regardless of the uneven cash payment schedule."
+    "answer": 0,
+    "explain": "An operating lease produces a **single straight-line lease cost**: $60,000 ÷ 3 = $20,000 a year, whatever the cash schedule. Expensing only the $10,000 paid is cash-basis accounting; the difference shows up in the lease liability and right-of-use asset, not as a separate deferred rent account."
   },
   {
     "id": "leases-12",
     "section": "leases",
     "topic": "Finance lease interest",
     "difficulty": "easy",
-    "q": "A finance lease liability is $100,000 at commencement, with a 5% discount rate and annual year-end payments of $23,000. What is year 1 interest expense?",
+    "q": "A lessee's finance lease requires payments at the end of each year. How is interest expense on the lease liability for the first year computed?",
     "choices": [
-      "$5,000",
-      "$23,000",
-      "$18,000",
-      "$4,100"
+      "The liability at commencement times the discount rate",
+      "The first annual payment times the discount rate",
+      "The liability after the first payment times the discount rate",
+      "The first payment less straight-line amortization of the asset"
     ],
     "answer": 0,
-    "explain": "Interest is the beginning liability times the discount rate: $100,000 × 5% = $5,000. The $23,000 payment then splits into that interest and $18,000 of principal; $4,100 applies the rate to the balance after the payment, a year early."
+    "explain": "A finance lease liability accrues interest like a loan: the **beginning balance** times the discount rate. Each year-end payment is split into that interest and a principal reduction, so applying the rate to the post-payment balance is a year early; amortization of the right-of-use asset is a separate, straight-line expense."
   },
   {
     "id": "leases-20",
     "section": "leases",
     "topic": "Operating lease ROU asset",
     "difficulty": "medium",
-    "q": "A lessee signs a 5-year operating lease with payments of $10,018 at the end of each year. The lease liability at commencement is $40,000, using an 8% discount rate, and there are no initial direct costs, incentives or prepaid rent. What is the right-of-use asset at the end of Year 1?",
+    "q": "Under an operating lease, how does a lessee determine the reduction in the right-of-use asset for each period?",
     "choices": [
-      "$32,000",
-      "$33,182",
-      "$29,982",
-      "$40,000"
+      "Straight-line lease cost less the interest accreted on the liability",
+      "Straight-line over the lease term, as for a finance lease asset",
+      "The cash payment less the interest accreted on the liability",
+      "It is not reduced; it is remeasured to the liability each period"
     ],
-    "answer": 1,
-    "explain": "The ROU asset is the plug: the $10,018 straight-line lease cost less the $3,200 accretion on the liability ($40,000 × 8%) is $6,818 of amortization, leaving **$33,182** — the same as the liability, $43,200 − $10,018. $32,000 reflects straight-line amortization, the finance-lease pattern."
+    "answer": 0,
+    "explain": "Operating lease cost is one straight-line amount, so the asset's amortization is the **plug**: straight-line lease cost less the liability's accretion. Cash paid less accretion reduces the liability, not the asset; the two match only with level payments and no direct costs or incentives. Straight-line amortization is the finance-lease pattern."
   },
   {
     "id": "leases-21",
@@ -2182,15 +2182,15 @@ var FAR_QUESTIONS = [
     "section": "leases",
     "topic": "Lease term",
     "difficulty": "medium",
-    "q": "A 5-year equipment lease gives the lessee a 3-year renewal option at a rent well below expected market rates, and the lessee is reasonably certain it will renew. What is the lease term under ASC 842?",
+    "q": "A 5-year equipment lease includes a 3-year renewal option at a rent so far below expected market rates that the lessee is reasonably certain to renew. What is the lease term under ASC 842?",
     "choices": [
       "8 years, the noncancelable period plus the renewal period",
-      "5 years; renewal options are never part of the lease term",
+      "5 years, because the option counts only once it is exercised",
       "5 years, with the renewal option disclosed in the notes only",
-      "8 years only if the lessor can also compel the renewal"
+      "8 years only if the lessor can compel the lessee to renew"
     ],
     "answer": 0,
-    "explain": "The lease term is the noncancelable period plus periods covered by options the lessee is reasonably certain to exercise (ASC 842-10-30-1). A renewal rent well below market is the economic incentive behind that judgment, so the 3-year option counts and the term is 8 years — and that longer term also feeds the major-part and present-value classification tests."
+    "explain": "The lease term is the noncancelable period **plus** option periods the lessee is reasonably certain to exercise (ASC 842-10-30-1). Renewal rent well below market is the economic incentive behind that judgment, so the 3-year option counts and the term is 8 years; neither exercise nor lessor compulsion is required."
   },
   {
     "id": "leases-16",
@@ -2257,15 +2257,15 @@ var FAR_QUESTIONS = [
     "section": "equity",
     "topic": "Stock issuance",
     "difficulty": "easy",
-    "q": "A company issues 1,000 shares of $1 par common stock for $10 per share cash. How much is credited to additional paid-in capital?",
+    "q": "A company issues common stock with a $1 par value for $10 per share in cash. How much of each share's proceeds is credited to additional paid-in capital?",
     "choices": [
-      "$10,000",
-      "$9,000",
-      "$1,000",
+      "$9",
+      "$10",
+      "$1",
       "$0"
     ],
-    "answer": 1,
-    "explain": "The $10,000 cash is allocated $1,000 to common stock at par (1,000 × $1) and the $9,000 excess over par to additional paid-in capital."
+    "answer": 0,
+    "explain": "Proceeds are split between the stock account at **par** and additional paid-in capital for the excess: $10 − $1 = $9 to APIC per share. Crediting the full $10 to common stock ignores par, and $1 is the amount that goes to common stock, not APIC."
   },
   {
     "id": "equity-2",
@@ -2287,15 +2287,15 @@ var FAR_QUESTIONS = [
     "section": "equity",
     "topic": "Treasury reissuance",
     "difficulty": "medium",
-    "q": "Treasury shares bought at $10 each are later reissued: 100 shares at $12. Where does the $200 excess over cost go?",
+    "q": "Under the cost method, a company reissues treasury shares for more than it paid for them. Where does the excess over cost go?",
     "choices": [
       "Credit to APIC from treasury stock",
-      "Gain on the income statement",
+      "Gain in income from continuing operations",
       "Credit to retained earnings",
-      "Credit to common stock at par"
+      "Credit to common stock at par value"
     ],
     "answer": 0,
-    "explain": "Reissuing treasury stock above cost credits additional paid-in capital from treasury stock transactions. Companies never report income-statement gains or losses on their own shares."
+    "explain": "Reissuing treasury stock above cost credits **additional paid-in capital from treasury stock transactions**; a company never reports a gain or loss in income on dealings in its own shares. Retained earnings is touched only when a reissue below cost exhausts that APIC, and common stock stays at the original par."
   },
   {
     "id": "equity-4",
@@ -2319,9 +2319,9 @@ var FAR_QUESTIONS = [
     "difficulty": "medium",
     "q": "A company declares a property dividend of land whose book value is below its fair value. How is the dividend recorded?",
     "choices": [
-      "Remeasure the land to fair value, with the gain in net income; reduce retained earnings by fair value",
+      "Remeasure the land to fair value, gain in net income; retained earnings falls by fair value",
       "Reduce retained earnings by the land's book value; no gain is recognized",
-      "Reduce retained earnings by fair value; the difference over book value goes to APIC",
+      "Reduce retained earnings by fair value and credit the excess over book value to additional paid-in capital",
       "Remeasure the land to fair value, with the gain in other comprehensive income"
     ],
     "answer": 0,
@@ -2377,15 +2377,15 @@ var FAR_QUESTIONS = [
     "section": "equity",
     "topic": "Stock dividend measurement",
     "difficulty": "medium",
-    "q": "A company with 10,000 shares outstanding ($1 par, $15 fair value) declares a 10% stock dividend. Retained earnings decreases by:",
+    "q": "A company declares a 10% stock dividend when its shares trade well above par. What amount is transferred from retained earnings to paid-in capital?",
     "choices": [
-      "$15,000",
-      "$1,000",
-      "$10,000",
-      "$150,000"
+      "The fair value of the shares issued",
+      "The par value of the shares issued",
+      "The excess of fair value over par value",
+      "Nothing; only a memorandum entry is made"
     ],
     "answer": 0,
-    "explain": "A 10% dividend is small, so it is recorded at fair value: 1,000 new shares × $15 = $15,000 debited to retained earnings, with $1,000 to common stock and $14,000 to APIC."
+    "explain": "A stock dividend under 20-25% is **small** and is capitalized at the shares' fair value: retained earnings is debited for fair value, with par to common stock and the excess to APIC. Par value applies to large stock dividends, and a memorandum entry is the treatment for a stock split."
   },
   {
     "id": "equity-10",
@@ -2407,30 +2407,30 @@ var FAR_QUESTIONS = [
     "section": "equity",
     "topic": "Basic EPS",
     "difficulty": "easy",
-    "q": "Net income is $100,000, preferred dividends declared are $10,000, and weighted-average common shares are 30,000. Basic EPS is:",
+    "q": "Net income is $100,000 and the preferred dividend declared for the year is $10,000. What is income available to common stockholders for basic EPS?",
     "choices": [
-      "$3.33",
-      "$3.67",
-      "$3.00",
-      "$2.67"
+      "$90,000",
+      "$100,000",
+      "$110,000",
+      "$80,000"
     ],
-    "answer": 2,
-    "explain": "Basic EPS = (net income − preferred dividends) ÷ weighted-average shares = $90,000 ÷ 30,000 = $3.00. Forgetting to subtract preferred dividends gives the $3.33 trap. Deducting a second year of preferred dividends gives $2.67."
+    "answer": 0,
+    "explain": "Basic EPS divides **income available to common stockholders** by weighted-average common shares, so the preferred dividend comes off first: $100,000 − $10,000 = $90,000. Using $100,000 forgets the deduction, $110,000 adds the dividend instead of subtracting it, and $80,000 deducts it twice."
   },
   {
     "id": "equity-12",
     "section": "equity",
     "topic": "Weighted-average shares",
     "difficulty": "medium",
-    "q": "A company had 10,000 shares outstanding all year and issued 6,000 more on July 1. Weighted-average shares for the year are:",
+    "q": "A company had 10,000 shares outstanding all year and issued 6,000 more at midyear. What are the weighted-average shares for the year?",
     "choices": [
+      "13,000",
       "16,000",
       "10,000",
-      "14,500",
-      "13,000"
+      "14,500"
     ],
-    "answer": 3,
-    "explain": "The 6,000 new shares were outstanding for half the year: 10,000 + (6,000 × 6/12) = 13,000. Using 16,000 ignores the time-weighting of the mid-year issuance."
+    "answer": 0,
+    "explain": "Shares are **weighted** by the fraction of the year they were outstanding: 10,000 + (6,000 × 6/12) = 13,000. Using 16,000 counts the new shares for the whole year, 10,000 ignores them entirely, and the weighting matters because the new capital earned income for only half the year."
   },
   {
     "id": "equity-13",
@@ -2467,15 +2467,15 @@ var FAR_QUESTIONS = [
     "section": "equity",
     "topic": "Treasury reissue below cost",
     "difficulty": "medium",
-    "q": "Using the cost method, a company bought 1,000 of its own shares at $20 each. It later reissued 200 of them at $25, its only prior treasury stock sale, and it has never retired shares. It now reissues 500 more at $16. How is the $2,000 difference between cost and proceeds on these 500 shares recorded?",
+    "q": "Under the cost method, a company reissues treasury shares for less than their cost. The shortfall exceeds the balance in APIC from earlier treasury stock sales. How is the shortfall recorded?",
     "choices": [
-      "Debit APIC from treasury stock $1,000 and a $1,000 loss in net income",
-      "Debit retained earnings for the full $2,000",
-      "Debit APIC from treasury stock $1,000 and retained earnings $1,000",
-      "Debit APIC from treasury stock for the full $2,000"
+      "Debit APIC from treasury stock to zero, then retained earnings for the rest",
+      "Debit retained earnings for the entire shortfall",
+      "Debit APIC from treasury stock for the entire shortfall, even to a debit balance",
+      "Debit APIC from treasury stock to zero, then a loss in net income for the rest"
     ],
-    "answer": 2,
-    "explain": "A shortfall first absorbs APIC from earlier treasury gains — here 200 × $5 = $1,000 — and the rest is charged to **retained earnings**. APIC from treasury stock cannot go negative, and a company never reports a loss in income on its own shares."
+    "answer": 0,
+    "explain": "A reissue below cost first absorbs **APIC from treasury stock transactions** built by earlier sales above cost; once that balance is exhausted, the remainder is charged to retained earnings. That APIC account never carries a debit balance, and a company never reports a loss in income on its own shares."
   },
   {
     "id": "equity-16",
@@ -2525,17 +2525,17 @@ var FAR_QUESTIONS = [
   {
     "id": "equity-20",
     "section": "equity",
-    "topic": "Partner's capital balance",
+    "topic": "Partner contributions",
     "difficulty": "easy",
-    "q": "Reyes and Tan operate an LLC taxed as a partnership. Reyes's capital account was $150,000 at the start of the year. During the year she contributed equipment that had cost her $60,000 and had an agreed fair value of $40,000, the LLC earned net income of $90,000 shared 60% to Reyes and 40% to Tan, and Reyes withdrew $30,000 in cash. What is Reyes's book (not tax-basis) capital balance at year end?",
+    "q": "A partner contributes equipment she bought years ago to the partnership. At what amount is it credited to her capital account?",
     "choices": [
-      "$214,000",
-      "$234,000",
-      "$244,000",
-      "$250,000"
+      "Its agreed fair value when contributed",
+      "The amount she originally paid for it",
+      "Her tax basis in the equipment",
+      "Its book value on her own records"
     ],
     "answer": 0,
-    "explain": "Partnership books record contributed property at its agreed **fair value**, credit each partner's share of income under the agreement, and debit distributions: $150,000 + $40,000 + (60% × $90,000 = $54,000) − $30,000 = **$214,000**. Recording the equipment at its $60,000 cost gives $234,000, forgetting the withdrawal gives $244,000, and crediting Reyes with all $90,000 gives $250,000."
+    "explain": "Partnership books record a noncash contribution at its **fair value** (as agreed by the partners) and credit that amount to the contributor's capital account. Her original cost, book value or tax basis matters only for her own tax records; the carryover basis is a tax rule, not a GAAP measurement."
   },
   {
     "id": "equity-21",
@@ -2750,17 +2750,17 @@ var FAR_QUESTIONS = [
   {
     "id": "cashflow-14",
     "section": "cashflow",
-    "topic": "Operating cash flow",
+    "topic": "Indirect method adjustment",
     "difficulty": "medium",
-    "q": "Net income is $100,000, depreciation is $20,000, and accounts receivable increased $10,000. What is net cash from operating activities under the indirect method?",
+    "q": "Under the indirect method, how is the year's amortization of premium on bonds payable treated in the operating section of the statement of cash flows?",
     "choices": [
-      "$110,000",
-      "$130,000",
-      "$90,000",
-      "$70,000"
+      "Subtracted from net income",
+      "Added to net income",
+      "Shown as a financing outflow",
+      "Excluded from the statement entirely"
     ],
     "answer": 0,
-    "explain": "Start with net income of $100,000, add back $20,000 of noncash depreciation, and subtract the $10,000 receivables increase: $110,000."
+    "explain": "Premium amortization lowers interest expense below the cash interest actually paid, so net income overstates operating cash and the amortization is **subtracted**. Adding it back is the treatment for discount amortization and depreciation, and the financing section carries only the bond's principal, never its interest."
   },
   {
     "id": "cashflow-15",
@@ -2799,8 +2799,8 @@ var FAR_QUESTIONS = [
     "difficulty": "medium",
     "q": "How does restricted cash appear in the statement of cash flows?",
     "choices": [
-      "The statement's totals include restricted cash, so transfers to restricted accounts are not flows",
-      "An investing outflow when cash is restricted and an inflow when it is released",
+      "Within the statement's cash totals, so transfers to restricted accounts are not flows",
+      "An investing outflow when cash becomes restricted and an investing inflow when it is released",
       "A financing activity, because the restrictions arise from lending agreements",
       "It is excluded from the statement and reported only in the balance sheet"
     ],
@@ -2962,30 +2962,30 @@ var FAR_QUESTIONS = [
     "section": "taxes",
     "topic": "Total tax expense",
     "difficulty": "medium",
-    "q": "Current tax payable is $40,000. During the year the deferred tax liability grew by $6,000 and the deferred tax asset grew by $2,000; all deferred tax changes relate to continuing operations. Total income tax expense is what?",
+    "q": "A company's deferred tax asset increases during the year, with no change in its deferred tax liability; everything relates to continuing operations. How does the increase affect total income tax expense?",
     "choices": [
-      "$44,000",
-      "$40,000",
-      "$48,000",
-      "$36,000"
+      "It reduces total expense by the amount of the increase",
+      "It raises total expense by the amount of the increase",
+      "It has no effect; only current tax enters expense",
+      "It raises expense only in the year the asset reverses"
     ],
     "answer": 0,
-    "explain": "Expense = current + deferred. The DTL increase **adds** $6,000; the DTA increase **subtracts** $2,000: $40,000 + $6,000 − $2,000 = **$44,000**."
+    "explain": "Total expense is current plus deferred tax, and a growing deferred tax asset is a deferred tax **benefit**: future deductions have been recorded, so the entry credits income tax expense. A growing deferred tax liability does the opposite, and the balance-sheet change is the expense now, not at reversal."
   },
   {
     "id": "taxes-20",
     "section": "taxes",
     "topic": "Loss carryforward",
-    "difficulty": "medium",
-    "q": "In Year 1, its first year, Corvid Corp. incurs a $400,000 net operating loss that it may carry forward. The enacted rate is 21% for Year 1, and enacted law raises it to 25% for Year 2 and later. Corvid has a $50,000 deferred tax liability from accelerated depreciation on equipment that will reverse into taxable income within the carryforward period. If needed, management would also sell land for a $300,000 taxable gain, a prudent and feasible tax-planning strategy with no significant cost. What deferred tax asset does Corvid recognize for the carryforward, net of any valuation allowance?",
+    "difficulty": "easy",
+    "q": "A corporation reports a net operating loss that tax law allows it to carry forward, and it expects future taxable income. What does it recognize for the loss in the year incurred?",
     "choices": [
-      "$84,000",
-      "$50,000",
-      "$0",
-      "$100,000"
+      "A deferred tax asset for the loss's future tax saving",
+      "A deferred tax liability until the loss is deducted",
+      "A receivable for the refund of prior years' taxes",
+      "Nothing until the loss is actually deducted on a return"
     ],
-    "answer": 3,
-    "explain": "A carryforward is a future deductible amount measured at the **enacted** rate for the years it will be used: $400,000 × 25% = **$100,000**; $84,000 uses the Year 1 rate. The start-up loss is negative evidence, but the reversing taxable temporary difference ($50,000 ÷ 25% = $200,000) plus the land sale ($300,000, none of it the DTL's reversal counted again, since land is not depreciated) provide $500,000 of future taxable income against a $400,000 loss, exactly enough under the 80%-of-taxable-income limit on post-2017 losses (80% × $500,000 = $400,000), so no valuation allowance is needed. The $50,000 DTL offsets the DTA only in balance-sheet presentation, not in measuring it."
+    "answer": 0,
+    "explain": "A carryforward is a future deductible amount, so its tax saving is recorded now as a **deferred tax asset**, at the enacted rate for the years of use, less any valuation allowance. A refund receivable arises only from carrybacks, which federal law rarely allows; nothing waits for the return."
   },
   {
     "id": "taxes-12",
@@ -3112,60 +3112,60 @@ var FAR_QUESTIONS = [
     "section": "combos",
     "topic": "Downstream inventory sale",
     "difficulty": "easy",
-    "q": "Parent sells goods that cost it $60,000 to its wholly owned subsidiary for $80,000. At year end, 40% of those goods are still in the subsidiary's inventory. How much unrealized profit is eliminated in consolidation?",
+    "q": "Parent sells goods to its subsidiary at a $20,000 markup. At year end, 40% of those goods are still in the subsidiary's inventory. How much intercompany profit does consolidation eliminate?",
     "choices": [
-      "$20,000",
       "$8,000",
+      "$20,000",
       "$12,000",
-      "$32,000"
+      "$0"
     ],
-    "answer": 1,
-    "explain": "Only the markup still sitting in the group's ending inventory is unrealized: ($80,000 − $60,000) × 40% = **$8,000**. The $12,000 on goods resold to outsiders has been earned, and $32,000 is the transfer price of the goods on hand, not the profit in them."
+    "answer": 0,
+    "explain": "Only the markup on goods still inside the group is **unrealized**: $20,000 × 40% = $8,000. The $12,000 on goods the subsidiary resold has been earned from outsiders, and the whole $20,000 would be eliminated only if nothing had been resold."
   },
   {
     "id": "combos-21",
     "section": "combos",
-    "topic": "Consolidated cost of goods sold",
+    "topic": "Consolidated cost of sales",
     "difficulty": "medium",
-    "q": "During the year, Parent sold goods costing $60,000 to its wholly owned subsidiary for $80,000, and the subsidiary resold three-fourths of them to outside customers. Separate-company cost of goods sold was $400,000 for Parent and $250,000 for the subsidiary. There was no intercompany inventory at the start of the year. What is consolidated cost of goods sold?",
+    "q": "Parent sold goods to its subsidiary for $80,000. At year end, $5,000 of Parent's profit on them is still in the subsidiary's inventory. By how much does consolidation reduce combined cost of goods sold?",
     "choices": [
-      "$575,000",
-      "$650,000",
-      "$570,000",
-      "$565,000"
+      "$75,000",
+      "$80,000",
+      "$85,000",
+      "$5,000"
     ],
     "answer": 0,
-    "explain": "Remove the $80,000 intercompany purchase from the combined $650,000, then add the $5,000 markup still in ending inventory ($20,000 × 1/4), which moves out of inventory and into cost of sales: $650,000 − $80,000 + $5,000 = **$575,000**. Stopping at $570,000 leaves ending inventory overstated by that unrealized profit."
+    "explain": "Consolidation removes the whole $80,000 intercompany purchase from cost of goods sold, then charges the $5,000 **unrealized profit** back to cost of goods sold and out of inventory: a net $75,000 reduction. $80,000 ignores the deferred profit, and $85,000 removes it in the wrong direction."
   },
   {
     "id": "combos-22",
     "section": "combos",
     "topic": "Intercompany equipment sale",
     "difficulty": "medium",
-    "q": "On January 1, Parent sells equipment with a carrying amount of $30,000 to its wholly owned subsidiary for $45,000. The subsidiary depreciates it straight-line over its 5-year remaining life with no salvage value. In the year of sale, by how much do the consolidation entries for this equipment reduce the two companies' combined net income?",
+    "q": "At the start of the year, Parent sells equipment to its subsidiary at a gain; the subsidiary depreciates it. For that year, consolidated net income is below their combined separate net income by how much?",
     "choices": [
-      "$18,000",
-      "$15,000",
-      "$3,000",
-      "$12,000"
+      "The gain, less this year's extra depreciation on the markup",
+      "The entire gain",
+      "Only this year's extra depreciation on the markup",
+      "Nothing; the sale was at arm's length, so the gain stands"
     ],
-    "answer": 3,
-    "explain": "Eliminate the $15,000 gain, then remove the excess depreciation the subsidiary takes on the marked-up cost ($15,000 ÷ 5 = $3,000), which adds income back: $15,000 − $3,000 = **$12,000**. The remaining $12,000 of gain reaches consolidated income at $3,000 a year over the next four years."
+    "answer": 0,
+    "explain": "The intercompany gain is eliminated in full, but the subsidiary's depreciation on the marked-up cost is also reduced, which adds back one year's slice of that gain. Net effect: the gain less this year's **excess depreciation**. The rest of the gain reaches consolidated income over the asset's remaining life."
   },
   {
     "id": "combos-23",
     "section": "combos",
     "topic": "Consolidated total assets",
     "difficulty": "easy",
-    "q": "Parent pays $500,000 cash for all of Sub's stock, an amount equal to Sub's book value, and Sub's book values equal fair values. Right after the purchase, Parent reports total assets of $2,000,000 (including the investment) and Sub reports total assets of $800,000 and liabilities of $300,000. What are consolidated total assets?",
+    "q": "Parent buys all of Sub's stock for $500,000, equal to Sub's book and fair value. The two separate balance sheets together show $2,800,000 of total assets, including the investment. What are consolidated total assets?",
     "choices": [
-      "$2,500,000",
-      "$2,800,000",
       "$2,300,000",
-      "$2,000,000"
+      "$2,800,000",
+      "$3,300,000",
+      "$1,800,000"
     ],
-    "answer": 2,
-    "explain": "The investment is eliminated against Sub's equity and replaced by Sub's individual assets and liabilities: $2,000,000 − $500,000 + $800,000 = **$2,300,000**. Adding the two balance sheets ($2,800,000) counts Sub's net assets twice — once as Parent's investment and again line by line."
+    "answer": 0,
+    "explain": "The investment account is eliminated against Sub's equity and replaced by Sub's individual assets and liabilities, so the consolidated total is the combined figure less the investment: $2,800,000 − $500,000 = $2,300,000. Leaving the investment in counts Sub's net assets **twice**, once as the investment and again line by line."
   },
   {
     "id": "combos-5",
@@ -3187,15 +3187,15 @@ var FAR_QUESTIONS = [
     "section": "combos",
     "topic": "Intercompany dividends",
     "difficulty": "easy",
-    "q": "Parent bought its wholly owned subsidiary at book value, with no fair value adjustments, and carries it at cost on its own books. Parent's separate net income of $500,000 includes $40,000 of dividends from the subsidiary, which earned $120,000. There are no other intercompany transactions. What is consolidated net income?",
+    "q": "Parent carries its wholly owned subsidiary at cost and recorded the dividend the subsidiary paid it this year as dividend income. How does the consolidated income statement treat that dividend?",
     "choices": [
-      "$620,000",
-      "$580,000",
-      "$540,000",
-      "$500,000"
+      "Eliminated; the subsidiary's full net income is included instead",
+      "Kept as dividend income, since Parent actually received the cash",
+      "Eliminated, along with an equal amount of the subsidiary's net income",
+      "Shown as a dividend declared in the consolidated retained earnings statement"
     ],
-    "answer": 1,
-    "explain": "A dividend from a subsidiary is cash moving inside the group, so Parent's dividend income is eliminated: $500,000 − $40,000 + $120,000 = **$580,000**. Keeping it ($620,000) counts $40,000 of the subsidiary's earnings twice, while $540,000 wrongly drops the part the subsidiary paid out."
+    "answer": 0,
+    "explain": "A dividend from a subsidiary is cash moving inside the group, so Parent's dividend income is eliminated and the subsidiary's **entire** net income joins consolidated income. Keeping the dividend counts those earnings twice; also deducting it from the subsidiary's income drops the part that was paid out."
   },
   {
     "id": "combos-7",
@@ -3231,16 +3231,16 @@ var FAR_QUESTIONS = [
     "id": "combos-9",
     "section": "combos",
     "topic": "Consolidated revenue",
-    "difficulty": "medium",
-    "q": "Parent revenue is $800,000 and subsidiary revenue is $300,000, including $60,000 the subsidiary billed the parent. Consolidated revenue is what?",
+    "difficulty": "easy",
+    "q": "Combined separate revenues of a parent and its subsidiary total $1,100,000, including $60,000 the subsidiary billed the parent. What is consolidated revenue?",
     "choices": [
       "$1,040,000",
       "$1,100,000",
-      "$800,000",
-      "$1,160,000"
+      "$1,160,000",
+      "$980,000"
     ],
     "answer": 0,
-    "explain": "Combine, then remove intercompany sales in full: $800,000 + $300,000 − $60,000 = **$1,040,000**. Only transactions with outsiders count as consolidated revenue."
+    "explain": "Combine the two, then remove intercompany sales in **full**: $1,100,000 − $60,000 = $1,040,000. Only sales to outsiders are consolidated revenue. $1,100,000 leaves the internal billing in, $1,160,000 adds it instead of removing it, and $980,000 removes it from both companies."
   },
   {
     "id": "combos-10",
@@ -3292,15 +3292,15 @@ var FAR_QUESTIONS = [
     "section": "combos",
     "topic": "Intercompany bonds",
     "difficulty": "medium",
-    "q": "A wholly owned subsidiary has bonds outstanding with a carrying amount of $480,000. On December 31, Parent buys all of them from outside investors for $460,000 and holds them as an investment. What does the consolidated income statement report for this purchase?",
+    "q": "Parent buys all of its subsidiary's outstanding bonds from outside investors for less than their carrying amount on the subsidiary's books. What does the consolidated income statement report for the purchase?",
     "choices": [
-      "No gain or loss; the $20,000 is amortized into interest over the remaining term",
-      "A $20,000 loss on extinguishment of debt",
-      "No gain or loss until the bonds mature or are sold",
-      "A $20,000 gain on extinguishment of debt"
+      "A gain on extinguishment of debt, in the year of purchase",
+      "A loss on extinguishment of debt, in the year of purchase",
+      "No gain or loss until the bonds mature or are resold",
+      "Nothing now; the difference is amortized into interest over the remaining term"
     ],
-    "answer": 3,
-    "explain": "To the group, the debt has been retired: the bonds and Parent's investment are eliminated, and the $480,000 carrying amount less the $460,000 paid is a **$20,000 gain** recognized now. The separate books recognize that same $20,000 gradually through interest in later years, so consolidation eliminates it there to avoid counting it twice."
+    "answer": 0,
+    "explain": "To the group, buying its own bonds from outsiders **retires** them: the bonds and Parent's investment are eliminated, and paying less than the carrying amount is a gain on extinguishment, recognized at once. The separate books record that difference through interest instead, so later consolidations remove it."
   },
   {
     "id": "combos-14",
@@ -3337,15 +3337,15 @@ var FAR_QUESTIONS = [
     "section": "combos",
     "topic": "Intercompany equipment, later year",
     "difficulty": "medium",
-    "q": "On January 1, Year 1, a wholly owned subsidiary sold equipment to Parent at a $24,000 gain. Parent depreciates the equipment straight-line over its 4-year remaining life. What does the Year 2 consolidation do to the two companies' combined depreciation expense?",
+    "q": "A subsidiary sold equipment to its parent at a $24,000 gain; the parent depreciates it straight-line over four remaining years. In the year after the sale, how does consolidation adjust combined depreciation expense?",
     "choices": [
-      "Decreases it by $12,000",
+      "Reduces it by $6,000",
       "Increases it by $6,000",
-      "Decreases it by $6,000",
-      "Nothing; the gain was eliminated in Year 1"
+      "Reduces it by $12,000",
+      "Leaves it unchanged; the gain was eliminated in the year of sale"
     ],
-    "answer": 2,
-    "explain": "Parent depreciates the marked-up cost, so each year of the remaining life carries $24,000 ÷ 4 = **$6,000** of excess depreciation to remove. Year 1's entries fixed only Year 1; $12,000 is the cumulative excess through Year 2, and Year 1's share runs through beginning retained earnings, not Year 2 expense."
+    "answer": 0,
+    "explain": "The parent depreciates the marked-up cost, so each remaining year carries $24,000 ÷ 4 = $6,000 of **excess depreciation** to remove. The year-of-sale entries fixed only that year; $12,000 is the cumulative excess through two years, and the first year's share now runs through beginning retained earnings."
   },
   {
     "id": "combos-17",
@@ -3354,9 +3354,9 @@ var FAR_QUESTIONS = [
     "difficulty": "medium",
     "q": "A subsidiary sells land to its parent at a $50,000 gain, and the parent still holds the land at year end. What does consolidation eliminate?",
     "choices": [
-      "The entire $50,000 gain, until the land is sold outside the group",
-      "Only the parent's ownership share of the gain",
-      "None of the gain, because land is not depreciable",
+      "The entire $50,000 gain, until the land leaves the group",
+      "Only the parent's ownership share of the $50,000 gain",
+      "None of the gain, because land is not a depreciable asset",
       "The gain net of its tax effect only"
     ],
     "answer": 0,
@@ -3367,30 +3367,30 @@ var FAR_QUESTIONS = [
     "section": "combos",
     "topic": "Intercompany profit, next year",
     "difficulty": "medium",
-    "q": "At the end of Year 1, Parent's inventory included goods bought from its wholly owned subsidiary that carried $5,000 of intercompany profit. Parent sold all of them to outside customers in Year 2. Because of these goods, how does Year 2 consolidated net income compare with the two companies' combined separate net income?",
+    "q": "Last year's consolidation deferred the profit on inventory a subsidiary had sold to its parent. This year the parent sold those goods to outside customers. What does this year's consolidation do with the deferred profit?",
     "choices": [
-      "Consolidated income is $5,000 lower",
-      "Consolidated income is $5,000 higher",
-      "No difference, because Year 1's elimination already dealt with it",
-      "No difference, because the $5,000 goes straight to retained earnings"
+      "Recognizes it in this year's consolidated income",
+      "Nothing; last year's elimination already removed it",
+      "Credits it straight to retained earnings, bypassing income",
+      "Keeps it deferred until the subsidiary pays a dividend"
     ],
-    "answer": 1,
-    "explain": "The profit deferred at the end of Year 1 is **realized** in Year 2 when the goods leave the group, so the worksheet credits cost of goods sold $5,000 and charges beginning retained earnings. With a wholly owned subsidiary the full amount moves, whether the sale was upstream, as here, or downstream."
+    "answer": 0,
+    "explain": "The profit deferred last year is **realized** this year when the goods leave the group: the worksheet credits cost of goods sold and debits beginning retained earnings, raising consolidated income. Last year's entry fixed only last year, and realized profit passes through income, never straight to retained earnings."
   },
   {
     "id": "combos-29",
     "section": "combos",
     "topic": "Consolidated RE, later years",
     "difficulty": "medium",
-    "q": "Parent acquired 100% of Sub at book value, with no fair value adjustments, when Sub's retained earnings were $200,000, and carries Sub at cost. Two years later, Parent's retained earnings are $900,000 and Sub's are $350,000; the only intercompany transactions have been dividends. What is consolidated retained earnings?",
+    "q": "Parent bought all of Sub's stock at book value several years ago and carries the investment at cost. Consolidated retained earnings today equals Parent's retained earnings plus what?",
     "choices": [
-      "$1,050,000",
-      "$1,250,000",
-      "$900,000",
-      "$1,100,000"
+      "Sub's increase in retained earnings since the acquisition",
+      "All of Sub's current retained earnings",
+      "Sub's retained earnings at the acquisition date",
+      "Nothing; Sub's retained earnings are fully eliminated"
     ],
     "answer": 0,
-    "explain": "Consolidated retained earnings is Parent's balance plus Sub's **increase since acquisition**: $900,000 + ($350,000 − $200,000) = **$1,050,000**. Sub's $200,000 at acquisition was bought, not earned by the group, and dividends need no adjustment — what Sub paid Parent is already in Parent's balance and already out of Sub's."
+    "explain": "Under the cost method Parent's retained earnings holds only the dividends Sub paid, so consolidation adds Sub's **increase** in retained earnings since acquisition (earnings less those dividends). Sub's balance at the acquisition date was bought, not earned by the group, so it is eliminated against the investment."
   },
   {
     "id": "special-1",
@@ -3444,10 +3444,10 @@ var FAR_QUESTIONS = [
     "difficulty": "medium",
     "q": "After issuing its statements, a company finds last year’s depreciation was materially understated. The correction is reported how?",
     "choices": [
-      "Restate the prior statements and adjust beginning retained earnings, net of tax",
-      "Record extra depreciation in the current year",
+      "Restate last year's statements and adjust beginning retained earnings",
+      "Record the shortfall as extra depreciation expense in the current year",
       "Adjust the current year through other comprehensive income",
-      "Disclose the error without changing any amounts"
+      "Disclose the error in the notes without changing any reported amounts"
     ],
     "answer": 0,
     "explain": "A material **error** in issued statements is a prior-period adjustment: restate the comparatives, so last year's income absorbs the expense and this year's **beginning retained earnings** reflects the correction, **net of tax**. Catching it up through current income would put last year's expense in this year's results."
@@ -3455,9 +3455,9 @@ var FAR_QUESTIONS = [
   {
     "id": "special-5",
     "section": "special",
-    "topic": "Inventory error carryforward",
+    "topic": "Uncorrected inventory error",
     "difficulty": "medium",
-    "q": "Ending inventory for Year 1 was overstated and never corrected; Year 2 ending inventory is correct. After Year 2's books are closed, retained earnings is what?",
+    "q": "A company overstated its ending inventory last year and never corrected it; this year's ending inventory is correct. After this year's books are closed, how is retained earnings stated?",
     "choices": [
       "Correctly stated",
       "Overstated by the full error",
@@ -3465,7 +3465,7 @@ var FAR_QUESTIONS = [
       "Overstated by twice the error"
     ],
     "answer": 0,
-    "explain": "Year 1 income was overstated; Year 2’s beginning inventory carried the same error and **understated** Year 2 income by the same amount. After two years the error **counterbalances** — retained earnings is right even though both years’ incomes were wrong. That needs Year 2's own ending inventory to be right; a fresh error there would carry into Year 3."
+    "explain": "Last year's overstated ending inventory overstated last year's income; the same figure became this year's beginning inventory and **understated** this year's income by the same amount. After two years the error counterbalances, so retained earnings is right even though both years' incomes were wrong."
   },
   {
     "id": "special-6",
@@ -3475,9 +3475,9 @@ var FAR_QUESTIONS = [
     "q": "A company adopts LIFO but cannot reconstruct prior-year layers. The change is applied how?",
     "choices": [
       "Prospectively, from the beginning of the year of change",
-      "Retrospectively using estimated layers",
-      "It is prohibited without full restatement",
-      "Through other comprehensive income"
+      "Retrospectively, using the best estimate of the missing layers",
+      "Not at all; the change is prohibited without full restatement",
+      "Through other comprehensive income in the year of change"
     ],
     "answer": 0,
     "explain": "When retrospective application is **impracticable** — the usual state of affairs for LIFO layers — the change is applied **prospectively**. This is the standard exception to the retrospective rule for principle changes."
@@ -3500,32 +3500,32 @@ var FAR_QUESTIONS = [
   {
     "id": "special-23",
     "section": "special",
-    "topic": "Second-quarter tax expense",
+    "topic": "Revised interim tax rate",
     "difficulty": "medium",
-    "q": "A calendar-year company reported first-quarter pretax income of $200,000 and, using an estimated annual effective tax rate of 30%, recognized $60,000 of income tax expense in the first quarter. Second-quarter pretax income is $300,000, and the company now estimates its annual effective rate at 28%. What is second-quarter income tax expense?",
+    "q": "In its second quarter, a company lowers its estimated annual effective tax rate. The first quarter's tax expense was computed at the higher rate. What happens to that first-quarter excess?",
     "choices": [
-      "$90,000",
-      "$84,000",
-      "$80,000",
-      "$140,000"
+      "It reduces second-quarter tax expense as a catch-up",
+      "The first quarter is restated at the new rate",
+      "It is spread over the remaining three quarters",
+      "Nothing; each quarter keeps the rate used at the time"
     ],
-    "answer": 2,
-    "explain": "Interim tax is cumulative: apply the current estimated annual rate to **year-to-date** income and subtract what has already been recognized: $500,000 × 28% − $60,000 = **$80,000**. Taxing the quarter alone at 28% ($84,000) misses the catch-up on first-quarter income now taxed at the lower rate, and $140,000 is the year-to-date total, not the quarter's charge."
+    "answer": 0,
+    "explain": "Interim tax is cumulative: each quarter applies the current estimated annual rate to **year-to-date** income and subtracts tax already recognized, so the second quarter absorbs the catch-up for the first quarter's higher rate. Earlier quarters are never restated for a new estimate, and nothing is deferred to later quarters."
   },
   {
     "id": "special-24",
     "section": "special",
     "topic": "Interim inventory decline",
     "difficulty": "medium",
-    "q": "In its first quarter, a calendar-year company wrote inventory down by $30,000 for a decline in net realizable value that it did not expect to reverse. During the third quarter, the net realizable value of that same inventory recovers by $45,000; there was no change in the second quarter. What does the company report in the third quarter?",
+    "q": "In its first quarter, a company wrote inventory down to net realizable value, expecting no recovery. In the third quarter, the same inventory's value rebounds above original cost. What does the company report that quarter?",
     "choices": [
-      "A $45,000 gain",
-      "A $30,000 gain",
-      "A $15,000 gain",
-      "No gain, because inventory write-downs are not reversed"
+      "A gain, limited to the first-quarter write-down",
+      "A gain for the full rebound above the written-down value",
+      "No gain, because inventory write-downs are not reversed",
+      "A restatement of the first quarter to remove the write-down"
     ],
-    "answer": 1,
-    "explain": "Within the same fiscal year, a later interim recovery of a recognized net realizable value decline is recognized as a gain, but only **up to the loss previously taken**: $30,000, not the full $45,000. The no-reversal rule is the annual ASC 330 rule; interim periods are integral parts of the year, and the year as a whole shows no loss on this inventory."
+    "answer": 0,
+    "explain": "Interim periods are **integral** to the year, so a same-year recovery of a write-down is a gain, but only up to the loss already recognized; the year as a whole shows no net loss. No-reversal is the annual ASC 330 rule, and earlier quarters are never restated."
   },
   {
     "id": "special-25",
@@ -3547,30 +3547,30 @@ var FAR_QUESTIONS = [
     "section": "special",
     "topic": "Fire after year end",
     "difficulty": "easy",
-    "q": "On January 20, Year 2, a fire destroys a calendar-year company's main warehouse, causing a $2,000,000 uninsured loss. The Year 1 financial statements are available to be issued on March 1, Year 2. How is the fire reflected in the Year 1 statements?",
+    "q": "Three weeks after its year end, but before its financial statements are issued, a fire destroys a company's main warehouse. How is the fire reflected in the year-end financial statements?",
     "choices": [
-      "Note disclosure of the event and the estimated loss; no adjustment",
-      "A $2,000,000 loss accrued in Year 1 and disclosed in the notes",
-      "Not reported, because it occurred after the balance sheet date",
-      "A $2,000,000 write-down of the warehouse at December 31, Year 1"
+      "Disclosed in the notes with the estimated loss; not accrued",
+      "Accrued as a loss in the year just ended",
+      "Not reported, because it happened after year end",
+      "Recorded as a write-down of the warehouse at year end"
     ],
     "answer": 0,
-    "explain": "The warehouse was intact on December 31, so the fire is a **nonrecognized** subsequent event: no adjustment, but the notes disclose the nature of the event and an estimate of its financial effect (or state that one cannot be made). Adjustment is reserved for events that give evidence about conditions that already existed at the balance sheet date, such as a long-troubled customer's bankruptcy."
+    "explain": "The warehouse was intact at the balance sheet date, so the fire is a **nonrecognized** subsequent event: no amounts change, but the notes describe the event and estimate its financial effect (or say none can be made). Adjustment is reserved for events revealing conditions that existed at year end."
   },
   {
     "id": "special-21",
     "section": "special",
     "topic": "Revised useful life",
     "difficulty": "easy",
-    "q": "Equipment costing $100,000, with no salvage value, has been depreciated straight-line over a 10-year life for four years. At the start of Year 5, the company revises the total useful life to 8 years. What is Year 5 depreciation?",
+    "q": "At the start of the year, a company shortens the estimated remaining useful life of equipment that has no salvage value. How is this year's straight-line depreciation computed?",
     "choices": [
-      "$15,000",
-      "$12,500",
-      "$22,500",
-      "$10,000"
+      "Carrying amount divided by the new remaining life",
+      "Original cost divided by the new total life",
+      "Carrying amount over the old remaining life, plus a catch-up charge",
+      "Original cost over the old life, with prior years restated"
     ],
     "answer": 0,
-    "explain": "A revised useful life is a change in estimate, applied **prospectively**: spread the $60,000 carrying amount over the 4 remaining years, $15,000 a year. $22,500 books a $10,000 catch-up for past years, and $12,500 applies the new life to the original cost as if it had always applied."
+    "explain": "A revised useful life is a change in **estimate**, applied prospectively: the remaining carrying amount is spread over the remaining revised life, with no catch-up for past years and no restatement. Applying the new life to original cost pretends the estimate had always been in place."
   },
   {
     "id": "special-13",
@@ -3607,45 +3607,45 @@ var FAR_QUESTIONS = [
     "section": "special",
     "topic": "Going-concern evaluation",
     "difficulty": "medium",
-    "q": "A calendar-year company that is not an SEC filer will issue its Year 1 financial statements on March 15, Year 2, which is also the date they are available to be issued. Through what date must management evaluate whether substantial doubt exists about the company's ability to continue as a going concern?",
+    "q": "Over what period must management evaluate whether substantial doubt exists about a company's ability to continue as a going concern?",
     "choices": [
-      "December 31, Year 2",
-      "March 15, Year 3",
-      "March 15, Year 2",
-      "December 31, Year 3"
+      "One year after the statements are issued or available to be issued",
+      "One year after the balance sheet date",
+      "Only through the date the statements are issued",
+      "As far ahead as management's budgets and forecasts extend"
     ],
-    "answer": 1,
-    "explain": "ASC 205-40 looks forward **one year from the date the statements are issued** (or are available to be issued, for entities that do not file with the SEC) — here March 15, Year 3. One year from the balance sheet date is the IFRS minimum, not the GAAP rule, and the issuance date itself only bounds the subsequent-events review."
+    "answer": 0,
+    "explain": "ASC 205-40 looks forward **one year from the date the statements are issued**, or are available to be issued for an entity that does not file with the SEC. Measuring from the balance sheet date cuts the window short, and the issuance date itself only bounds the subsequent-events review."
   },
   {
     "id": "special-28",
     "section": "special",
     "topic": "Inventory method change",
     "difficulty": "medium",
-    "q": "At the start of Year 3, a company changes from the weighted-average method to FIFO and presents Year 2 and Year 3 in comparative statements. Under FIFO, cumulative pretax income for all years before Year 2 would have been $50,000 higher, and Year 2 pretax income would have been $20,000 higher. The tax rate is 25%. By how much is retained earnings at the beginning of Year 2 adjusted in the restated statements?",
+    "q": "A company changes from weighted-average to FIFO and presents last year's statements alongside this year's. Where is the effect of the change on last year's income shown?",
     "choices": [
-      "$52,500 increase",
-      "$50,000 increase",
-      "$37,500 increase",
-      "$15,000 increase"
+      "In last year's income statement, restated under FIFO",
+      "In last year's opening retained earnings",
+      "In this year's opening retained earnings",
+      "In this year's income statement, as a cumulative effect"
     ],
-    "answer": 2,
-    "explain": "Retrospective application puts the cumulative effect of all periods **before the earliest period presented** into that period's opening retained earnings, net of tax: $50,000 × (1 − 25%) = **$37,500**. Year 2's $20,000 is not part of the opening adjustment — Year 2 is presented, so its own income statement is restated instead."
+    "answer": 0,
+    "explain": "Retrospective application restates each prior period presented for its own **period-specific** effects, so last year's income statement is simply redone under FIFO. Only the cumulative effect on years before the earliest period presented goes to that period's opening retained earnings, net of tax; nothing runs through this year's income."
   },
   {
     "id": "special-22",
     "section": "special",
     "topic": "Prior-year error",
     "difficulty": "medium",
-    "q": "After issuing its Year 1 statements, a company discovers a material error: it failed to record $40,000 of depreciation in Year 1. Its tax rate is 25%, and it presents single-year financial statements. How is the error reported in the Year 2 statements?",
+    "q": "After issuing last year's statements, a company discovers it omitted $40,000 of depreciation that year. Its tax rate is 25%. By how much does the correction reduce this year's beginning retained earnings?",
     "choices": [
-      "A $30,000 correction loss in Year 2 net income",
-      "Beginning retained earnings reduced by $40,000",
-      "Year 2 depreciation expense increased by $40,000",
-      "Beginning retained earnings reduced by $30,000"
+      "$30,000",
+      "$40,000",
+      "$10,000",
+      "$0"
     ],
-    "answer": 3,
-    "explain": "A material prior-period error is a **prior-period adjustment** to beginning retained earnings, net of tax: $40,000 × (1 − 25%) = **$30,000**. Running it through Year 2 income, gross or net, puts last year's expense in this year's results."
+    "answer": 0,
+    "explain": "A material error in issued statements is a **prior-period adjustment** to beginning retained earnings, net of tax: $40,000 × (1 − 25%) = $30,000. The gross $40,000 ignores the related tax effect, and running the correction through this year's income puts last year's expense in this year's results."
   },
   {
     "id": "special-18",
@@ -3877,22 +3877,22 @@ var FAR_QUESTIONS = [
     "section": "govnfp",
     "topic": "Multi-year pledge",
     "difficulty": "medium",
-    "q": "In December Year 1, a donor gives a not-for-profit a signed, unconditional promise to pay $100,000 in Year 3, with no stipulation on how the money is to be used. How does the NFP report the promise in its Year 1 statements?",
+    "q": "In December, a donor gives a not-for-profit an unconditional written promise to pay $100,000 two years from now, naming no purpose. How does the NFP report the promise this year?",
     "choices": [
-      "Nothing in Year 1; revenue is recognized when the cash is received in Year 3",
-      "A receivable and a refundable advance liability until the payment is made",
-      "A receivable and contribution revenue in Year 1, increasing net assets without donor restrictions",
-      "A receivable and contribution revenue in Year 1, increasing net assets with donor restrictions"
+      "Receivable and revenue, increasing net assets with donor restrictions",
+      "Receivable and revenue, increasing net assets without donor restrictions",
+      "Receivable and a refundable advance liability",
+      "Nothing until the cash is received"
     ],
-    "answer": 3,
-    "explain": "An unconditional promise is recognized when it is made, as a receivable and revenue. Because payment is due in a future period, the gift carries an **implied time restriction**, so it lands in net assets with donor restrictions even though the donor named no purpose. A refundable advance is recorded only for a *conditional* promise whose cash has already arrived."
+    "answer": 0,
+    "explain": "An unconditional promise is recognized when made, as a receivable and revenue. Payment due in a future period carries an **implied time restriction**, so the gift increases net assets with donor restrictions even though no purpose was named. A refundable advance is only for a conditional promise already paid."
   },
   {
     "id": "govnfp-22",
     "section": "govnfp",
-    "topic": "Taxes collected for others",
+    "topic": "County tax collections",
     "difficulty": "easy",
-    "q": "A county collects property taxes on behalf of the school districts within its borders and remits the collections to them, keeping no share of the money and exercising no discretion over it. Which fund does the county use to report these collections?",
+    "q": "A county collects property taxes for the school districts inside its borders and passes the money straight through to them, keeping no share. Which fund reports these collections?",
     "choices": [
       "Custodial fund",
       "Private-purpose trust fund",
@@ -3900,7 +3900,7 @@ var FAR_QUESTIONS = [
       "Internal service fund"
     ],
     "answer": 0,
-    "explain": "Resources a government holds for other governments or parties in a purely custodial capacity are fiduciary and go in a **custodial fund** (the successor to the old agency fund). A private-purpose trust fund requires a trust arrangement, and the collections are never the county's own revenue, so no governmental or proprietary fund applies."
+    "explain": "Resources a government holds for other governments or parties in a custodial capacity are fiduciary and go in a **custodial fund**, the successor to the agency fund. A private-purpose trust needs a trust arrangement, and the collections are never the county's own revenue, so no governmental or proprietary fund applies."
   },
   {
     "id": "govnfp-27",
@@ -3967,15 +3967,15 @@ var FAR_QUESTIONS = [
     "section": "govnfp",
     "topic": "Building gift cash flows",
     "difficulty": "easy",
-    "q": "A museum receives a $2,000,000 cash gift that the donor restricts to constructing a new wing, and during the same year it pays $1,200,000 to the contractor building the wing. How are the gift and the construction payments classified in the museum's statement of cash flows?",
+    "q": "A museum receives a cash gift the donor restricts to building a new wing and pays the contractor that year. How does its statement of cash flows classify the gift and the payments?",
     "choices": [
-      "Gift: operating activity; construction payments: investing activity",
-      "Gift: financing activity; construction payments: financing activity",
-      "Gift: operating activity; construction payments: operating activity",
-      "Gift: financing activity; construction payments: investing activity"
+      "Gift: financing; payments: investing",
+      "Gift: operating; payments: investing",
+      "Gift: operating; payments: operating",
+      "Gift: financing; payments: financing"
     ],
-    "answer": 3,
-    "explain": "Contributions (and investment income) that a donor restricts to acquiring, constructing or improving long-lived assets, or to a donor-restricted endowment, are **financing** inflows for a not-for-profit; paying the contractor is an **investing** outflow, like any capital expenditure. Only contributions free of such long-term restrictions are operating receipts, so the corporate reflex of putting every receipt in operating is the trap."
+    "answer": 0,
+    "explain": "Contributions a donor restricts to acquiring, constructing or improving long-lived assets, or to an endowment, are **financing** inflows for a not-for-profit; paying the contractor is an investing outflow. Only gifts free of such long-term restrictions are operating receipts, so treating every receipt as operating is the trap."
   },
   {
     "id": "govnfp-30",
@@ -3997,30 +3997,30 @@ var FAR_QUESTIONS = [
     "section": "ratios",
     "topic": "Current ratio",
     "difficulty": "easy",
-    "q": "At year-end a company reports cash $20,000, accounts receivable $40,000, inventory $50,000, prepaid insurance $10,000, and equipment $80,000. Its liabilities are accounts payable $40,000, accrued wages $10,000, and a note payable due in five years of $70,000. Using year-end balances, what is the current ratio?",
+    "q": "A company is computing its current ratio from its year-end balance sheet. Which of these balances does it leave out?",
     "choices": [
-      "4.0",
-      "2.4",
-      "1.0",
-      "1.2"
+      "A note payable due in five years",
+      "Prepaid insurance for next year",
+      "Accrued wages payable",
+      "Inventory held for resale"
     ],
-    "answer": 1,
-    "explain": "Current ratio = current assets ÷ current liabilities = ($20,000 + $40,000 + $50,000 + $10,000) ÷ ($40,000 + $10,000) = $120,000 ÷ $50,000 = **2.4**. Equipment and the five-year note are noncurrent: adding equipment gives 4.0, adding the note to the denominator gives 1.0, and 1.2 is the quick ratio."
+    "answer": 0,
+    "explain": "The current ratio divides current assets by current liabilities. Prepaid insurance and inventory are current assets and accrued wages are a current liability, so all three belong. The five-year note is **noncurrent**, like equipment; putting it in the denominator would understate the ratio."
   },
   {
     "id": "ratios-2",
     "section": "ratios",
     "topic": "Quick ratio",
     "difficulty": "medium",
-    "q": "A company has cash $15,000, marketable securities $10,000, net accounts receivable $25,000, inventory $30,000, prepaid expenses $5,000, and current liabilities $50,000. Using year-end balances, what is the quick (acid-test) ratio?",
+    "q": "A company buys inventory on account, payable in 30 days. What does the purchase do to its quick (acid-test) ratio?",
     "choices": [
-      "1.6",
-      "1.7",
-      "0.8",
-      "1.0"
+      "It falls, whatever its starting level",
+      "It rises, whatever its starting level",
+      "It is unchanged",
+      "It falls only if it was above 1.0"
     ],
-    "answer": 3,
-    "explain": "Quick assets exclude inventory and prepaids: ($15,000 + $10,000 + $25,000) ÷ $50,000 = **1.0**. Including inventory gives 1.6 and including prepaids as well gives the current ratio of 1.7; dropping the marketable securities, which are quick assets, gives 0.8."
+    "answer": 0,
+    "explain": "Quick assets are cash, marketable securities and receivables; inventory is excluded. The purchase adds nothing to quick assets but raises current liabilities, so the ratio **falls** at any starting level. The above-1.0 logic matters only when numerator and denominator move together, which they do not here."
   },
   {
     "id": "ratios-3",
@@ -4057,105 +4057,105 @@ var FAR_QUESTIONS = [
     "section": "ratios",
     "topic": "Times interest earned",
     "difficulty": "medium",
-    "q": "A company reports net income of $60,000 after income tax expense of $20,000 and interest expense of $20,000. What is its times interest earned ratio?",
+    "q": "A company computes its times interest earned ratio. Which earnings figure goes in the numerator?",
     "choices": [
-      "4.0",
-      "3.0",
-      "5.0",
-      "2.5"
+      "Income before interest and income taxes",
+      "Net income",
+      "Net income plus interest expense",
+      "Income before taxes but after interest"
     ],
-    "answer": 2,
-    "explain": "Times interest earned = earnings before interest and taxes ÷ interest expense = ($60,000 + $20,000 + $20,000) ÷ $20,000 = **5.0**. Adding back only interest gives 4.0 and using net income alone gives 3.0; both understate the earnings available to cover interest because taxes are computed after interest is deducted; dividing by interest plus taxes gives 2.5."
+    "answer": 0,
+    "explain": "Times interest earned divides **EBIT** by interest expense: both interest and income taxes are added back to net income, because taxes are computed after interest is deducted and the ratio asks how many times operating earnings cover the interest charge. Adding back interest alone, or using net income, understates coverage."
   },
   {
     "id": "ratios-6",
     "section": "ratios",
     "topic": "Gross margin",
     "difficulty": "easy",
-    "q": "Gross sales were $600,000, sales returns and allowances $100,000, cost of goods sold $300,000, operating expenses $120,000, and net income $60,000. What is the gross margin percentage?",
+    "q": "Which comparison gives a company's gross margin percentage?",
     "choices": [
-      "50%",
-      "12%",
-      "16%",
-      "40%"
+      "Net sales less cost of goods sold, divided by net sales",
+      "Gross sales less cost of goods sold, divided by gross sales",
+      "Operating income divided by net sales",
+      "Net income divided by net sales"
     ],
-    "answer": 3,
-    "explain": "Gross margin = (net sales − cost of goods sold) ÷ net sales = ($500,000 − $300,000) ÷ $500,000 = **40%**. Using gross sales of $600,000 gives 50%; 12% is the net profit margin and 16% is the operating margin."
+    "answer": 0,
+    "explain": "Gross margin is gross profit (net sales minus cost of goods sold) as a percentage of **net sales**, after returns and allowances. Starting from gross sales inflates both numerator and denominator; operating income over sales is the operating margin, and net income over sales is the net profit margin."
   },
   {
     "id": "ratios-7",
     "section": "ratios",
     "topic": "Return on common equity",
     "difficulty": "medium",
-    "q": "Net income was $66,000 and preferred dividends of $6,000 were declared. Common stockholders’ equity was $300,000 at the beginning of the year and $500,000 at the end. Using average common equity, what is the return on common stockholders’ equity?",
+    "q": "A company with preferred stock outstanding computes its return on common stockholders' equity. How does it treat the preferred dividends, and which equity base does it use?",
     "choices": [
-      "15%",
-      "12%",
-      "16.5%",
-      "13.2%"
+      "Subtract preferred dividends; use average common equity",
+      "Subtract preferred dividends; use ending total equity",
+      "Ignore preferred dividends; use average total equity",
+      "Subtract common dividends; use average common equity"
     ],
     "answer": 0,
-    "explain": "Return on common equity = (net income − preferred dividends) ÷ average common equity = ($66,000 − $6,000) ÷ (($300,000 + $500,000) ÷ 2) = $60,000 ÷ $400,000 = **15%**. Using ending equity gives 12%, and forgetting to remove the preferred dividends gives 16.5%."
+    "explain": "Return on common equity measures what the common holders earned: net income **less preferred dividends**, divided by average common stockholders' equity. Ending or total equity mismatches the year's earnings with the capital that produced them, and common dividends are a distribution of the return, not a deduction from it."
   },
   {
     "id": "ratios-8",
     "section": "ratios",
     "topic": "Days in inventory",
     "difficulty": "medium",
-    "q": "Cost of goods sold was $300,000 and net sales were $500,000. Inventory was $50,000 at the beginning of the year and $70,000 at the end. Using average inventory and a 365-day year, what is the number of days in inventory?",
+    "q": "A company computes inventory turnover to find its days in inventory. Which figure does it divide by average inventory, and why?",
     "choices": [
-      "44 days",
-      "73 days",
-      "85 days",
-      "51 days"
+      "Cost of goods sold, because inventory is carried at cost",
+      "Net sales, because turnover measures selling activity",
+      "Gross profit, because it isolates the inventory markup",
+      "Purchases, because they are what replenish inventory"
     ],
-    "answer": 1,
-    "explain": "Inventory turnover = cost of goods sold ÷ average inventory = $300,000 ÷ $60,000 = 5.0 times, so days in inventory = 365 ÷ 5.0 = **73 days**. Using net sales instead of COGS gives 8.3 turns (44 days) because inventory is carried at cost, and using ending inventory of $70,000 gives 4.3 turns (85 days)."
+    "answer": 0,
+    "explain": "Inventory turnover is **cost of goods sold** divided by average inventory, and days in inventory is 365 divided by that turnover. Inventory is carried at cost, so dividing sales (at selling prices) by inventory (at cost) overstates the turns and understates the days; purchases and gross profit measure other things."
   },
   {
     "id": "ratios-9",
     "section": "ratios",
-    "topic": "Days sales outstanding",
+    "topic": "Receivables turnover",
     "difficulty": "medium",
-    "q": "Total sales for the year were $1,095,000, of which $365,000 were cash sales. Accounts receivable was $50,000 at the beginning of the year and $70,000 at the end. Using average receivables and a 365-day year, what is days sales outstanding?",
+    "q": "A company makes both cash and credit sales. Which sales figure belongs in its receivables turnover ratio, and why?",
     "choices": [
-      "35 days",
-      "20 days",
-      "25 days",
-      "30 days"
+      "Net credit sales, because only they pass through receivables",
+      "Total net sales, because turnover measures all selling activity",
+      "Cash collected from customers, because turnover measures collections",
+      "Gross sales, because returns do not affect collections"
     ],
-    "answer": 3,
-    "explain": "Net credit sales are $1,095,000 − $365,000 = $730,000 and average receivables are ($50,000 + $70,000) ÷ 2 = $60,000, so days sales outstanding = $60,000 ÷ $730,000 × 365 = **30 days** exactly (turnover is 12.17 times). Cash sales never pass through receivables, so using total sales understates the result (20 days); using ending receivables gives 35 days."
+    "answer": 0,
+    "explain": "Receivables turnover divides **net credit sales** by average receivables, and days sales outstanding is 365 over that turnover. Cash sales never create a receivable, so including them inflates turnover; cash collected is what the ratio measures, not its input; and returns and allowances come out since they are never collected."
   },
   {
     "id": "ratios-10",
     "section": "ratios",
     "topic": "Price-earnings ratio",
     "difficulty": "medium",
-    "q": "Net income was $500,000 and preferred dividends were $50,000. Weighted-average common shares outstanding were 150,000, and 180,000 common shares were outstanding at year-end. The stock trades at $30 per share. What is the price-earnings ratio?",
+    "q": "A company with preferred stock outstanding computes its price-earnings ratio. Its market price per share is divided by which figure?",
     "choices": [
-      "9.0",
-      "10.0",
-      "12.0",
-      "10.8"
+      "Earnings per common share, after preferred dividends",
+      "Earnings per share before deducting preferred dividends",
+      "Dividends paid per common share",
+      "Book value per common share"
     ],
-    "answer": 1,
-    "explain": "EPS = (net income − preferred dividends) ÷ weighted-average common shares = ($500,000 − $50,000) ÷ 150,000 = $3.00, so P/E = $30 ÷ $3.00 = **10.0**. Ignoring the preferred dividends gives EPS of $3.33 (P/E 9.0); using year-end shares instead of the weighted average gives $2.50 (P/E 12.0)."
+    "answer": 0,
+    "explain": "The price-earnings ratio divides market price per share by **basic EPS**: net income less preferred dividends, over weighted-average common shares. Skipping the preferred dividends overstates EPS and understates the multiple; dividends per share feed the dividend yield and payout ratio, and book value per share feeds the price-to-book ratio."
   },
   {
     "id": "ratios-11",
     "section": "ratios",
     "topic": "Budget variances",
     "difficulty": "easy",
-    "q": "A company budgeted revenue of $200,000 and expenses of $150,000 for the year. Actual revenue was $220,000 and actual expenses were $158,000. How should the budget-versus-actual variances be described?",
+    "q": "A company's actual revenue beat its budget by $20,000, and its actual expenses exceeded their budget by $8,000. How is the expense variance labeled?",
     "choices": [
-      "Revenue $20,000 favorable; expenses $8,000 favorable; net income $28,000 favorable",
-      "Revenue $20,000 unfavorable; expenses $8,000 unfavorable; net income $28,000 unfavorable",
-      "Revenue $20,000 favorable; expenses $8,000 unfavorable; net income $12,000 favorable",
-      "Revenue $20,000 favorable; expenses $8,000 unfavorable; net income $12,000 unfavorable"
+      "Unfavorable, because spending exceeded the plan",
+      "Unfavorable only if the extra spending exceeded the extra revenue",
+      "Favorable, because higher revenue required the extra spending",
+      "Neutral, because the revenue variance more than offsets it"
     ],
-    "answer": 2,
-    "explain": "Labels follow the effect on income: revenue above budget is favorable, expenses above budget are unfavorable, and the two net to actual income of $62,000 against budgeted $50,000 — a **$12,000 favorable** variance. Spending more than planned is not favorable just because it happened alongside higher revenue."
+    "answer": 0,
+    "explain": "Variance labels follow the effect on income: revenue above budget is favorable, and expenses above budget are **unfavorable**, whatever happened elsewhere. The two net to a favorable income variance, but netting does not relabel the expense side; spending more than planned is not favorable because sales were strong."
   },
   {
     "id": "ratios-12",
@@ -4192,37 +4192,37 @@ var FAR_QUESTIONS = [
     "section": "ratios",
     "topic": "Cash to accrual revenue",
     "difficulty": "medium",
-    "q": "A company collected $500,000 from customers during the year. Accounts receivable rose from $40,000 to $55,000, and unearned revenue fell from $20,000 to $12,000. What is accrual-basis revenue for the year?",
+    "q": "A company collected $500,000 from customers during the year, and its accounts receivable rose by $15,000 over the year. It has no unearned revenue. What is accrual-basis revenue?",
     "choices": [
-      "$477,000",
-      "$507,000",
-      "$523,000",
-      "$493,000"
+      "$515,000",
+      "$485,000",
+      "$500,000",
+      "$530,000"
     ],
-    "answer": 2,
-    "explain": "Accrual revenue = cash collected + increase in receivables + decrease in unearned revenue = $500,000 + $15,000 + $8,000 = **$523,000**. Receivables grew because sales outran collections, and the drop in unearned revenue means cash collected earlier was earned this year; subtracting either amount reverses the adjustment."
+    "answer": 0,
+    "explain": "Receivables grew because sales outran collections, so accrual revenue is cash collected plus the increase in receivables: $500,000 + $15,000 = **$515,000**. Subtracting the increase ($485,000) reverses the adjustment, $500,000 is cash-basis revenue, and $530,000 counts the change twice."
   },
   {
     "id": "ratios-15",
     "section": "ratios",
     "topic": "Cash to accrual expenses",
     "difficulty": "medium",
-    "q": "A company paid $200,000 in cash for operating expenses during the year. Prepaid expenses increased from $10,000 to $16,000, and accrued expenses payable decreased from $25,000 to $16,000. What is accrual-basis operating expense for the year?",
+    "q": "A company paid $200,000 in cash for operating expenses during the year, and its accrued expenses payable fell by $9,000. It has no prepaid expenses. What is accrual-basis operating expense?",
     "choices": [
-      "$215,000",
-      "$185,000",
-      "$203,000",
-      "$197,000"
+      "$191,000",
+      "$209,000",
+      "$200,000",
+      "$218,000"
     ],
-    "answer": 1,
-    "explain": "Accrual expense = cash paid − increase in prepaids − decrease in accrued liabilities = $200,000 − $6,000 − $9,000 = **$185,000**. Cash spent to build up prepaids buys future expense, and cash used to pay down last year’s accruals settles past expense, so both are backed out; adding them instead gives $215,000."
+    "answer": 0,
+    "explain": "Part of the cash paid settled last year's accrued expenses, so this year's expense is cash paid less the decrease in the accrual: $200,000 − $9,000 = **$191,000**. Adding the decrease ($209,000) is the sign error, $200,000 is the cash-basis figure, and $218,000 doubles the adjustment."
   },
   {
     "id": "ratios-16",
     "section": "ratios",
     "topic": "Identifying the framework",
     "difficulty": "medium",
-    "q": "A company records revenue when collected and expenses when paid, but it capitalizes equipment and depreciates it straight-line over its estimated useful life — not over the MACRS recovery period used on its tax return — and reports its bank loan as a liability. On which basis are its statements prepared?",
+    "q": "A company records revenue when collected and expenses when paid, but it capitalizes equipment, depreciates it over its estimated useful life, and reports its bank loan as a liability. What basis is this?",
     "choices": [
       "Modified cash basis",
       "Pure cash basis",
@@ -4230,7 +4230,7 @@ var FAR_QUESTIONS = [
       "Accrual basis under GAAP"
     ],
     "answer": 0,
-    "explain": "The modified cash basis starts from the cash basis and adds modifications with substantial support — most commonly capitalizing and depreciating long-lived assets and recording long-term debt. A pure cash basis would expense the equipment when paid and show no loan liability; GAAP would also accrue receivables and payables; and the income tax basis, which a cash-method taxpayer's statements can otherwise resemble, would depreciate over the MACRS recovery period used on the return rather than an estimated useful life."
+    "explain": "The **modified cash basis** is the cash basis plus modifications with substantial support, typically capitalizing and depreciating long-lived assets and recording long-term debt. A pure cash basis would expense the equipment when paid, GAAP would also accrue receivables and payables, and the tax basis would follow the return's depreciation methods."
   },
   {
     "id": "ratios-17",
