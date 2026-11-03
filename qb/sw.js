@@ -1,6 +1,6 @@
 /* QB Blitz service worker — cache-first so the app works offline (bump VERSION on deploys). */
 
-var VERSION = 'qbblitz-v13';
+var VERSION = 'qbblitz-v14';
 var ASSETS = [
   './',
   './index.html',

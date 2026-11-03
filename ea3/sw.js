@@ -1,6 +1,6 @@
 /* EA3 Blitz service worker — cache-first so the app works offline (bump VERSION on deploys). */
 
-var VERSION = 'ea3blitz-v47';
+var VERSION = 'ea3blitz-v48';
 var ASSETS = [
   './',
   './index.html',

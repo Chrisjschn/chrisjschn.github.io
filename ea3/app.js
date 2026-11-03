@@ -1333,13 +1333,21 @@
     var next = document.getElementById('btn-next');
     next.textContent = quiz.index + 1 < quiz.questions.length ? 'Next' : 'See Results';
     next.classList.remove('hidden');
-    // Next floats at the bottom edge: lift the page if it would cover the answer just marked
-    var marked = 0;
+    // Next floats at the bottom edge: lift the page so the explanation shows above it,
+    // never past the answer just marked, which stays on screen (short screens: the
+    // iPhone Duo closed, the SE). Where everything fits, nothing moves.
+    var marked = 0, markedTop = Infinity;
     document.querySelectorAll('#choices .choice.correct, #choices .choice.wrong').forEach(function (b) {
-      marked = Math.max(marked, b.getBoundingClientRect().bottom);
+      var r = b.getBoundingClientRect();
+      marked = Math.max(marked, r.bottom); markedTop = Math.min(markedTop, r.top);
     });
-    var cover = marked + 8 - next.getBoundingClientRect().top;
-    if (cover > 0) window.scrollBy(0, cover);
+    var nextTop = next.getBoundingClientRect().top;
+    var cover = marked + 8 - nextTop;                          // the least: the marked answer clear of Next
+    var fb = document.getElementById('feedback');
+    var want = fb ? fb.getBoundingClientRect().bottom + 8 - nextTop : cover; // the explanation clear of Next
+    var most = markedTop - 8;                                   // the most: the marked answer still at the top
+    var lift = Math.max(cover, Math.min(want, most));
+    if (lift > 0) window.scrollBy(0, lift);
   }
 
   function nextQuestion() {

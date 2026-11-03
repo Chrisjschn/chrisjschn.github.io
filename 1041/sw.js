@@ -1,6 +1,6 @@
 /* 1041 Blitz service worker — cache-first so the app works offline (bump VERSION on deploys). */
 
-var VERSION = 't41blitz-v13';
+var VERSION = 't41blitz-v14';
 var ASSETS = [
   './',
   './index.html',

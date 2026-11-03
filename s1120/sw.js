@@ -1,6 +1,6 @@
 /* Recon Blitz service worker — cache-first so the app works offline (bump VERSION on deploys). */
 
-var VERSION = 's1120-v14';
+var VERSION = 's1120-v15';
 var ASSETS = [
   './',
   './index.html',
