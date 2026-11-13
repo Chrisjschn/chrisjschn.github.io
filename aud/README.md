@@ -44,6 +44,6 @@ nonissuers, and call out PCAOB (AS), SSARS (AR-C), SSAE (AT-C) or GAGAS
 explicitly wherever the answer turns on which framework applies — that
 distinction is itself a heavily tested idea.
 
-The accent is teal (`#12796f`), the last unclaimed entry in `reteam.py`'s
+The accent is navy (`#1e3a8a`; teal until 13 Nov 2026), the `navy` entry in `reteam.py`'s
 `TEAMS`. Green remains off limits: it would collide with `--good` (`#15803d`),
 the correct-answer colour in the quiz view.
