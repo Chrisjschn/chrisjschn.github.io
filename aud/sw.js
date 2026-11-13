@@ -1,11 +1,12 @@
 /* AUD Blitz service worker — cache-first so the app works offline (bump VERSION on deploys). */
 
-var VERSION = 'audblitz-v21';
+var VERSION = 'audblitz-v22';
 var ASSETS = [
   './',
   './index.html',
   './styles.css',
   './app.js',
+  './telemetry.js',
   './data/questions.js',
   './manifest.webmanifest',
   './icons/icon.svg',
