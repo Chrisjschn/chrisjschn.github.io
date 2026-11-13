@@ -1545,30 +1545,30 @@ var FAR_QUESTIONS = [
     "section": "basis",
     "topic": "Cost basis",
     "difficulty": "easy",
-    "q": "A business buys a machine for $60,000, pays $3,000 sales tax, $2,000 freight, and $5,000 to install it. What is the machine's depreciable basis?",
+    "q": "A business buys a machine and also pays sales tax, freight-in, installation, and routine maintenance after it starts running. Which cost is NOT part of the machine's depreciable basis?",
     "choices": [
-      "$60,000",
-      "$63,000",
-      "$65,000",
-      "$70,000"
+      "Maintenance after it is in service",
+      "Sales tax paid on the purchase",
+      "Freight to deliver the machine",
+      "Charges to install the machine"
     ],
-    "answer": 3,
-    "explain": "Basis is the cost of acquiring the asset and getting it ready for its intended use, so sales tax, freight, and installation are all capitalized into the $70,000 basis rather than deducted."
+    "answer": 0,
+    "explain": "Basis includes every cost of acquiring the machine and getting it ready for its intended use, so sales tax, freight and installation are capitalized and recovered through depreciation. Routine maintenance keeps the machine running after it is placed in service; it adds nothing to basis and is deducted as an ordinary business expense."
   },
   {
     "id": "basis-2",
     "section": "basis",
     "topic": "Gift basis",
     "difficulty": "medium",
-    "q": "A father gifts stock with a $40,000 basis and a $25,000 fair market value. The daughter later sells it for $30,000. What gain or loss does she recognize?",
+    "q": "A father gifts stock worth less than his basis. The daughter later sells it for a price between the father's basis and the gift-date value. What does she recognize?",
     "choices": [
-      "$10,000 loss",
-      "$5,000 gain",
       "No gain or loss",
-      "$15,000 loss"
+      "A loss, using the father's basis",
+      "A gain, using the gift-date value",
+      "A loss, using the gift-date value"
     ],
-    "answer": 2,
-    "explain": "When FMV at the date of gift is below the donor's basis, a dual basis applies: $40,000 for computing gain and $25,000 for computing loss. A $30,000 sale price falls between them, so neither figure produces a result and nothing is recognized."
+    "answer": 0,
+    "explain": "When the gift-date value is below the donor's basis, the donee has a dual basis: the donor's basis for computing gain and the gift-date value for computing loss. A sale price between the two produces no gain under the first and no loss under the second, so nothing is recognized. Using the father's basis alone would create a disallowed loss."
   },
   {
     "id": "basis-3",
@@ -1785,15 +1785,15 @@ var FAR_QUESTIONS = [
     "section": "disposition",
     "topic": "Amount realized",
     "difficulty": "medium",
-    "q": "A taxpayer sells land with a $180,000 basis for $50,000 cash, and the buyer assumes the $150,000 mortgage on it. What is the realized gain?",
+    "q": "A taxpayer sells land for $50,000 cash, and the buyer also assumes the $150,000 mortgage on it. What is the taxpayer's amount realized?",
     "choices": [
-      "$20,000",
+      "$200,000",
       "$50,000",
-      "$170,000",
-      "No gain, because cash received is less than basis"
+      "$150,000",
+      "$100,000"
     ],
     "answer": 0,
-    "explain": "Amount realized includes cash plus any liability the buyer assumes, so it is $200,000. Subtracting the $180,000 basis leaves a $20,000 gain even though only $50,000 changed hands."
+    "explain": "Amount realized is everything the seller receives: cash, property, and any liability the buyer assumes or takes subject to. Debt relief counts like cash because the seller no longer owes it, so the amount realized is $50,000 + $150,000 = $200,000. Counting only the cash understates the gain by the whole mortgage."
   },
   {
     "id": "disposition-2",
@@ -1830,15 +1830,15 @@ var FAR_QUESTIONS = [
     "section": "disposition",
     "topic": "Section 1245 recapture",
     "difficulty": "medium",
-    "q": "Equipment costing $100,000 with $70,000 of depreciation taken is sold for $85,000. How is the gain characterized?",
+    "q": "Equipment on which $70,000 of depreciation has been taken is sold at a $55,000 gain. How is the gain characterized under section 1245?",
     "choices": [
-      "$55,000 long-term capital gain",
-      "$55,000 ordinary income",
-      "$30,000 ordinary income and $25,000 capital gain",
-      "$70,000 ordinary income and a $15,000 capital loss"
+      "$55,000 of ordinary income",
+      "$55,000 of section 1231 gain",
+      "$55,000 of long-term capital gain",
+      "$15,000 ordinary and $40,000 section 1231 gain"
     ],
-    "answer": 1,
-    "explain": "Adjusted basis is $30,000, so the gain is $55,000. Section 1245 recaptures gain as ordinary income up to all depreciation taken ($70,000), and since the gain is less than that, the entire $55,000 is ordinary."
+    "answer": 0,
+    "explain": "Section 1245 recaptures gain on depreciable personal property as ordinary income up to the depreciation taken. Here the $55,000 gain is less than the $70,000 of depreciation, so every dollar is ordinary. Section 1231 or capital gain treatment applies only to gain above total depreciation, which would require selling for more than original cost."
   },
   {
     "id": "disposition-5",
@@ -1905,15 +1905,15 @@ var FAR_QUESTIONS = [
     "section": "disposition",
     "topic": "Related party losses",
     "difficulty": "medium",
-    "q": "A taxpayer sells stock with a $50,000 basis to her brother for $35,000. He later sells it to an unrelated buyer for $58,000. What does the brother recognize?",
+    "q": "A taxpayer sells stock to her brother at a $15,000 loss. He later sells it to an unrelated buyer at a $23,000 gain. What does the brother recognize?",
     "choices": [
-      "$23,000 gain",
       "$8,000 gain",
-      "$8,000 gain and the sister deducts her $15,000 loss",
-      "$23,000 gain reduced by the sister's disallowed loss to zero"
+      "$23,000 gain",
+      "$8,000 gain, and the sister deducts her $15,000 loss",
+      "$38,000 gain"
     ],
-    "answer": 1,
-    "explain": "The sister's $15,000 loss is disallowed under section 267. The brother's $23,000 gain is reduced by that previously disallowed loss, leaving $8,000. The right of offset only shelters gain — it can never create a loss."
+    "answer": 0,
+    "explain": "The sister's $15,000 loss on a sale to her brother is disallowed under section 267. When he later sells to an outsider, his $23,000 realized gain is reduced by that disallowed loss, leaving $8,000. The offset belongs to the brother only; the sister never deducts the loss, and the offset can shelter gain but never create a loss."
   },
   {
     "id": "disposition-10",
@@ -2040,15 +2040,15 @@ var FAR_QUESTIONS = [
     "section": "income",
     "topic": "Scholarships",
     "difficulty": "easy",
-    "q": "A degree candidate receives a $30,000 scholarship: $22,000 covers tuition and required fees and $8,000 covers room and board. How much is taxable?",
+    "q": "A degree candidate's scholarship pays $22,000 toward tuition and required fees and $8,000 toward room and board. How much is taxable?",
     "choices": [
-      "$0",
       "$8,000",
+      "$0",
       "$22,000",
       "$30,000"
     ],
-    "answer": 1,
-    "explain": "A qualified scholarship covering tuition, required fees, books, and supplies is excluded for a degree candidate. Amounts for room, board, or services rendered are taxable."
+    "answer": 0,
+    "explain": "A degree candidate excludes a qualified scholarship to the extent it pays tuition, required fees, books and supplies, so the $22,000 is tax-free. Amounts for room and board, travel, or required services are not qualified expenses, so the $8,000 is included in gross income. Being a degree candidate does not make the whole award excludable."
   },
   {
     "id": "income-3",
@@ -2145,15 +2145,15 @@ var FAR_QUESTIONS = [
     "section": "income",
     "topic": "Cancellation of debt",
     "difficulty": "medium",
-    "q": "A taxpayer with $180,000 of liabilities and $150,000 of assets has $50,000 of debt forgiven. How much cancellation of debt income is recognized?",
+    "q": "A taxpayer who is insolvent by $30,000 has $50,000 of debt forgiven outside bankruptcy. How much cancellation of debt income is taxable?",
     "choices": [
-      "$0",
       "$20,000",
+      "$0",
       "$30,000",
       "$50,000"
     ],
-    "answer": 1,
-    "explain": "The insolvency exclusion covers COD income up to the amount of insolvency immediately before the discharge, here $30,000. The remaining $20,000 is taxable, and excluded amounts reduce tax attributes such as NOLs and basis."
+    "answer": 0,
+    "explain": "Section 108 excludes cancellation of debt income only to the extent the taxpayer is insolvent immediately before the discharge. Insolvent by $30,000, the taxpayer excludes $30,000 of the $50,000 discharged and reports $20,000. Excluding the whole amount requires a Title 11 bankruptcy case or another specific exclusion, such as qualified farm debt, and excluded amounts reduce tax attributes such as NOLs and basis."
   },
   {
     "id": "income-10",
@@ -2190,15 +2190,15 @@ var FAR_QUESTIONS = [
     "section": "income",
     "topic": "Damages",
     "difficulty": "medium",
-    "q": "A plaintiff receives $200,000 for physical injuries, $50,000 for emotional distress arising from those injuries, and $75,000 in punitive damages. What is included in gross income?",
+    "q": "A plaintiff's physical-injury settlement includes damages for the injury itself, damages for emotional distress caused by it, and punitive damages. Which portion is included in gross income?",
     "choices": [
-      "$75,000",
-      "$125,000",
-      "$50,000",
-      "Nothing — personal injury recoveries are excluded"
+      "Only the punitive damages",
+      "Only the emotional distress damages",
+      "The emotional distress and punitive damages",
+      "None of it; physical injury recoveries are excluded"
     ],
     "answer": 0,
-    "explain": "Compensatory damages for physical injury or sickness are excluded, and emotional distress damages flowing from a physical injury ride along. Punitive damages are taxable in virtually all cases."
+    "explain": "Section 104(a)(2) excludes damages received on account of physical injury or sickness, and emotional distress damages ride along when the distress flows from that physical injury. Punitive damages punish the defendant rather than compensate a loss, so they are taxable; the only exception, section 104(c), is a wrongful-death action under a state law that allows nothing but punitive damages. Emotional distress damages are taxable only when no physical injury underlies them."
   },
   {
     "id": "income-13",
@@ -2640,15 +2640,15 @@ var FAR_QUESTIONS = [
     "section": "credits",
     "topic": "Credit ordering",
     "difficulty": "medium",
-    "q": "A taxpayer has $1,200 of tax liability, a $2,000 nonrefundable credit, and $900 of federal income tax withheld. What is the result?",
+    "q": "A taxpayer's nonrefundable credit exceeds her entire tax liability, and she also had federal income tax withheld from her wages. What is refunded to her?",
     "choices": [
-      "A $1,700 refund",
-      "A $900 refund",
-      "A $2,000 refund",
-      "No refund, and $800 of credit carries forward"
+      "The withholding only",
+      "The withholding plus the unused credit",
+      "The unused credit only",
+      "Nothing, because the credit absorbed the liability"
     ],
-    "answer": 1,
-    "explain": "The nonrefundable credit wipes out the $1,200 liability and the remaining $800 is simply lost. Withholding is a refundable payment, so the full $900 comes back."
+    "answer": 0,
+    "explain": "A nonrefundable credit can reduce tax liability to zero but no further; any excess is simply lost unless a specific carryforward applies. Withholding is a payment of tax, not a credit, so once liability is zero every dollar withheld comes back. Refunding the unused credit would turn a nonrefundable credit into a refundable one."
   },
   {
     "id": "credits-11",
@@ -3000,15 +3000,15 @@ var FAR_QUESTIONS = [
     "section": "ccorp",
     "topic": "Boot in a section 351 exchange",
     "difficulty": "medium",
-    "q": "A shareholder transfers property with a $40,000 basis and $100,000 fair market value to a controlled corporation for stock worth $85,000 plus $15,000 cash. What gain is recognized?",
+    "q": "In a section 351 exchange, a shareholder with a $60,000 realized gain on the transferred property receives stock plus $15,000 cash. What gain is recognized?",
     "choices": [
-      "$60,000",
       "$15,000",
+      "$60,000",
       "$45,000",
       "$0"
     ],
-    "answer": 1,
-    "explain": "Gain is recognized to the lesser of realized gain ($60,000) or boot received ($15,000). The shareholder's stock basis becomes $40,000 basis plus $15,000 gain less $15,000 boot, or $40,000."
+    "answer": 0,
+    "explain": "In a section 351 exchange, gain is recognized only to the extent of boot, the cash or other property received besides stock, and never more than the realized gain. Boot of $15,000 is less than the $60,000 realized gain, so $15,000 is recognized. Recognizing the full $60,000 ignores the nonrecognition rule, and $0 ignores the boot."
   },
   {
     "id": "ccorp-3",
@@ -3090,15 +3090,15 @@ var FAR_QUESTIONS = [
     "section": "ccorp",
     "topic": "Distribution ordering",
     "difficulty": "medium",
-    "q": "A corporation with $30,000 of current earnings and profits and a $50,000 accumulated deficit distributes $40,000 to shareholders. How is the distribution characterized?",
+    "q": "A corporation has current earnings and profits of $30,000 but an accumulated E&P deficit. It distributes $40,000 to shareholders. How much is a dividend?",
     "choices": [
-      "$40,000 dividend",
-      "$30,000 dividend and $10,000 return of capital or gain",
-      "$40,000 return of capital",
-      "Nothing is taxable because accumulated E&P is negative"
+      "$30,000",
+      "$40,000",
+      "$0",
+      "$10,000"
     ],
-    "answer": 1,
-    "explain": "Distributions come first from current E&P, then accumulated E&P, then return of capital reducing basis, and finally capital gain. Current E&P of $30,000 supports a dividend even with an accumulated deficit."
+    "answer": 0,
+    "explain": "Distributions are dividends to the extent of current E&P first, then accumulated E&P. Current E&P is measured on its own at year-end, so $30,000 is a dividend even though accumulated E&P is a deficit; the deficit does not net against current earnings. The remaining $10,000 is a return of capital that reduces stock basis, then capital gain."
   },
   {
     "id": "ccorp-9",
@@ -3240,15 +3240,15 @@ var FAR_QUESTIONS = [
     "section": "flowthru",
     "topic": "Partner's outside basis",
     "difficulty": "medium",
-    "q": "A partner contributes property with a $50,000 basis subject to a $30,000 liability the partnership assumes. The partner's share of partnership liabilities afterward is $10,000. What is the partner's outside basis?",
+    "q": "A partner contributes property subject to a $30,000 liability, which the partnership assumes. The partner's share of that liability afterward is $10,000. What is the net effect of the liability on the partner's outside basis?",
     "choices": [
-      "$50,000",
-      "$30,000",
-      "$20,000",
-      "$60,000"
+      "A $20,000 decrease",
+      "A $30,000 decrease",
+      "A $10,000 increase",
+      "No net effect"
     ],
-    "answer": 1,
-    "explain": "Basis starts at the $50,000 carryover basis, drops by the $30,000 liability the partnership assumed (a deemed distribution), and rises by the partner's $10,000 share of partnership liabilities (a deemed contribution) — a net $20,000 shift to the other partners — leaving $30,000. Debt allocation is what makes partnership basis differ from S corporation basis."
+    "answer": 0,
+    "explain": "Under section 752 a liability the partnership takes over is a deemed cash distribution to the contributing partner, and the partner's share of partnership liabilities is a deemed cash contribution. Increases and decreases from the same transaction are netted (Reg. 1.752-1(f)): $30,000 of relief less the $10,000 share leaves a single $20,000 deemed distribution, so outside basis falls by $20,000 after the property's carryover basis is added. A full $30,000 reduction forgets that partners get basis for their share of partnership debt."
   },
   {
     "id": "flowthru-3",
@@ -3285,15 +3285,15 @@ var FAR_QUESTIONS = [
     "section": "flowthru",
     "topic": "Sale of contributed property",
     "difficulty": "medium",
-    "q": "A partner contributes property with a $20,000 basis and $70,000 fair market value. The partnership later sells it for $75,000. How is the gain allocated?",
+    "q": "A partner contributes property with a $50,000 built-in gain. The partnership later sells it for $5,000 more than its contribution-date value. How is the gain allocated?",
     "choices": [
-      "Equally among all partners under the partnership agreement",
-      "$50,000 to the contributing partner, $5,000 shared under the agreement",
-      "Entirely to the contributing partner as a section 704(c) item",
-      "Entirely to the noncontributing partners to equalize capital"
+      "$50,000 to the contributing partner; $5,000 under the agreement",
+      "The entire gain under the partnership agreement",
+      "The entire gain to the contributing partner",
+      "The entire gain to the noncontributing partners"
     ],
-    "answer": 1,
-    "explain": "Section 704(c) requires built-in gain or loss at the contribution date to be allocated back to the contributing partner. Only appreciation arising after contribution is shared under the general allocation rules."
+    "answer": 0,
+    "explain": "Section 704(c) sends the built-in gain or loss that existed at contribution back to the contributing partner, so the $50,000 is allocated entirely to her. Only the $5,000 of appreciation after contribution is shared under the partnership agreement. Splitting the whole gain under the agreement would shift pre-contribution gain to partners who never bore it."
   },
   {
     "id": "flowthru-6",
@@ -3330,15 +3330,15 @@ var FAR_QUESTIONS = [
     "section": "flowthru",
     "topic": "Liquidating distributions",
     "difficulty": "medium",
-    "q": "A partner with a $60,000 outside basis receives only land worth $45,000 with a $35,000 inside basis in liquidation of the entire interest. What is the partner's basis in the land?",
+    "q": "A partner receives only land in liquidation of her entire partnership interest. The land's inside basis is lower than her outside basis. What is her basis in the land?",
     "choices": [
-      "$35,000",
-      "$45,000",
-      "$60,000",
-      "$25,000"
+      "Her full outside basis",
+      "The land's inside basis, carried over",
+      "The land's fair market value",
+      "The inside basis, with the difference recognized as a loss"
     ],
-    "answer": 2,
-    "explain": "In a liquidating distribution the partner's entire remaining outside basis is assigned to the property received, so no loss is recognized here. A loss is recognized only when the liquidating distribution consists solely of cash, receivables, and inventory."
+    "answer": 0,
+    "explain": "In a liquidating distribution the partner's entire remaining outside basis is assigned to the property received, so the land takes her outside basis, not the partnership's inside basis. Carryover of inside basis applies to current, non-liquidating distributions. A loss is recognized in liquidation only when the partner receives solely cash, unrealized receivables and inventory, so none arises on land."
   },
   {
     "id": "flowthru-9",
@@ -3510,15 +3510,15 @@ var FAR_QUESTIONS = [
     "section": "estates",
     "topic": "Distribution deduction",
     "difficulty": "medium",
-    "q": "A simple trust has distributable net income of $40,000, which includes $5,000 of tax-exempt interest, and distributes all $40,000 of its accounting income to the beneficiary. What is the trust's distribution deduction?",
+    "q": "A simple trust's distributable net income of $40,000 includes $5,000 of tax-exempt interest. It distributes all of its accounting income. What is the trust's distribution deduction?",
     "choices": [
-      "$45,000",
-      "$40,000",
       "$35,000",
-      "$30,000"
+      "$40,000",
+      "$45,000",
+      "$5,000"
     ],
-    "answer": 2,
-    "explain": "The distribution deduction is capped at DNI reduced by the tax-exempt income included in it: $40,000 − $5,000 = $35,000. The trust was never taxed on the exempt interest, so it gets no deduction for passing it out; the beneficiary reports $35,000 of taxable income and receives the $5,000 as tax-exempt interest."
+    "answer": 0,
+    "explain": "The distribution deduction cannot exceed DNI reduced by the tax-exempt income included in it, so $40,000 less $5,000 leaves $35,000. The trust was never taxed on the exempt interest, so it receives no deduction for passing it out. The beneficiary reports $35,000 of taxable income and treats the $5,000 as tax-exempt interest in her hands."
   },
   {
     "id": "estates-21",
@@ -3585,15 +3585,15 @@ var FAR_QUESTIONS = [
     "section": "estates",
     "topic": "Character of distributions",
     "difficulty": "medium",
-    "q": "A complex trust has distributable net income of $60,000: $45,000 of taxable interest and $15,000 of qualified dividends. The instrument does not allocate particular classes of income to anyone. The trustee distributes $20,000 to the sole beneficiary. What does the beneficiary report?",
+    "q": "A complex trust's $60,000 distributable net income is three-quarters taxable interest and one-quarter qualified dividends; the instrument allocates no class of income. It distributes $20,000 to its sole beneficiary. What does she report?",
     "choices": [
       "$15,000 of taxable interest and $5,000 of qualified dividends",
       "$20,000 of taxable interest",
       "$5,000 of taxable interest and $15,000 of qualified dividends",
-      "$45,000 of taxable interest and $15,000 of qualified dividends"
+      "$20,000 of qualified dividends"
     ],
     "answer": 0,
-    "explain": "Distributions carry out DNI pro rata by class unless the instrument allocates specific items: interest is 75% of DNI and dividends 25%, so $20,000 × 75% = $15,000 of interest and $20,000 × 25% = $5,000 of qualified dividends. The beneficiary is taxed on the $20,000 distributed, not all $60,000 of DNI, and no ordering rule fills the distribution with one class first."
+    "explain": "Unless the instrument allocates specific classes of income, a distribution carries out each class of DNI pro rata. Three-quarters of the $20,000 is taxable interest, $15,000, and one-quarter is qualified dividends, $5,000. No ordering rule fills the distribution with one class first, and the beneficiary is taxed on the $20,000 distributed, not on the trust's entire $60,000 of DNI."
   },
   {
     "id": "estates-10",
