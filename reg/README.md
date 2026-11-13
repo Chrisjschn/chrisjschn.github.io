@@ -43,6 +43,6 @@ The engine (`app.js`) is a copy of FAR Blitz's with REG branding — the
 harness stay identical across apps. See the FAR Blitz README for the question
 format and the iOS wrapper playbook.
 
-The accent is burnt orange (`#d4622a`). Green is deliberately *not* used: it
+The accent is royal blue (`#2457d5`; burnt orange until 13 Nov 2026). Green is deliberately *not* used: it
 would collide with `--good` (`#15803d`), the correct-answer colour in the quiz
 view.

@@ -8,9 +8,9 @@
   --ink-2: #5b5b6b;
   --ink-3: #8a8a99;
   --line: #e2e3ec;
-  --accent: #d4622a;
+  --accent: #2457d5;
   --accent-ink: #ffffff;
-  --accent-soft: #fbe6da;
+  --accent-soft: #dfe7fb;
   --good: #15803d;
   --good-soft: #e3f5e9;
   --bad: #b91c1c;
@@ -31,9 +31,9 @@
     --ink-2: #b4b4c2;
     --ink-3: #7e7e8e;
     --line: #32323e;
-    --accent: #f0a077;
-    --accent-ink: #33150a;
-    --accent-soft: #4a2313;
+    --accent: #8fb0ff;
+    --accent-ink: #0b1f52;
+    --accent-soft: #172d66;
     --good: #4ade80;
     --good-soft: #17301f;
     --bad: #f87171;
@@ -405,7 +405,7 @@ main {
 .level-card {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #e8834c 0%, #a4451a 100%);
+  background: linear-gradient(135deg, #4a7ae8 0%, #163a9c 100%);
   border-radius: 20px;
   box-shadow: 0 10px 26px rgba(20, 20, 40, .22);
   padding: 17px 17px 15px;
