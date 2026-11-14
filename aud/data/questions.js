@@ -657,40 +657,40 @@ var FAR_QUESTIONS = [
       "PCAOB QC 1000",
       "AICPA SQMS No. 1",
       "SAS 146",
-      "Government Auditing Standards, chapter 5"
+      "IAASB ISQM 1"
     ],
     "answer": 0,
-    "explain": "PCAOB QC 1000, effective 15 December 2025, applies to registered firms for engagements performed under PCAOB standards, so the issuer audits fall under it. The firm's nonissuer practice follows AICPA SQMS No. 1. Both are risk-based systems built on quality objectives, quality risks and responses, but QC 1000 adds PCAOB-specific requirements such as an annual evaluation reported to the PCAOB. SAS 146 governs quality management on an individual engagement, and the Yellow Book's quality requirements apply only to GAGAS engagements."
+    "explain": "PCAOB QC 1000, effective 15 December 2026 after a one-year deferral, applies to registered firms for engagements performed under PCAOB standards, so the issuer audits fall under it. The firm's nonissuer practice follows AICPA SQMS No. 1. Both are risk-based systems built on quality objectives, quality risks and responses, but QC 1000 adds PCAOB-specific requirements such as an annual evaluation reported to the PCAOB. SAS 146 governs quality management on an individual engagement, and ISQM 1 is the international standard, not the one a US issuer audit is subject to."
   },
   {
     "id": "ethics-19",
     "section": "ethics",
-    "topic": "QC 1000 annual evaluation",
+    "topic": "QC 1000 firm obligations",
     "difficulty": "medium",
     "q": "Under PCAOB QC 1000, what must a registered firm do each year about its quality control system?",
     "choices": [
       "Evaluate the system's effectiveness and report the results to the PCAOB on Form QC",
-      "Publish its full quality control manual on the firm's public website",
       "Have the AICPA peer review program inspect a sample of its issuer engagements every three years",
-      "Rotate the partner responsible for quality control to a different office"
+      "Submit its quality control policies to the PCAOB for approval before each fiscal year begins",
+      "Engage another registered firm to inspect a sample of its issuer audits and report to the SEC"
     ],
     "answer": 0,
-    "explain": "QC 1000 requires an annual evaluation of the QC system as of 30 September, concluding whether it is effective, with the results reported to the PCAOB on Form QC, a non-public form certified by the firm's leadership. Peer review is the AICPA program for nonissuer practice and does not cover issuer audits, and QC 1000 requires neither a public manual nor partner rotation."
+    "explain": "QC 1000 requires an annual evaluation of the QC system as of a date the firm selects (the 2024 text fixed it at 30 September; the 2026 amendments let the firm choose), concluding whether it is effective, with the results reported to the PCAOB on Form QC, a non-public form certified by the firm's leadership. Peer review is the AICPA program for nonissuer practice and excludes engagements subject to PCAOB inspection; the PCAOB does not pre-approve a firm's policies, and no other firm inspects on its behalf."
   },
   {
     "id": "ethics-20",
     "section": "ethics",
-    "topic": "External oversight of quality control",
+    "topic": "Oversight of a firm's QC system",
     "difficulty": "medium",
-    "q": "Under PCAOB QC 1000, which firm must establish an external quality control function made up of persons who can exercise independent judgment?",
+    "q": "Under PCAOB QC 1000 as amended in 2026, who provides external oversight of a registered firm's quality control system?",
     "choices": [
-      "A firm that issued audit reports for more than 100 issuers in the prior calendar year",
-      "Every firm registered with the PCAOB, regardless of its size or client base",
-      "A firm whose most recent PCAOB inspection report identified a quality control deficiency",
-      "A firm that audits any broker-dealer registered with the SEC"
+      "The PCAOB, through its inspections and the firm's annual Form QC report",
+      "An external quality control function the firm appoints when it audits more than 100 issuers",
+      "The AICPA peer review program, which reviews the firm's issuer audits every three years",
+      "The SEC's Office of the Chief Accountant, which approves each firm's Form QC before filing"
     ],
     "answer": 0,
-    "explain": "QC 1000 requires firms that issued audit reports for more than 100 issuers in the prior calendar year to have an external quality control function: one or more persons who are not partners, principals or employees of the firm, who evaluate the firm's significant judgments in assessing and reporting on its QC system and have access to the firm's leadership and governance. Smaller registered firms are not required to have one."
+    "explain": "The 2024 text of QC 1000 required firms that issued audit reports for more than 100 issuers in the prior calendar year to appoint an external quality control function of persons outside the firm. The PCAOB rescinded that requirement in September 2026 and the SEC approved the change in November 2026, before the standard took effect on 15 December 2026, so no firm has to appoint one. External oversight comes from PCAOB inspections and from the annual evaluation reported on Form QC, which the PCAOB receives but does not pre-approve. AICPA peer review excludes engagements subject to PCAOB inspection."
   },
   {
     "id": "engmt-1",
@@ -1430,14 +1430,14 @@ var FAR_QUESTIONS = [
   {
     "id": "icfr-15",
     "section": "icfr",
-    "topic": "Compensating controls",
+    "topic": "Evaluating a segregation-of-duties deficiency",
     "difficulty": "medium",
     "q": "A small company's bookkeeper records cash receipts and also prepares the bank reconciliation. The owner reviews each reconciliation against the bank statement and signs it. How should the auditor evaluate this?",
     "choices": [
       "Weigh the owner's review as a possible compensating control before judging the deficiency's severity",
       "Classify it as a material weakness, since incompatible duties over cash are never acceptable in any entity",
       "Conclude there is no deficiency, because the owner is involved in the process",
-      "Report it to the company's bank as a significant deficiency in cash controls"
+      "Treat it as a significant deficiency at minimum, since a review can never offset incompatible duties"
     ],
     "answer": 0,
     "explain": "Incompatible duties are a deficiency in design, but severity turns on the likelihood and magnitude of a misstatement the controls would not prevent or detect. The owner's review of the reconciliation against the statement may be a compensating control that lowers that likelihood, so the auditor evaluates whether it is precise enough and actually performed before calling the deficiency significant or a material weakness. Deficiencies are communicated to management and those charged with governance, not to the bank."
@@ -1872,7 +1872,7 @@ var FAR_QUESTIONS = [
       "The referred-to auditor audited the component under GAAS or PCAOB standards with an unrestricted report",
       "The referred-to auditor belongs to the same international firm network as the group auditor",
       "The component represents less than 20% of consolidated group assets",
-      "The referred-to auditor consents in writing to being named, and its complete report is attached to the group report"
+      "The group auditor has reviewed the referred-to auditor's working papers and reperformed its key tests"
     ],
     "answer": 0,
     "explain": "SAS 149 calls an auditor whose report is referenced a referred-to auditor, not a component auditor. Making reference requires that the referred-to auditor audited the component's financial statements under GAAS or PCAOB standards (other standards need additional procedures), that the component used the group's financial reporting framework or the group auditor takes responsibility for the conversion adjustments, that the report is not restricted as to use, and that the group auditor has obtained the report and is satisfied with the referred-to auditor's independence and competence. The group auditor does not direct, supervise or review the referred-to auditor's work. Naming the referred-to auditor needs its express permission and its report presented with the group report."
@@ -1970,7 +1970,7 @@ var FAR_QUESTIONS = [
   {
     "id": "plan-17",
     "section": "plan",
-    "topic": "Risk-based group audit scoping",
+    "topic": "Group audit scoping under SAS 149",
     "difficulty": "medium",
     "q": "Under SAS 149, how does the group auditor decide which components need audit work, and how much?",
     "choices": [
@@ -2139,12 +2139,12 @@ var FAR_QUESTIONS = [
     "difficulty": "medium",
     "q": "An auditor uses published market data to evaluate a security's fair value. What must the auditor consider?",
     "choices": [
-      "Whether management subscribes to the same external data source",
       "The relevance and reliability of the source, its reputation and methodology",
-      "Whether the source is audited by the same firm as the client",
-      "Nothing further — external data is presumed reliable by the standards"
+      "Whether management subscribes to the same external data source",
+      "Whether the quoted price agrees with management's own fair value estimate",
+      "Whether the data was published after the balance sheet date"
     ],
-    "answer": 1,
+    "answer": 0,
     "explain": "External information is not reliable just because it comes from outside the entity. The auditor evaluates the source's reputation, authority and methodology, the relevance of the data to the measurement, and whether it is complete and current. Who else subscribes to the source, or who audits the provider, settles nothing."
   },
   {
