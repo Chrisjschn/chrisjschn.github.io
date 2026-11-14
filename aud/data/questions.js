@@ -1,4 +1,4 @@
-/* AUD Blitz question bank -- CPA Exam Auditing and Attestation, 16 sections, 280 questions.
+/* AUD Blitz question bank -- CPA Exam Auditing and Attestation, 16 sections, 287 questions.
    Original content authored against the AICPA AUD blueprint and reviewed for
    technical accuracy and exam craft. Choice order is shuffled at display time;
    'answer' is the index of the correct choice.
@@ -646,6 +646,51 @@ var FAR_QUESTIONS = [
     ],
     "answer": 3,
     "explain": "The Code allows client data to go to an outside provider only under a confidentiality agreement with adequate safeguards or with the client's specific consent; neither exists. SQMS 1 requires the firm to respond to ethics breaches. The disclosure is the breach, so later deletion or no misuse does not cure it."
+  },
+  {
+    "id": "ethics-18",
+    "section": "ethics",
+    "topic": "Issuer versus nonissuer quality standards",
+    "difficulty": "medium",
+    "q": "A registered firm audits both public companies and private companies. Which quality standard governs its system of quality control for the public-company audits?",
+    "choices": [
+      "PCAOB QC 1000",
+      "AICPA SQMS No. 1",
+      "SAS 146",
+      "Government Auditing Standards, chapter 5"
+    ],
+    "answer": 0,
+    "explain": "PCAOB QC 1000, effective 15 December 2025, applies to registered firms for engagements performed under PCAOB standards, so the issuer audits fall under it. The firm's nonissuer practice follows AICPA SQMS No. 1. Both are risk-based systems built on quality objectives, quality risks and responses, but QC 1000 adds PCAOB-specific requirements such as an annual evaluation reported to the PCAOB. SAS 146 governs quality management on an individual engagement, and the Yellow Book's quality requirements apply only to GAGAS engagements."
+  },
+  {
+    "id": "ethics-19",
+    "section": "ethics",
+    "topic": "QC 1000 annual evaluation",
+    "difficulty": "medium",
+    "q": "Under PCAOB QC 1000, what must a registered firm do each year about its quality control system?",
+    "choices": [
+      "Evaluate the system's effectiveness and report the results to the PCAOB on Form QC",
+      "Publish its full quality control manual on the firm's public website",
+      "Have the AICPA peer review program inspect a sample of its issuer engagements every three years",
+      "Rotate the partner responsible for quality control to a different office"
+    ],
+    "answer": 0,
+    "explain": "QC 1000 requires an annual evaluation of the QC system as of 30 September, concluding whether it is effective, with the results reported to the PCAOB on Form QC, a non-public form certified by the firm's leadership. Peer review is the AICPA program for nonissuer practice and does not cover issuer audits, and QC 1000 requires neither a public manual nor partner rotation."
+  },
+  {
+    "id": "ethics-20",
+    "section": "ethics",
+    "topic": "External oversight of quality control",
+    "difficulty": "medium",
+    "q": "Under PCAOB QC 1000, which firm must establish an external quality control function made up of persons who can exercise independent judgment?",
+    "choices": [
+      "A firm that issued audit reports for more than 100 issuers in the prior calendar year",
+      "Every firm registered with the PCAOB, regardless of its size or client base",
+      "A firm whose most recent PCAOB inspection report identified a quality control deficiency",
+      "A firm that audits any broker-dealer registered with the SEC"
+    ],
+    "answer": 0,
+    "explain": "QC 1000 requires firms that issued audit reports for more than 100 issuers in the prior calendar year to have an external quality control function: one or more persons who are not partners, principals or employees of the firm, who evaluate the firm's significant judgments in assessing and reporting on its QC system and have access to the firm's leadership and governance. Smaller registered firms are not required to have one."
   },
   {
     "id": "engmt-1",
@@ -1385,17 +1430,17 @@ var FAR_QUESTIONS = [
   {
     "id": "icfr-15",
     "section": "icfr",
-    "topic": "Deficiency communication",
+    "topic": "Compensating controls",
     "difficulty": "medium",
-    "q": "To whom must material weaknesses in a nonissuer audit be communicated?",
+    "q": "A small company's bookkeeper records cash receipts and also prepares the bank reconciliation. The owner reviews each reconciliation against the bank statement and signs it. How should the auditor evaluate this?",
     "choices": [
-      "Management and those charged with governance, in writing",
-      "The entity's shareholders, in the annual report",
-      "The entity's regulator, within 30 days",
-      "The successor auditor, at the time of the change"
+      "Weigh the owner's review as a possible compensating control before judging the deficiency's severity",
+      "Classify it as a material weakness, since incompatible duties over cash are never acceptable in any entity",
+      "Conclude there is no deficiency, because the owner is involved in the process",
+      "Report it to the company's bank as a significant deficiency in cash controls"
     ],
     "answer": 0,
-    "explain": "Both significant deficiencies and material weaknesses go in writing to management and those charged with governance, no later than 60 days after the report release date. Public disclosure is not the auditor's role for a nonissuer."
+    "explain": "Incompatible duties are a deficiency in design, but severity turns on the likelihood and magnitude of a misstatement the controls would not prevent or detect. The owner's review of the reconciliation against the statement may be a compensating control that lowers that likelihood, so the auditor evaluates whether it is precise enough and actually performed before calling the deficiency significant or a material weakness. Deficiencies are communicated to management and those charged with governance, not to the bank."
   },
   {
     "id": "icfr-16",
@@ -1820,17 +1865,17 @@ var FAR_QUESTIONS = [
   {
     "id": "plan-10",
     "section": "plan",
-    "topic": "Referring to a component auditor",
+    "topic": "Making reference to a referred-to auditor",
     "difficulty": "medium",
-    "q": "Under AU-C 600, what must be true before the group auditor may make reference to a component auditor?",
+    "q": "Under SAS 149 (AU-C 600), what must be true before the group auditor may make reference to a referred-to auditor in the group audit report?",
     "choices": [
-      "The component auditor must belong to the same international firm network",
-      "The component audit must follow GAAS or PCAOB standards, with a report not restricted as to use",
-      "The component must represent less than 20% of consolidated group assets",
-      "The component auditor must consent in writing to being named, and its report must be attached"
+      "The referred-to auditor audited the component under GAAS or PCAOB standards with an unrestricted report",
+      "The referred-to auditor belongs to the same international firm network as the group auditor",
+      "The component represents less than 20% of consolidated group assets",
+      "The referred-to auditor consents in writing to being named, and its complete report is attached to the group report"
     ],
-    "answer": 1,
-    "explain": "Making reference requires the group auditor to be satisfied with the component auditor's independence and competence, and the component audit must have followed GAAS or PCAOB standards with a report not restricted as to use. SAS 149 revises group audits for periods ending on or after 15 December 2026."
+    "answer": 0,
+    "explain": "SAS 149 calls an auditor whose report is referenced a referred-to auditor, not a component auditor. Making reference requires that the referred-to auditor audited the component's financial statements under GAAS or PCAOB standards (other standards need additional procedures), that the component used the group's financial reporting framework or the group auditor takes responsibility for the conversion adjustments, that the report is not restricted as to use, and that the group auditor has obtained the report and is satisfied with the referred-to auditor's independence and competence. The group auditor does not direct, supervise or review the referred-to auditor's work. Naming the referred-to auditor needs its express permission and its report presented with the group report."
   },
   {
     "id": "plan-11",
@@ -1923,6 +1968,21 @@ var FAR_QUESTIONS = [
     "explain": "Opening balances must be evaluated for material misstatement and for consistent application of accounting policies. The auditor may review the predecessor's documentation or perform procedures directly."
   },
   {
+    "id": "plan-17",
+    "section": "plan",
+    "topic": "Risk-based group audit scoping",
+    "difficulty": "medium",
+    "q": "Under SAS 149, how does the group auditor decide which components need audit work, and how much?",
+    "choices": [
+      "From the assessed risks of material misstatement of the group financial statements, wherever they arise",
+      "By auditing every component whose assets exceed 15% of consolidated group assets",
+      "By relying on each component's own statutory audit without further group-level work",
+      "By rotating full-scope audits among the components so that each one is covered at least every three years"
+    ],
+    "answer": 0,
+    "explain": "SAS 149 drops the old significant-component screen and makes group audits risk-based: the group auditor identifies and assesses the risks of material misstatement of the group financial statements and designs work on components, accounts or disclosures to respond to those risks, performed by the group engagement team or by component auditors under its direction, supervision and review. Size thresholds, rotation and statutory audits are not the test."
+  },
+  {
     "id": "evid-1",
     "section": "evid",
     "topic": "Sufficient and appropriate",
@@ -1950,7 +2010,7 @@ var FAR_QUESTIONS = [
       "A photocopy of a vendor invoice supplied by the client and stamped as approved"
     ],
     "answer": 0,
-    "explain": "Evidence obtained directly by the auditor from a knowledgeable independent source outranks internally generated evidence, originals outrank copies, and written outranks oral."
+    "explain": "A confirmation that reaches the auditor directly from an independent, knowledgeable bank is generally the most persuasive evidence here: the source is outside the entity and the auditor obtained it. Reliability is still a judgment about the source, how the information was obtained, its authenticity, relevance and completeness, not a fixed ranking of external over internal or written over oral."
   },
   {
     "id": "evid-3",
@@ -2085,7 +2145,7 @@ var FAR_QUESTIONS = [
       "Nothing further — external data is presumed reliable by the standards"
     ],
     "answer": 1,
-    "explain": "External information is generally more reliable than internal but is not automatically appropriate. The auditor considers the source's reputation, the nature and authority of the data, and whether management used it competently."
+    "explain": "External information is not reliable just because it comes from outside the entity. The auditor evaluates the source's reputation, authority and methodology, the relevance of the data to the measurement, and whether it is complete and current. Who else subscribes to the source, or who audits the provider, settles nothing."
   },
   {
     "id": "evid-12",
@@ -3157,7 +3217,7 @@ var FAR_QUESTIONS = [
     "section": "complete",
     "topic": "Uncorrected misstatements",
     "difficulty": "medium",
-    "q": "Management will not correct a $420,000 overstatement of inventory. Materiality is $150,000 and pretax income is $4.2 million. The error is confined to inventory and cost of sales. Which opinion follows?",
+    "q": "Management will not correct a $420,000 overstatement of inventory. Materiality is $150,000. The misstatement is confined to inventory and cost of sales and is not a substantial proportion of the statements. Which opinion follows?",
     "choices": [
       "Adverse, because management refused to correct a material misstatement",
       "Qualified, because the effect is material but not pervasive",
@@ -3165,7 +3225,7 @@ var FAR_QUESTIONS = [
       "Unmodified, with an emphasis-of-matter paragraph describing the error"
     ],
     "answer": 1,
-    "explain": "$420,000 is nearly three times materiality, so the opinion is modified, but the error sits in two accounts and is a tenth of pretax income, so it is not pervasive: a qualified opinion. Adverse needs a pervasive effect, a disclaimer is for missing evidence, not known error, and emphasis cannot cure a misstatement."
+    "explain": "The misstatement is nearly three times materiality, so the opinion is modified. It is not pervasive: pervasiveness is a judgment about whether the effects are confined to specific elements, would represent a substantial proportion of the financial statements, or are fundamental to users' understanding, not a ratio to income. Material but not pervasive means a qualified opinion. Adverse needs pervasive effects, a disclaimer is for missing evidence rather than a known error, and an emphasis-of-matter paragraph cannot cure a misstatement."
   },
   {
     "id": "report-1",
@@ -3320,17 +3380,17 @@ var FAR_QUESTIONS = [
   {
     "id": "report-11",
     "section": "report",
-    "topic": "Group audit reference",
+    "topic": "Reference to a referred-to auditor",
     "difficulty": "medium",
-    "q": "Under AU-C 600, the group auditor makes reference to a component auditor's audit. What must the report state?",
+    "q": "Under SAS 149, the group auditor makes reference to a referred-to auditor's audit. What must the group auditor's report state?",
     "choices": [
-      "The name and business address of the component auditor involved",
-      "That other auditors audited a portion, and the magnitude of that portion",
-      "That the group auditor reviewed the component auditor's working papers",
-      "That the component auditor's opinion on the component was unmodified"
+      "That a referred-to auditor audited a portion of the group, and the magnitude of that portion",
+      "The name and business address of the referred-to auditor involved",
+      "That the group auditor reviewed the referred-to auditor's working papers and agreed with its conclusions",
+      "That the referred-to auditor's opinion on the component was unmodified"
     ],
-    "answer": 1,
-    "explain": "The report states that other auditors audited a portion of the group and gives the magnitude of that portion in dollars or percentages. Naming the component auditor needs its permission and its report presented alongside. PCAOB standards and SAS 149 have their own rules."
+    "answer": 0,
+    "explain": "The report says the component's financial statements were audited by another auditor, the referred-to auditor, and gives the magnitude of that portion as dollar amounts or percentages of key totals. Naming the referred-to auditor requires its express permission and its report presented with the group report. The group auditor takes no responsibility for the referred-to auditor's work, so it does not review those working papers. PCAOB standards allow the same division of responsibility."
   },
   {
     "id": "report-12",
@@ -4306,5 +4366,50 @@ var FAR_QUESTIONS = [
     ],
     "answer": 2,
     "explain": "An exception is a flag, not a finding: some will be errors, others approved discounts or price changes. The auditor investigates and corroborates, then evaluates the actual misstatements. Nothing is projected because the whole population was tested, and an explanation from management must still be corroborated."
+  },
+  {
+    "id": "cycles-17",
+    "section": "cycles",
+    "topic": "AI-generated information from management",
+    "difficulty": "medium",
+    "q": "Management gives the auditor an accrued-liabilities schedule that an AI tool assembled from vendor emails and contracts. How should the auditor treat it?",
+    "choices": [
+      "Test it for completeness and accuracy against source documents, alert to omissions or bias from the tool",
+      "Accept it as external evidence, since the tool is not controlled by management",
+      "Rely on it once management represents in writing that the tool's output is complete, accurate and free of bias",
+      "Reject it and require management to rebuild the schedule by hand before any testing"
+    ],
+    "answer": 0,
+    "explain": "Information generated with technology, including AI, is entity-provided information whose reliability the auditor evaluates like any other: is it complete and accurate, is the source authentic, and could the tool have introduced bias, omissions or invented detail? The auditor agrees items to vendor documents and searches for unrecorded liabilities. A tool run by management is not an external source, a representation is not evidence on its own, and nothing requires a manual rebuild."
+  },
+  {
+    "id": "cycles-18",
+    "section": "cycles",
+    "topic": "Audit team's use of generative AI",
+    "difficulty": "medium",
+    "q": "An audit senior uses a firm-approved generative AI tool to summarize 40 lease agreements for the lease testing. What is required before relying on the summaries?",
+    "choices": [
+      "Corroborate the summarized terms against the agreements, since the tool can omit or misstate terms",
+      "Nothing further, because the firm approved the tool and its outputs for use as evidence on engagements",
+      "Obtain management's written agreement with each of the summaries",
+      "Replace the summaries with a statistical sample of ten agreements read in full"
+    ],
+    "answer": 0,
+    "explain": "AI output is information the auditor must evaluate for accuracy and completeness before it becomes evidence: a tool can drop a renewal option or misread a payment schedule. The senior checks the summaries against the source agreements, or tests enough of them to rely on the rest, and documents the tool and how its output was evaluated. Firm approval covers confidentiality and security, not the reliability of a particular output, and management's agreement is not corroboration."
+  },
+  {
+    "id": "cycles-19",
+    "section": "cycles",
+    "topic": "Designing a data extraction request",
+    "difficulty": "medium",
+    "q": "An auditor asks the client's IT department for the year's sales invoice data. What should the request specify so the extract can be relied on?",
+    "choices": [
+      "The fields, date range and filters wanted, plus a record count and control total to reconcile to the ledger",
+      "Only the invoice amounts for the year, so the file stays small enough to analyze in a spreadsheet",
+      "A monthly summary prepared by IT, to avoid handling thousands of individual invoices",
+      "That IT remove voided, unusual and credit-memo invoices before sending, so the data arrives clean and ready to use"
+    ],
+    "answer": 0,
+    "explain": "A usable extract is defined up front: which tables and fields, the period and any filters, the file format, and a record count and control total so the auditor can reconcile the file to the general ledger before using it. Summaries and pre-cleaned data hide exactly the items the auditor needs to see, and amounts alone cannot be traced to customers, dates or documents."
   }
 ];
