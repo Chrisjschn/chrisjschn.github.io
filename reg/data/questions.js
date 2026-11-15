@@ -2360,7 +2360,7 @@ var FAR_QUESTIONS = [
       "The owner's share of entity debt, or their basis in the entity"
     ],
     "answer": 0,
-    "explain": "Above the threshold the wage and capital limitation applies: the greater of 50% of allocable W-2 wages, or 25% of wages plus 2.5% of the unadjusted basis of qualified property. Specified service businesses lose the deduction entirely once fully phased out."
+    "explain": "Above the threshold the wage and capital limitation applies: the greater of 50% of allocable W-2 wages, or 25% of wages plus 2.5% of the unadjusted basis of qualified property. That figure is a ceiling, not the deduction: the business's deduction is the lesser of 20% of its QBI and this limit, and the total is then capped at 20% of taxable income over net capital gain. Specified service businesses lose the deduction entirely once fully phased out."
   },
   {
     "id": "deduct-16",
@@ -3282,15 +3282,15 @@ var FAR_QUESTIONS = [
     "section": "partner",
     "topic": "Loss exceeding basis",
     "difficulty": "medium",
-    "q": "A partner's share of partnership ordinary loss exceeds her outside basis by $6,000. She has ample at-risk basis and materially participates. What happens to the $6,000?",
+    "q": "A partner's share of partnership ordinary loss exceeds her outside basis by $6,000. She materially participates and no other limitation applies. What happens to the $6,000?",
     "choices": [
       "It is suspended and carried forward until her outside basis is restored",
-      "It is deducted this year because she is at risk and materially participates",
+      "It is deducted this year because she materially participates in the business",
       "It is permanently disallowed and never deducted",
       "It is treated as a capital loss deductible against her other capital gains"
     ],
     "answer": 0,
-    "explain": "Section 704(d) limits a partner's deductible loss to her outside basis at year end; the excess is carried forward indefinitely and deducted when basis is restored by income allocations, contributions or an increased share of liabilities. The basis limit applies first, so at-risk and passive activity rules are only reached by losses that clear it. The loss keeps its ordinary character and is not lost permanently."
+    "explain": "Section 704(d) limits a partner's deductible loss to her outside basis at year end; the excess is carried forward indefinitely and deducted when basis is restored by income allocations, contributions or an increased share of liabilities. The basis limit applies first, so the at-risk and passive activity rules are only reached by losses that clear it, and material participation cannot rescue a loss that basis has already blocked. The loss keeps its ordinary character and is not lost permanently."
   },
   {
     "id": "partner-5",
@@ -3312,7 +3312,7 @@ var FAR_QUESTIONS = [
     "section": "partner",
     "topic": "Partners and SE tax",
     "difficulty": "medium",
-    "q": "A limited partner who performs no services receives only a distributive share of a limited partnership's trade or business income. How is that share treated for self-employment tax?",
+    "q": "A limited partner with no management role, who performs no services, receives only a distributive share of a limited partnership's trade or business income. How is that share treated for self-employment tax?",
     "choices": [
       "Excluded from self-employment income, unlike a general partner's share",
       "Included in self-employment income, like a general partner's share",
@@ -3545,7 +3545,7 @@ var FAR_QUESTIONS = [
       "Nothing, because the corporation pays tax at the entity level"
     ],
     "answer": 0,
-    "explain": "Section 6072(b) makes Form 1120-S due on the 15th day of the third month after year end, March 15 for a calendar year, with a six-month extension available. The corporation issues each shareholder a Schedule K-1, and under section 1366 each reports a pro rata share of income for the days held, here $60,000, whether or not anything was distributed. An S corporation generally pays no entity-level income tax."
+    "explain": "Under section 1366 an S corporation's items pass through to the shareholders pro rata, per share and per day, and are taxed to them in the year earned whether or not anything is distributed, so each 50% shareholder reports $60,000 of ordinary income from the Schedule K-1 the corporation issues. Distributions are not dividends while the corporation has no C-year earnings and profits, and an S corporation generally pays no entity-level income tax. Form 1120-S itself is due the 15th day of the third month after year end (section 6072(b)), with a six-month extension."
   },
   {
     "id": "scorp-7",
