@@ -4,28 +4,30 @@ Sister app to [FAR Blitz](../cpa-far-quiz/) for the CPA Exam's **REG
 (Regulation)** section. Identical engine and features — quick quizzes, Daily
 Challenge, Blitz 60, weak-spot drilling, XP with a career ladder (Undrafted
 Rookie → MVP → Hall of Famer), streaks with freezes, a Trophy Room, offline
-PWA — with a question bank built against the AICPA REG blueprint:
+PWA — with a question bank of 240 items in 17 sections built against the
+2026/2027 AICPA REG blueprint (realigned 15 Nov 2026; the subjects that moved
+to the TCP discipline in 2024 are archived in `store/reg/bank/tcp-scope-removed.json`):
 
 **Area I — Ethics, Professional Responsibilities & Federal Tax Procedures**
-Circular 230 and preparer duties · IRS examinations, appeals, statutes and
-taxpayer penalties
+Circular 230 and preparer duties · state boards and legal liability · IRS
+examinations, appeals, statutes, authority and taxpayer penalties
 
 **Area II — Business Law**
-Contracts and UCC Article 2 · agency and employment · debtor–creditor
-(secured transactions, suretyship, bankruptcy) · entity choice and federal
-securities regulation
+Contracts and UCC Article 2 · agency, employment taxes and federal regulation
+(ACA, FCPA) · debtor–creditor (secured transactions, suretyship, bankruptcy) ·
+business structures
 
 **Area III — Federal Taxation of Property Transactions**
-Basis, holding period and cost recovery · dispositions, character and
-nonrecognition
+Basis, holding period and cost recovery · capital gains and losses, including
+digital assets
 
 **Area IV — Federal Taxation of Individuals**
-Gross income · adjustments, deductions and QBI · credits, AMT and filing
-status · loss limitations
+Gross income and K-1 reporting · adjustments, deductions and QBI · credits,
+filing status and other taxes · loss limitations
 
 **Area V — Federal Taxation of Entities**
-C corporations · partnerships and S corporations · estates, trusts, gift tax
-and exempt organizations
+Book-tax differences · C corporations and state tax · partnerships · S
+corporations · LLC classification and exempt organizations
 
 ## Run
 

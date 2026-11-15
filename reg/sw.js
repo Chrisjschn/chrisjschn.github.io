@@ -1,6 +1,6 @@
 /* REG Blitz service worker — cache-first so the app works offline (bump VERSION on deploys). */
 
-var VERSION = 'regblitz-v22';
+var VERSION = 'regblitz-v23';
 var ASSETS = [
   './',
   './index.html',
