@@ -1,4 +1,4 @@
-/* REG Blitz question bank -- CPA Exam Regulation, 15 sections, 240 questions.
+/* REG Blitz question bank -- CPA Exam Regulation, 17 sections, 240 questions.
    Original content authored against the AICPA REG blueprint and adversarially
    reviewed for technical accuracy and exam craft. Choice order is shuffled at
    display time; 'answer' is the index of the correct choice.
@@ -27,8 +27,8 @@ var FAR_SECTIONS = [
   },
   {
     "id": "agency",
-    "name": "Agency & Employment Law",
-    "short": "Agency",
+    "name": "Agency, Employment & Federal Regulation",
+    "short": "Agency & Employment",
     "emoji": "🤝"
   },
   {
@@ -39,20 +39,20 @@ var FAR_SECTIONS = [
   },
   {
     "id": "entity",
-    "name": "Entity Choice & Securities Regulation",
-    "short": "Entity & Securities",
+    "name": "Business Structures",
+    "short": "Structures",
     "emoji": "🏢"
   },
   {
     "id": "basis",
     "name": "Basis, Holding Period & Cost Recovery",
-    "short": "Basis & Cost Recovery",
+    "short": "Basis & Depreciation",
     "emoji": "📐"
   },
   {
     "id": "disposition",
-    "name": "Property Dispositions & Nonrecognition",
-    "short": "Dispositions",
+    "name": "Capital Gains & Losses",
+    "short": "Gains & Losses",
     "emoji": "🔁"
   },
   {
@@ -69,8 +69,8 @@ var FAR_SECTIONS = [
   },
   {
     "id": "credits",
-    "name": "Credits, AMT & Filing Status",
-    "short": "Credits & AMT",
+    "name": "Credits, Filing Status & Other Taxes",
+    "short": "Credits & Filing Status",
     "emoji": "🎟️"
   },
   {
@@ -80,21 +80,33 @@ var FAR_SECTIONS = [
     "emoji": "📉"
   },
   {
+    "id": "booktax",
+    "name": "Book-Tax Differences",
+    "short": "Book vs Tax",
+    "emoji": "📊"
+  },
+  {
     "id": "ccorp",
-    "name": "C Corporations",
+    "name": "C Corporations & State Tax",
     "short": "C Corps",
     "emoji": "🏭"
   },
   {
-    "id": "flowthru",
-    "name": "Partnerships & S Corporations",
-    "short": "Flow-Throughs",
+    "id": "partner",
+    "name": "Partnerships",
+    "short": "Partnerships",
     "emoji": "🔗"
   },
   {
+    "id": "scorp",
+    "name": "S Corporations",
+    "short": "S Corps",
+    "emoji": "🧾"
+  },
+  {
     "id": "estates",
-    "name": "Fiduciary Income Tax & Exempt Orgs",
-    "short": "Trusts & Exempt Orgs",
+    "name": "LLCs & Tax-Exempt Organizations",
+    "short": "LLCs & Exempt Orgs",
     "emoji": "🕊️"
   }
 ];
@@ -341,6 +353,36 @@ var FAR_QUESTIONS = [
     "explain": "The Office of Professional Responsibility may censure, suspend, disbar, or impose a monetary penalty. Only a state board of accountancy can act against a CPA license."
   },
   {
+    "id": "ethics-17",
+    "section": "ethics",
+    "topic": "Disciplinary bodies",
+    "difficulty": "easy",
+    "q": "A client complains that a CPA knowingly signed false returns. Which body has the legal power to suspend or revoke the CPA's license to practice?",
+    "choices": [
+      "The state board of accountancy",
+      "The IRS Office of Professional Responsibility",
+      "The AICPA Professional Ethics Division",
+      "The Public Company Accounting Oversight Board"
+    ],
+    "answer": 0,
+    "explain": "CPA licenses are issued under state accountancy statutes, most modeled on the Uniform Accountancy Act, and only the state board that issued a license can suspend or revoke it, fine the licensee, censure, or order remedial CPE. The AICPA can only end membership, the IRS can only bar practice before the IRS under Circular 230, and the PCAOB can only bar a person or firm from auditing issuers. None of those bodies can touch the license itself."
+  },
+  {
+    "id": "ethics-18",
+    "section": "ethics",
+    "topic": "Accountant negligence",
+    "difficulty": "medium",
+    "q": "A CPA negligently prepares a tax projection knowing the client will give it to First Bank for a loan. The bank lends and loses money. In a Restatement jurisdiction, what is the CPA's exposure?",
+    "choices": [
+      "Liable only to the client, who alone is in privity",
+      "Liable to the bank as a foreseen user of the work",
+      "Liable to the bank only if fraud or gross negligence is shown",
+      "Liable to any lender who might reasonably have relied"
+    ],
+    "answer": 1,
+    "explain": "Under the Restatement (Second) of Torts section 552, a negligent accountant is liable to the limited class of third parties the accountant knew would receive and rely on the work for a known purpose; a lender the CPA knew about is squarely inside that class. The privity rule of Ultramares would protect the CPA from any non-client, and fraud or gross negligence is what a non-client must show in a strict privity state, not a Restatement one. Liability to anyone who might foreseeably rely is the minority foreseeability approach, which reaches further than the Restatement."
+  },
+  {
     "id": "procedure-1",
     "section": "procedure",
     "topic": "Assessment statute",
@@ -579,6 +621,21 @@ var FAR_QUESTIONS = [
     ],
     "answer": 1,
     "explain": "Math error authority lets the IRS skip deficiency procedures, but a request for abatement within 60 days forces the IRS back into the ordinary process, including a notice of deficiency and Tax Court rights."
+  },
+  {
+    "id": "procedure-17",
+    "section": "procedure",
+    "topic": "Weight of authority",
+    "difficulty": "medium",
+    "q": "A client's position rests on a private letter ruling the IRS issued to another taxpayer, which conflicts with a Treasury regulation. Which statement about these authorities is correct?",
+    "choices": [
+      "The ruling controls because it is more specific and more recent",
+      "The regulation controls; the ruling binds only the taxpayer who requested it",
+      "The ruling may be relied on as binding precedent by any taxpayer with similar facts",
+      "Neither binds the client; only the Code and court decisions do"
+    ],
+    "answer": 1,
+    "explain": "The Internal Revenue Code sits at the top of the hierarchy, followed by Treasury regulations, which carry the force of law unless a court holds them invalid, then revenue rulings and revenue procedures, which bind the IRS as to all taxpayers. A private letter ruling binds the IRS only for the taxpayer who requested it and under section 6110(k)(3) may not be used or cited as precedent by anyone else. IRS publications and instructions explain the law but are not authority at all."
   },
   {
     "id": "contracts-1",
@@ -1061,6 +1118,36 @@ var FAR_QUESTIONS = [
     "explain": "When the principal is fully disclosed and the agent signs in a representative capacity with authority, only the principal is bound. The agent takes on personal liability only by signing without authority or in their own name."
   },
   {
+    "id": "agency-17",
+    "section": "agency",
+    "topic": "Employer health coverage",
+    "difficulty": "medium",
+    "q": "A company averaged 80 full-time equivalent employees last year and offers no health coverage. Several full-time employees buy subsidized coverage on an exchange. What is the company's federal tax exposure?",
+    "choices": [
+      "An employer shared responsibility payment under section 4980H",
+      "None, because the mandate applies only to employers with 100 or more employees",
+      "A penalty equal to the premium tax credits the employees received",
+      "Loss of the deduction for wages paid to the employees who bought exchange coverage"
+    ],
+    "answer": 0,
+    "explain": "An applicable large employer averaged at least 50 full-time plus full-time equivalent employees in the prior year, and a full-time employee works 30 or more hours a week. An ALE that fails to offer minimum essential coverage that is affordable and provides minimum value to substantially all full-time employees owes the section 4980H assessable payment once any full-time employee receives a premium tax credit. The payment is a nondeductible excise tax computed per full-time employee at indexed amounts, not a refund of the employees' credits, and the employer's wage deduction is unaffected."
+  },
+  {
+    "id": "agency-18",
+    "section": "agency",
+    "topic": "Foreign Corrupt Practices Act",
+    "difficulty": "medium",
+    "q": "A US company's agent abroad pays a customs clerk $40 to speed routine processing of approved import papers and pays a minister $50,000 to win a supply contract. Under the FCPA, which is correct?",
+    "choices": [
+      "Only the payment to the minister violates the anti-bribery provisions",
+      "Both payments violate the anti-bribery provisions regardless of amount",
+      "Neither violates the Act because an agent, not the company, paid",
+      "Both violate the Act unless each was accurately recorded in the company's books"
+    ],
+    "answer": 0,
+    "explain": "The FCPA's anti-bribery provisions bar issuers, domestic concerns, and anyone acting in the United States from corruptly paying a foreign official to obtain or retain business, and a company is liable for payments its agent makes on its behalf. A narrow exception covers facilitating payments for routine governmental action an official is already obliged to perform, such as processing approved paperwork; awarding a contract is a discretionary act and never routine. Issuers must also record every payment accurately under the books-and-records and internal-controls provisions, so even a lawful grease payment must be booked for what it is."
+  },
+  {
     "id": "debtor-1",
     "section": "debtor",
     "topic": "Attachment",
@@ -1320,30 +1407,15 @@ var FAR_QUESTIONS = [
     "section": "entity",
     "topic": "Limited partnerships",
     "difficulty": "medium",
-    "q": "What is the principal risk to a limited partner who takes an active role in managing the business?",
+    "q": "Under the Revised Uniform Limited Partnership Act, what is the principal risk to a limited partner who takes part in controlling the business?",
     "choices": [
+      "Personal liability to partnership creditors as though a general partner",
       "Loss of the right to share in partnership profits and losses",
-      "Personal liability to creditors who believed they dealt with a general partner",
       "Automatic conversion of the limited partnership into a general partnership",
       "Forfeiture of the limited partner's capital account to the partnership"
     ],
-    "answer": 1,
-    "explain": "The control rule strips the liability shield of a limited partner who participates in control, at least as to creditors who reasonably believed they were dealing with a general partner. Approving major structural decisions is a protected safe harbor."
-  },
-  {
-    "id": "entity-3",
-    "section": "entity",
-    "topic": "Entity classification",
-    "difficulty": "medium",
-    "q": "A domestic LLC with two members makes no entity classification election. How is it treated for federal tax purposes?",
-    "choices": [
-      "As a C corporation",
-      "As a partnership",
-      "As a disregarded entity",
-      "As an S corporation"
-    ],
-    "answer": 1,
-    "explain": "Under the check-the-box rules, a multi-member domestic LLC defaults to partnership treatment and a single-member LLC defaults to a disregarded entity. Either may elect corporate treatment on Form 8832."
+    "answer": 0,
+    "explain": "RULPA's control rule strips the liability shield of a limited partner who participates in control, but only as to creditors who reasonably believed, from that conduct, that they were dealing with a general partner; voting on major structural decisions is a protected safe harbor. States that have adopted the Uniform Limited Partnership Act (2001) abolished the rule, so the result depends on the governing statute."
   },
   {
     "id": "entity-4",
@@ -1406,139 +1478,19 @@ var FAR_QUESTIONS = [
     "explain": "An LLP protects each partner from vicarious liability for other partners' wrongful acts and, in most states, for partnership obligations generally. A partner always remains liable for their own negligence."
   },
   {
-    "id": "entity-8",
+    "id": "entity-17",
     "section": "entity",
-    "topic": "Securities Act of 1933",
+    "topic": "LLC structure",
     "difficulty": "easy",
-    "q": "What does the Securities Act of 1933 principally regulate?",
+    "q": "Three members form an LLC whose operating agreement names one of them as manager. The LLC defaults on a bank loan that no member guaranteed. Which statement is correct?",
     "choices": [
-      "Trading of securities in the secondary market",
-      "The initial issuance of securities to the public",
-      "Proxy solicitations by public companies",
-      "Insider trading by corporate officers"
-    ],
-    "answer": 1,
-    "explain": "The 1933 Act governs the offer and sale of securities by issuers, requiring registration and a prospectus unless an exemption applies. The 1934 Act picks up ongoing reporting, proxies, and secondary market trading."
-  },
-  {
-    "id": "entity-9",
-    "section": "entity",
-    "topic": "Regulation D",
-    "difficulty": "medium",
-    "q": "An issuer sells securities under Rule 506(b) of Regulation D. What limitation applies to the investors?",
-    "choices": [
-      "No more than 35 non-accredited purchasers, who must be sophisticated",
-      "No more than 35 purchasers in total, whether accredited or not",
-      "Every purchaser must be an accredited investor, verified by the issuer",
-      "No more than 100 purchasers, all residing in the issuer's home state"
+      "No member is personally liable for the loan",
+      "The managing member is personally liable because she ran the business",
+      "All three are personally liable because an LLC is taxed as a partnership",
+      "The bank may reach the members only after exhausting the LLC's assets"
     ],
     "answer": 0,
-    "explain": "Rule 506(b) permits an unlimited number of accredited investors plus up to 35 sophisticated non-accredited purchasers, but forbids general solicitation. Rule 506(c) allows general solicitation only if every purchaser is accredited and verified."
-  },
-  {
-    "id": "entity-10",
-    "section": "entity",
-    "topic": "Section 11 liability",
-    "difficulty": "medium",
-    "q": "An investor sues under section 11 of the 1933 Act after buying shares in a registered offering. What must the investor prove?",
-    "choices": [
-      "That the issuer acted with scienter in making the misstatement",
-      "That the investor read the registration statement and relied on the misstatement when buying",
-      "That the registration statement contained a material misstatement and the shares lost value",
-      "That the investor purchased the securities directly from the issuer"
-    ],
-    "answer": 2,
-    "explain": "Section 11 is close to strict liability for the issuer — no scienter, no reliance, and no privity required. The plaintiff shows a material misstatement and damages; non-issuer defendants may raise a due diligence defense."
-  },
-  {
-    "id": "entity-11",
-    "section": "entity",
-    "topic": "Due diligence defense",
-    "difficulty": "medium",
-    "q": "An accountant is sued under section 11 over audited financials in a registration statement. What is the accountant's principal defense?",
-    "choices": [
-      "That the investor never read the prospectus before purchasing",
-      "That after reasonable investigation they believed the statements were true",
-      "That the misstatement was immaterial to the issuer's overall business",
-      "That the issuer agreed by contract to indemnify them against liability"
-    ],
-    "answer": 1,
-    "explain": "An expert may escape section 11 liability for the expertised portion by proving due diligence — a reasonable investigation supporting a reasonable belief in the statements. Indemnification against securities liability is generally unenforceable as against public policy."
-  },
-  {
-    "id": "entity-12",
-    "section": "entity",
-    "topic": "Rule 10b-5",
-    "difficulty": "medium",
-    "q": "Which element distinguishes a Rule 10b-5 claim from a section 11 claim?",
-    "choices": [
-      "Materiality of the misstatement",
-      "Scienter and reliance must be proven",
-      "The plaintiff must be a purchaser of securities",
-      "Damages must be quantifiable"
-    ],
-    "answer": 1,
-    "explain": "Rule 10b-5 requires scienter — intent or recklessness — plus reliance, causation, and damages, and applies to any purchase or sale. Section 11 dispenses with both scienter and reliance but is confined to registration statements."
-  },
-  {
-    "id": "entity-13",
-    "section": "entity",
-    "topic": "Short-swing profits",
-    "difficulty": "medium",
-    "q": "An officer of a reporting company buys shares in March and sells them at a gain in July of the same year. What is the consequence under section 16(b)?",
-    "choices": [
-      "The officer must disgorge the profit to the corporation",
-      "The officer is subject to criminal prosecution for insider trading",
-      "The trades are voided and the shares returned",
-      "No consequence, absent use of material nonpublic information"
-    ],
-    "answer": 0,
-    "explain": "Section 16(b) recaptures for the issuer any profit an officer, director, or greater-than-10% owner makes from a purchase and sale within six months. It is mechanical — no proof of inside information is needed."
-  },
-  {
-    "id": "entity-14",
-    "section": "entity",
-    "topic": "Periodic reporting",
-    "difficulty": "easy",
-    "q": "A public company completes a major acquisition. Which filing reports it?",
-    "choices": [
-      "Form 10-K",
-      "Form 10-Q",
-      "Form 8-K",
-      "Schedule 14A"
-    ],
-    "answer": 2,
-    "explain": "Form 8-K is the current report for specified material events, filed within days of the triggering event. The 10-K is annual, the 10-Q quarterly, and Schedule 14A is the proxy statement."
-  },
-  {
-    "id": "entity-15",
-    "section": "entity",
-    "topic": "Sarbanes-Oxley certifications",
-    "difficulty": "medium",
-    "q": "Who must personally certify the accuracy of a public company's periodic reports and the effectiveness of its disclosure controls?",
-    "choices": [
-      "The chief executive officer and the chief financial officer",
-      "The chair of the company's independent audit committee",
-      "The engagement partner on the external audit team",
-      "A majority of the members of the board of directors"
-    ],
-    "answer": 0,
-    "explain": "Sarbanes-Oxley section 302 requires the CEO and CFO to certify each periodic report personally. Section 404 then requires management's assessment of internal control over financial reporting, with an auditor attestation for larger filers."
-  },
-  {
-    "id": "entity-16",
-    "section": "entity",
-    "topic": "Accredited investors",
-    "difficulty": "medium",
-    "q": "Which individual qualifies as an accredited investor?",
-    "choices": [
-      "Anyone whose annual salary exceeds $100,000 in the current year",
-      "An individual with net worth over $1 million excluding their home",
-      "Any person who signs a written representation of sophistication",
-      "Any existing shareholder of the company issuing the securities"
-    ],
-    "answer": 1,
-    "explain": "Individual accreditation rests on net worth over $1 million excluding the primary residence, or income over $200,000 ($300,000 with a spouse) for the last two years. Certain professional certifications and knowledgeable employees also qualify."
+    "explain": "Members of a limited liability company are not personally liable for the company's debts merely because they are members or because they manage it; only a personal guarantee, their own tort, or veil piercing reaches them. Federal tax classification as a partnership has no effect on state-law liability. An LLC is member-managed by default, but the operating agreement here names a manager, so the company is manager-managed and the other members do not share management rights."
   },
   {
     "id": "basis-1",
@@ -1605,7 +1557,7 @@ var FAR_QUESTIONS = [
     "section": "basis",
     "topic": "Conversion to business use",
     "difficulty": "medium",
-    "q": "A taxpayer converts a personal residence with a $300,000 basis and $260,000 FMV into a rental. What basis is used to compute depreciation?",
+    "q": "A taxpayer converts a personal residence into a rental. The building alone, excluding the land, has a $300,000 adjusted basis and a $260,000 FMV. What basis is used to depreciate it?",
     "choices": [
       "$300,000",
       "$260,000",
@@ -1613,7 +1565,7 @@ var FAR_QUESTIONS = [
       "Zero until the property is sold"
     ],
     "answer": 1,
-    "explain": "On conversion from personal to business use, the depreciable basis is the lesser of adjusted basis or fair market value at the conversion date, so a personal-use decline in value cannot be converted into deductions."
+    "explain": "On conversion from personal to business use, the depreciable basis is the lesser of adjusted basis or fair market value at the conversion date (Reg. 1.168(i)-4), so a decline in value during personal use never becomes a deduction. The land's share of the cost is carved out first: land is not depreciable at all, so only the building's $260,000 is recovered through depreciation."
   },
   {
     "id": "basis-6",
@@ -1781,6 +1733,36 @@ var FAR_QUESTIONS = [
     "explain": "Passenger automobiles are listed property subject to annual dollar caps on depreciation including section 179 and bonus. Business use of 50% or less also forces straight-line ADS recovery and can trigger recapture."
   },
   {
+    "id": "basis-17",
+    "section": "basis",
+    "topic": "Building expenditures",
+    "difficulty": "medium",
+    "q": "A landlord spends $60,000 to replace the entire roof of a rental building and $4,000 to patch leaks and repaint a hallway. How are the costs treated?",
+    "choices": [
+      "Both are deducted as repairs because neither enlarges the building or changes its use",
+      "The roof is capitalized and depreciated; the patching and painting are deducted",
+      "Both are capitalized because they relate to a depreciable building",
+      "The roof is deducted as a repair; the patching and painting are capitalized"
+    ],
+    "answer": 1,
+    "explain": "Under the tangible property regulations (Reg. 1.263(a)-3), an amount paid for a betterment, a restoration, or an adaptation of a unit of property to a new use is capitalized into basis and depreciated. Replacing an entire roof restores a major component of the building structure, so it is capitalized. Patching leaks and repainting keep the building in its ordinary operating condition and are deductible repairs; enlargement is only one of several triggers for capitalization."
+  },
+  {
+    "id": "basis-18",
+    "section": "basis",
+    "topic": "Bonus depreciation eligibility",
+    "difficulty": "medium",
+    "q": "In 2026 a calendar-year business buys a used heavy delivery truck from an unrelated dealer and places it in service. It makes no section 179 election. What first-year cost recovery applies?",
+    "choices": [
+      "Regular MACRS only, because bonus depreciation requires new property",
+      "100% bonus depreciation, because the truck is new to the taxpayer",
+      "Regular MACRS only, because bonus depreciation must be elected",
+      "20% bonus depreciation under the old phase-down schedule for 2026"
+    ],
+    "answer": 1,
+    "explain": "The OBBBA made 100% bonus depreciation under section 168(k) permanent for qualified property acquired and placed in service after January 19, 2025, ending the TCJA phase-down that would have allowed only 20% in 2026. Used property qualifies if the taxpayer had not used it before and bought it from an unrelated party. Bonus depreciation applies automatically unless the taxpayer elects out; when section 179 is also claimed, 179 is applied first, then bonus, then regular MACRS on any remaining basis."
+  },
+  {
     "id": "disposition-1",
     "section": "disposition",
     "topic": "Amount realized",
@@ -1794,66 +1776,6 @@ var FAR_QUESTIONS = [
     ],
     "answer": 0,
     "explain": "Amount realized is everything the seller receives: cash, property, and any liability the buyer assumes or takes subject to. Debt relief counts like cash because the seller no longer owes it, so the amount realized is $50,000 + $150,000 = $200,000. Counting only the cash understates the gain by the whole mortgage."
-  },
-  {
-    "id": "disposition-2",
-    "section": "disposition",
-    "topic": "Section 1231 netting",
-    "difficulty": "medium",
-    "q": "A business has a net section 1231 gain for the year with no prior-year 1231 losses. How is it characterized?",
-    "choices": [
-      "Ordinary income",
-      "Long-term capital gain",
-      "Short-term capital gain",
-      "Tax-exempt to the extent of depreciation"
-    ],
-    "answer": 1,
-    "explain": "Section 1231 gives the best of both worlds — a net gain is long-term capital gain while a net loss is fully deductible ordinary loss. Depreciation recapture is computed first and is always ordinary."
-  },
-  {
-    "id": "disposition-3",
-    "section": "disposition",
-    "topic": "Section 1231 lookback",
-    "difficulty": "medium",
-    "q": "A taxpayer has a $40,000 net section 1231 gain this year and had a $15,000 net section 1231 loss two years ago that has not been recaptured. How is this year's gain treated?",
-    "choices": [
-      "$40,000 long-term capital gain",
-      "$15,000 ordinary income and $25,000 long-term capital gain",
-      "$40,000 ordinary income",
-      "$25,000 ordinary income and $15,000 long-term capital gain"
-    ],
-    "answer": 1,
-    "explain": "The five-year lookback recharacterizes current net 1231 gain as ordinary to the extent of unrecaptured net 1231 losses from the five preceding years. Only the $25,000 excess gets capital treatment."
-  },
-  {
-    "id": "disposition-4",
-    "section": "disposition",
-    "topic": "Section 1245 recapture",
-    "difficulty": "medium",
-    "q": "Equipment on which $70,000 of depreciation has been taken is sold at a $55,000 gain. How is the gain characterized under section 1245?",
-    "choices": [
-      "$55,000 of ordinary income",
-      "$55,000 of section 1231 gain",
-      "$55,000 of long-term capital gain",
-      "$15,000 ordinary and $40,000 section 1231 gain"
-    ],
-    "answer": 0,
-    "explain": "Section 1245 recaptures gain on depreciable personal property as ordinary income up to the depreciation taken. Here the $55,000 gain is less than the $70,000 of depreciation, so every dollar is ordinary. Section 1231 or capital gain treatment applies only to gain above total depreciation, which would require selling for more than original cost."
-  },
-  {
-    "id": "disposition-5",
-    "section": "disposition",
-    "topic": "Selling a depreciated rental building",
-    "difficulty": "medium",
-    "q": "An individual sells a rental building at a gain after claiming straight-line depreciation. How is the portion of gain equal to that depreciation taxed?",
-    "choices": [
-      "As ordinary income at the taxpayer's marginal rate",
-      "At a maximum rate of 25%",
-      "At the 0/15/20% long-term capital gain rates",
-      "As tax-exempt return of capital"
-    ],
-    "answer": 1,
-    "explain": "Straight-line depreciation on realty produces no section 1250 ordinary recapture, but for individuals that slice of gain is unrecaptured section 1250 gain taxed at up to 25%. Any remaining gain rides the normal capital rates."
   },
   {
     "id": "disposition-6",
@@ -1901,66 +1823,6 @@ var FAR_QUESTIONS = [
     "explain": "A wash sale occurs when substantially identical securities are acquired within 30 days before or after the sale. The loss is deferred, not lost — it is added to the replacement shares' basis and their holding period tacks."
   },
   {
-    "id": "disposition-9",
-    "section": "disposition",
-    "topic": "Related party losses",
-    "difficulty": "medium",
-    "q": "A taxpayer sells stock to her brother at a $15,000 loss. He later sells it to an unrelated buyer at a $23,000 gain. What does the brother recognize?",
-    "choices": [
-      "$8,000 gain",
-      "$23,000 gain",
-      "$8,000 gain, and the sister deducts her $15,000 loss",
-      "$38,000 gain"
-    ],
-    "answer": 0,
-    "explain": "The sister's $15,000 loss on a sale to her brother is disallowed under section 267. When he later sells to an outsider, his $23,000 realized gain is reduced by that disallowed loss, leaving $8,000. The offset belongs to the brother only; the sister never deducts the loss, and the offset can shelter gain but never create a loss."
-  },
-  {
-    "id": "disposition-10",
-    "section": "disposition",
-    "topic": "Like-kind exchanges",
-    "difficulty": "medium",
-    "q": "Which exchange qualifies for nonrecognition under section 1031?",
-    "choices": [
-      "A delivery truck exchanged for a newer delivery truck",
-      "An apartment building exchanged for raw investment land",
-      "Inventory exchanged for inventory of another dealer",
-      "Corporate stock exchanged for other corporate stock"
-    ],
-    "answer": 1,
-    "explain": "Section 1031 now applies only to real property held for productive use or investment, and virtually all real estate is like-kind to other real estate. Personal property, inventory, and securities were all excluded by the 2017 act."
-  },
-  {
-    "id": "disposition-11",
-    "section": "disposition",
-    "topic": "Exchange deadlines",
-    "difficulty": "medium",
-    "q": "In a deferred like-kind exchange, by when must the replacement property be identified and received?",
-    "choices": [
-      "Identified within 45 days and received within 180 days of the transfer",
-      "Identified within 45 days and received within 180 days of identification",
-      "Both within 180 days of the transfer",
-      "Both by the due date of the return without extensions"
-    ],
-    "answer": 0,
-    "explain": "Replacement property must be identified in writing within 45 days and actually received by the earlier of 180 days after the transfer or the return's due date including extensions. Missing either deadline makes the whole exchange taxable."
-  },
-  {
-    "id": "disposition-12",
-    "section": "disposition",
-    "topic": "Involuntary conversions",
-    "difficulty": "medium",
-    "q": "A factory is destroyed by fire and the owner receives insurance proceeds exceeding basis. To defer the gain, when must qualifying replacement property be acquired?",
-    "choices": [
-      "Within 180 days of receiving the proceeds",
-      "Within two years after the close of the year the gain was realized",
-      "By the due date of the return for the year of the casualty",
-      "Within five years in all cases"
-    ],
-    "answer": 1,
-    "explain": "Section 1033 gives a replacement period ending two years after the close of the tax year in which gain was realized, extended to three years for real property condemned and held for business or investment use."
-  },
-  {
     "id": "disposition-13",
     "section": "disposition",
     "topic": "Sale of a residence",
@@ -1976,36 +1838,6 @@ var FAR_QUESTIONS = [
     "explain": "Section 121 excludes up to $500,000 of gain for joint filers who owned and used the home as a principal residence for two of the last five years. The $60,000 excess is long-term capital gain."
   },
   {
-    "id": "disposition-14",
-    "section": "disposition",
-    "topic": "Section 1244 stock",
-    "difficulty": "medium",
-    "q": "A married couple filing jointly loses $140,000 on qualifying section 1244 stock in a single year. How is the loss characterized?",
-    "choices": [
-      "$140,000 ordinary loss",
-      "$100,000 ordinary loss and $40,000 capital loss",
-      "$50,000 ordinary loss and $90,000 capital loss",
-      "$140,000 capital loss"
-    ],
-    "answer": 1,
-    "explain": "Section 1244 converts what would be a capital loss into an ordinary loss, capped at $50,000 a year ($100,000 on a joint return). Anything above the cap stays a capital loss subject to the $3,000 limit."
-  },
-  {
-    "id": "disposition-15",
-    "section": "disposition",
-    "topic": "Installment sales",
-    "difficulty": "medium",
-    "q": "A taxpayer sells business equipment at a gain on the installment method, with depreciation recapture built into the gain. When is the recapture reported?",
-    "choices": [
-      "Pro rata as payments are received",
-      "Entirely in the year of sale",
-      "In the final year of the installment contract",
-      "Only if the buyer defaults"
-    ],
-    "answer": 1,
-    "explain": "Depreciation recapture is recognized in full in the year of sale regardless of when cash is collected. Only the gain remaining after recapture is spread using the gross profit percentage."
-  },
-  {
     "id": "disposition-16",
     "section": "disposition",
     "topic": "Nonbusiness bad debts",
@@ -2019,6 +1851,36 @@ var FAR_QUESTIONS = [
     ],
     "answer": 1,
     "explain": "A nonbusiness bad debt is always a short-term capital loss, deductible only when totally worthless — partial worthlessness gets nothing. Business bad debts, by contrast, produce an ordinary deduction and may be partially written off."
+  },
+  {
+    "id": "disposition-17",
+    "section": "disposition",
+    "topic": "Digital assets",
+    "difficulty": "medium",
+    "q": "A graphic designer receives cryptocurrency worth $60,000 as payment for services and sells it for $90,000 after holding it more than a year. What are the tax results?",
+    "choices": [
+      "$90,000 of ordinary income, because cryptocurrency is treated as foreign currency",
+      "$60,000 ordinary income on receipt and $30,000 long-term capital gain on sale",
+      "$90,000 long-term capital gain on sale and nothing on receipt",
+      "$60,000 ordinary income on receipt and $30,000 ordinary income on sale"
+    ],
+    "answer": 1,
+    "explain": "The IRS treats digital assets such as cryptocurrency, stablecoins, and NFTs as property, not currency. Property received as payment for services is ordinary compensation income at its fair market value when received, and that value becomes the basis. A later sale is a disposition of a capital asset, so the $30,000 of appreciation is capital gain, long-term because the holding period exceeded one year."
+  },
+  {
+    "id": "disposition-18",
+    "section": "disposition",
+    "topic": "Netting gains and losses",
+    "difficulty": "medium",
+    "q": "An individual has a $9,000 short-term capital loss and a $4,000 long-term capital gain, and no other capital transactions. What is the result for the year?",
+    "choices": [
+      "$5,000 deducted against ordinary income this year",
+      "$3,000 deducted against ordinary income; $2,000 carries forward as a short-term loss",
+      "$3,000 deducted against ordinary income; $2,000 carries forward as a long-term loss",
+      "$4,000 of long-term gain taxed at preferential rates and the full loss carried forward"
+    ],
+    "answer": 1,
+    "explain": "Short-term and long-term gains and losses are netted separately, then against each other. The $9,000 short-term loss absorbs the $4,000 long-term gain, leaving a $5,000 net short-term capital loss. Section 1211(b) lets an individual deduct up to $3,000 of net capital loss against ordinary income, and section 1212(b) carries the remaining $2,000 forward indefinitely, keeping its short-term character."
   },
   {
     "id": "income-1",
@@ -2261,6 +2123,21 @@ var FAR_QUESTIONS = [
     "explain": "Prizes and awards are included in gross income at fair market value when received, and that value also becomes the winner's basis in the property."
   },
   {
+    "id": "income-17",
+    "section": "income",
+    "topic": "Schedule K-1 items",
+    "difficulty": "medium",
+    "q": "A partner who itemizes receives a Schedule K-1 showing ordinary business income, a long-term capital gain, and a charitable contribution. The partnership distributed nothing. How does the partner report these on Form 1040?",
+    "choices": [
+      "Nothing this year, because no cash was distributed to the partner",
+      "Income on Schedule E, the gain on Schedule D, and the contribution on Schedule A, all this year",
+      "All three combined as one net amount of ordinary income on Schedule E",
+      "Income and gain on Schedule E this year; the contribution is deductible only by the partnership"
+    ],
+    "answer": 1,
+    "explain": "A partner (like an S corporation shareholder) is taxed on their distributive share in the year the entity earns it, whether or not anything is distributed; distributions are generally tax-free returns of basis. Section 702 requires separately stated items to keep their character in the partner's hands, so ordinary business income goes to Schedule E, the long-term capital gain to Schedule D, and the charitable contribution to Schedule A, where it is subject to the partner's own AGI limits. The partnership itself deducts nothing for the contribution."
+  },
+  {
     "id": "deduct-1",
     "section": "deduct",
     "topic": "Adjustments to income",
@@ -2501,6 +2378,21 @@ var FAR_QUESTIONS = [
     "explain": "Law, accounting, health, consulting, athletics, financial services, and businesses whose principal asset is the reputation or skill of their owners are SSTBs. Architecture and engineering were specifically carved out of that list."
   },
   {
+    "id": "deduct-17",
+    "section": "deduct",
+    "topic": "Tips and overtime pay",
+    "difficulty": "medium",
+    "q": "A single bartender who does not itemize earns reported tips and FLSA overtime in 2026. Which statement about the OBBBA deductions for qualified tips and overtime is correct?",
+    "choices": [
+      "She cannot claim either because the deductions are only for itemizers",
+      "She may claim both without itemizing, but the amounts remain subject to FICA",
+      "The tips and overtime are excluded from wages, so no FICA is withheld on them",
+      "Her entire overtime pay, not just the premium portion, is deductible"
+    ],
+    "answer": 1,
+    "explain": "For 2025 through 2028, sections 224 and 225 allow deductions for qualified tips received in a customarily tipped occupation and reported to the employer, and for the overtime premium that the Fair Labor Standards Act requires (the half in time-and-a-half). Both are deductions from AGI in computing taxable income, allowed whether or not the taxpayer itemizes, phased out by MAGI, and require a Social Security number and a joint return if married. They are not exclusions, so the tips and overtime stay in wages and remain subject to FICA and withholding."
+  },
+  {
     "id": "credits-1",
     "section": "credits",
     "topic": "Head of household",
@@ -2612,13 +2504,13 @@ var FAR_QUESTIONS = [
     "difficulty": "medium",
     "q": "A taxpayer's adoption credit exceeds their tax liability for the year. How is the excess treated?",
     "choices": [
-      "Up to $5,000 is refunded and the rest carries forward up to five years",
-      "The full excess is refunded in the year the adoption is finalized",
-      "The full excess carries forward for up to five years",
-      "The full excess is lost, because the credit is nonrefundable"
+      "Refunded up to a capped amount; the rest carries forward five years",
+      "Refunded in full in the year the adoption is finalized",
+      "Carried forward in full for up to five years, none refunded",
+      "Lost in full, because the credit is nonrefundable"
     ],
     "answer": 0,
-    "explain": "Since 2025 the adoption credit is refundable up to $5,000 (indexed). Any excess beyond the refundable portion stays nonrefundable and carries forward for up to five years; carried-forward amounts never become refundable. Qualified expenses for a special needs adoption are treated as paid in full regardless of actual outlay."
+    "explain": "For tax years after 2024 the adoption credit is refundable up to a cap ($5,000, indexed). Any excess beyond the refundable portion stays nonrefundable and carries forward for up to five years; carried-forward amounts never become refundable. Qualified expenses for a special needs adoption are treated as paid in full regardless of actual outlay."
   },
   {
     "id": "credits-9",
@@ -2666,21 +2558,6 @@ var FAR_QUESTIONS = [
     "explain": "Excess Social Security withheld by two or more unrelated employers is claimed as a refundable credit on the individual return. When a single employer over-withholds, the employer must correct it."
   },
   {
-    "id": "credits-12",
-    "section": "credits",
-    "topic": "AMT adjustments",
-    "difficulty": "medium",
-    "q": "Which item is added back in computing alternative minimum taxable income for an individual?",
-    "choices": [
-      "Charitable contributions",
-      "State and local taxes deducted as itemized deductions",
-      "Home mortgage interest on acquisition indebtedness",
-      "Qualified dividend income"
-    ],
-    "answer": 1,
-    "explain": "State and local taxes are not deductible for AMT purposes and are added back. Charitable contributions and acquisition mortgage interest remain allowable, and qualified dividends keep their preferential rate."
-  },
-  {
     "id": "credits-13",
     "section": "credits",
     "topic": "AMT mechanics",
@@ -2694,21 +2571,6 @@ var FAR_QUESTIONS = [
     ],
     "answer": 0,
     "explain": "AMT is effectively the excess of tentative minimum tax over regular tax, so the taxpayer ends up paying the greater amount. The AMT exemption itself phases out as alternative minimum taxable income rises."
-  },
-  {
-    "id": "credits-14",
-    "section": "credits",
-    "topic": "AMT from timing differences",
-    "difficulty": "medium",
-    "q": "A taxpayer paid AMT this year caused entirely by a timing difference. What relief is available in later years?",
-    "choices": [
-      "A refund of the AMT paid in the year it was incurred",
-      "A minimum tax credit carried forward against future regular tax",
-      "An amended return recomputing the prior year without AMT",
-      "No relief, because AMT once paid is permanently lost"
-    ],
-    "answer": 1,
-    "explain": "AMT from deferral items generates a minimum tax credit carried forward indefinitely against regular tax in years when regular tax exceeds tentative minimum tax. AMT from exclusion items generates no such credit."
   },
   {
     "id": "credits-15",
@@ -2843,7 +2705,7 @@ var FAR_QUESTIONS = [
       "They are added to the basis of the taxpayer's other activities"
     ],
     "answer": 1,
-    "explain": "A complete disposition of the entire interest in a fully taxable transaction to an unrelated party frees the suspended losses in full, deductible against any income. A gift or an installment sale does not trigger that release."
+    "explain": "A complete disposition of the entire interest in a fully taxable transaction to an unrelated party frees the suspended losses in full, deductible against any income (Section 469(g)). An installment sale releases them only in proportion to the gain recognized each year, and a gift releases none: the suspended losses are added to the donee's basis."
   },
   {
     "id": "losses-8",
@@ -2951,21 +2813,6 @@ var FAR_QUESTIONS = [
     "explain": "When the at-risk amount drops below zero, section 465 recaptures previously allowed losses as income to that extent. The recaptured amount is then added back to the taxpayer's suspended loss pool for future use."
   },
   {
-    "id": "losses-15",
-    "section": "losses",
-    "topic": "Passive credits",
-    "difficulty": "medium",
-    "q": "How are tax credits generated by a passive activity limited?",
-    "choices": [
-      "They may offset only the tax attributable to passive income",
-      "They are fully refundable",
-      "They may offset tax on any income once basis is restored",
-      "They are disallowed permanently"
-    ],
-    "answer": 0,
-    "explain": "Passive activity credits offset only the portion of tax attributable to passive activities, and the excess is suspended. Unlike suspended losses, suspended credits are generally not freed on disposition — they are added to basis by election instead."
-  },
-  {
     "id": "losses-16",
     "section": "losses",
     "topic": "Basis limitation",
@@ -2981,49 +2828,124 @@ var FAR_QUESTIONS = [
     "explain": "Losses are limited to the shareholder's combined stock and debt basis, so $12,000 is deductible and basis drops to zero. The remaining $8,000 is suspended indefinitely until basis is restored."
   },
   {
-    "id": "ccorp-1",
-    "section": "ccorp",
-    "topic": "Section 351 control",
+    "id": "ccorp-5",
+    "section": "booktax",
+    "topic": "Book-tax differences",
     "difficulty": "medium",
-    "q": "What control must transferors hold immediately after a section 351 transfer for nonrecognition to apply?",
+    "q": "Which item is a permanent difference on Schedule M-1 rather than a timing difference?",
     "choices": [
-      "At least 80% of voting power, with nonvoting stock disregarded in the count",
-      "At least 80% of voting power and 80% of each class of nonvoting stock",
-      "100% of the outstanding stock",
-      "At least two-thirds of the fair market value of all stock"
+      "Depreciation computed differently for book and tax",
+      "Premiums paid on a key-person life insurance policy",
+      "Warranty expense accrued for book purposes",
+      "Bad debt expense using the allowance method"
     ],
     "answer": 1,
-    "explain": "Section 351 requires the transferring group to control at least 80% of total combined voting power and 80% of the shares of each class of nonvoting stock immediately after the exchange. Falling short makes the entire transfer taxable."
+    "explain": "Key-person life insurance premiums are never deductible and the proceeds are never taxable, so the difference never reverses. Depreciation, accrued warranties, and allowance-method bad debts all reverse in later periods."
   },
   {
-    "id": "ccorp-2",
-    "section": "ccorp",
-    "topic": "Boot in a section 351 exchange",
-    "difficulty": "medium",
-    "q": "In a section 351 exchange, a shareholder with a $60,000 realized gain on the transferred property receives stock plus $15,000 cash. What gain is recognized?",
+    "id": "booktax-1",
+    "section": "booktax",
+    "topic": "Municipal bond interest",
+    "difficulty": "easy",
+    "q": "A corporation's net income per books includes $12,000 of interest on municipal bonds. How is this item treated on Schedule M-1?",
     "choices": [
-      "$15,000",
-      "$60,000",
-      "$45,000",
-      "$0"
+      "Subtracted from book income as a permanent difference",
+      "Added to book income as a permanent difference",
+      "Subtracted from book income as a temporary difference that reverses at maturity",
+      "No adjustment, because the interest is fully taxable to a corporation"
     ],
     "answer": 0,
-    "explain": "In a section 351 exchange, gain is recognized only to the extent of boot, the cash or other property received besides stock, and never more than the realized gain. Boot of $15,000 is less than the $60,000 realized gain, so $15,000 is recognized. Recognizing the full $60,000 ignores the nonrecognition rule, and $0 ignores the boot."
+    "explain": "Interest on state and local bonds is excluded from gross income under section 103 for corporations as well as individuals, so it is in book income but never in taxable income. Schedule M-1 subtracts it, and because the exclusion never reverses it is a permanent difference. Adding it would move the reconciliation the wrong way, and nothing about the item reverses at maturity."
   },
   {
-    "id": "ccorp-3",
-    "section": "ccorp",
-    "topic": "Liabilities assumed in a section 351 exchange",
+    "id": "booktax-2",
+    "section": "booktax",
+    "topic": "Depreciation methods",
     "difficulty": "medium",
-    "q": "A shareholder transfers property with a $30,000 basis subject to a $50,000 mortgage the corporation assumes, in an otherwise qualifying section 351 exchange. What is the consequence?",
+    "q": "A corporation's MACRS depreciation this year exceeds the straight-line depreciation on its books. How does this difference appear in the Schedule M-1 reconciliation?",
     "choices": [
-      "No gain, because liability relief is never boot",
-      "$50,000 of gain is recognized",
-      "$20,000 of gain is recognized under section 357(c)",
-      "The exchange fails section 351 entirely"
+      "A subtraction from book income that reverses in later years",
+      "An addition to book income that reverses in later years",
+      "A subtraction from book income that never reverses",
+      "No adjustment, because depreciation is only a book estimate"
     ],
-    "answer": 2,
-    "explain": "Liability relief is generally not boot, but section 357(c) forces gain when liabilities assumed exceed the aggregate basis of the property transferred. The stock basis is then zero."
+    "answer": 0,
+    "explain": "Tax depreciation above book depreciation lowers taxable income below book income, so Schedule M-1 subtracts the excess. Total depreciation over the asset's life is the same under both systems, so the difference is temporary: in later years book depreciation exceeds tax depreciation and the adjustment becomes an addition. A difference that never reverses, such as a fine, is a permanent difference."
+  },
+  {
+    "id": "booktax-3",
+    "section": "booktax",
+    "topic": "Book income tax expense",
+    "difficulty": "easy",
+    "q": "A corporation's income statement shows $84,000 of federal income tax expense. In reconciling net income per books to taxable income on Schedule M-1, this expense is",
+    "choices": [
+      "Added back to book income and never deductible",
+      "Added back this year and deducted when paid",
+      "Subtracted from book income as a nontaxable item",
+      "Ignored, because Schedule M-1 starts from pretax book income"
+    ],
+    "answer": 0,
+    "explain": "Schedule M-1 begins with net income per books, which is after federal income tax, and line 2 adds that tax back because section 275 bars any deduction for federal income taxes. The difference is permanent: the tax is never deductible, paid or not. State income taxes, by contrast, are deductible and need no M-1 adjustment."
+  },
+  {
+    "id": "booktax-4",
+    "section": "booktax",
+    "topic": "Client meals and outings",
+    "difficulty": "medium",
+    "q": "A corporation expensed business meals with clients and tickets to sporting events for those clients in full on its books. Which Schedule M-1 treatment is correct?",
+    "choices": [
+      "Add back half of the meals and all of the tickets as permanent differences",
+      "Add back all of the meals and all of the tickets as permanent differences",
+      "Add back half of the meals and half of the tickets as permanent differences",
+      "Add back half of the meals only, with the tickets deductible in full"
+    ],
+    "answer": 0,
+    "explain": "Section 274 limits business meals to 50% and, since the TCJA, allows no deduction for entertainment such as event tickets, so the nondeductible portions are added back on Schedule M-1. Neither amount is ever deducted in a later year, so both are permanent differences. Treating the tickets like meals or as fully deductible applies pre-2018 law."
+  },
+  {
+    "id": "booktax-5",
+    "section": "booktax",
+    "topic": "Bad debt methods",
+    "difficulty": "medium",
+    "q": "A corporation's allowance for doubtful accounts grew during the year, so book bad debt expense exceeded the receivables actually written off. What is the Schedule M-1 effect?",
+    "choices": [
+      "Add the excess to book income as a temporary difference",
+      "Subtract the excess from book income as a temporary difference",
+      "Add the excess to book income as a permanent difference",
+      "No adjustment, because corporations may use the reserve method for tax"
+    ],
+    "answer": 0,
+    "explain": "For tax, section 166 allows a bad debt deduction only when a specific receivable becomes worthless; the reserve method is not permitted. Book expense above the actual charge-offs is therefore added back on Schedule M-1. The difference is temporary because the reserved accounts are eventually written off and deducted, reversing the adjustment."
+  },
+  {
+    "id": "booktax-6",
+    "section": "booktax",
+    "topic": "Schedule M-3 filing requirement",
+    "difficulty": "easy",
+    "q": "Which corporation must file Schedule M-3 instead of Schedule M-1 with its Form 1120?",
+    "choices": [
+      "One with total assets of $10 million or more at year end",
+      "One with gross receipts of $10 million or more for the year",
+      "One with taxable income of $1 million or more for the year",
+      "One that files a consolidated return, regardless of its size"
+    ],
+    "answer": 0,
+    "explain": "The test is balance-sheet size: a corporation whose Schedule L total assets at the end of the year are $10 million or more must file Schedule M-3; one with assets under $50 million may complete only Part I of Schedule M-3 and use Schedule M-1 for the detailed reconciliation, while one at $50 million or more completes all three parts. Gross receipts and taxable income are not the test, and a consolidated group applies the same asset test to its consolidated Schedule L. Smaller corporations may file Schedule M-3 voluntarily."
+  },
+  {
+    "id": "booktax-7",
+    "section": "booktax",
+    "topic": "Reconciling to taxable income",
+    "difficulty": "medium",
+    "q": "A corporation's net income per books is $400,000. It includes $40,000 of municipal bond interest and an equal amount of federal income tax expense. What is taxable income?",
+    "choices": [
+      "$400,000",
+      "$480,000",
+      "$320,000",
+      "$440,000"
+    ],
+    "answer": 0,
+    "explain": "Federal income tax expense is never deductible, so the $40,000 is added back; municipal bond interest is never taxable, so the $40,000 is subtracted. The two adjustments offset and taxable income equals book income, $400,000. The other answers move one or both items in the wrong direction."
   },
   {
     "id": "ccorp-4",
@@ -3039,21 +2961,6 @@ var FAR_QUESTIONS = [
     ],
     "answer": 1,
     "explain": "C corporations pay a flat 21% on taxable income, replacing the old graduated schedule. The corporate alternative minimum tax was repealed for regular corporations, though a separate 15% book minimum tax reaches only very large corporations."
-  },
-  {
-    "id": "ccorp-5",
-    "section": "ccorp",
-    "topic": "Book-tax differences",
-    "difficulty": "medium",
-    "q": "Which item is a permanent difference on Schedule M-1 rather than a timing difference?",
-    "choices": [
-      "Depreciation computed differently for book and tax",
-      "Premiums paid on a key-person life insurance policy",
-      "Warranty expense accrued for book purposes",
-      "Bad debt expense using the allowance method"
-    ],
-    "answer": 1,
-    "explain": "Key-person life insurance premiums are never deductible and the proceeds are never taxable, so the difference never reverses. Depreciation, accrued warranties, and allowance-method bad debts all reverse in later periods."
   },
   {
     "id": "ccorp-6",
@@ -3086,96 +2993,6 @@ var FAR_QUESTIONS = [
     "explain": "Ownership of at least 20% but under 80% earns a 65% DRD. Under 20% gets 50%, and an affiliated group member owning 80% or more gets 100%."
   },
   {
-    "id": "ccorp-8",
-    "section": "ccorp",
-    "topic": "Distribution ordering",
-    "difficulty": "medium",
-    "q": "A corporation has current earnings and profits of $30,000 but an accumulated E&P deficit. It distributes $40,000 to shareholders. How much is a dividend?",
-    "choices": [
-      "$30,000",
-      "$40,000",
-      "$0",
-      "$10,000"
-    ],
-    "answer": 0,
-    "explain": "Distributions are dividends to the extent of current E&P first, then accumulated E&P. Current E&P is measured on its own at year-end, so $30,000 is a dividend even though accumulated E&P is a deficit; the deficit does not net against current earnings. The remaining $10,000 is a return of capital that reduces stock basis, then capital gain."
-  },
-  {
-    "id": "ccorp-9",
-    "section": "ccorp",
-    "topic": "Property distributions",
-    "difficulty": "medium",
-    "q": "A corporation distributes appreciated land with a $60,000 basis and $100,000 fair market value to a shareholder. What does the corporation recognize?",
-    "choices": [
-      "No gain, because a distribution is not a sale",
-      "$40,000 of gain, as if the land had been sold at fair market value",
-      "$100,000 of ordinary income",
-      "A $40,000 reduction in earnings and profits with no gain"
-    ],
-    "answer": 1,
-    "explain": "Section 311(b) treats a distribution of appreciated property as a sale at fair market value, so the corporation recognizes the $40,000 gain. Losses on depreciated property distributed to shareholders are not recognized."
-  },
-  {
-    "id": "ccorp-10",
-    "section": "ccorp",
-    "topic": "Shareholder's basis in distributed property",
-    "difficulty": "easy",
-    "q": "A shareholder receives land worth $100,000 with a $60,000 corporate basis as a dividend distribution. What is the shareholder's basis in the land?",
-    "choices": [
-      "$60,000",
-      "$100,000",
-      "$40,000",
-      "The shareholder's stock basis immediately before the distribution"
-    ],
-    "answer": 1,
-    "explain": "A shareholder takes distributed property at its fair market value, which is also the amount of the distribution measured for dividend purposes. The corporation's basis carries over only in a section 351 transfer, not a distribution."
-  },
-  {
-    "id": "ccorp-11",
-    "section": "ccorp",
-    "topic": "Stock redemptions",
-    "difficulty": "medium",
-    "q": "When does a redemption qualify as substantially disproportionate, producing sale or exchange treatment?",
-    "choices": [
-      "Any time the shareholder's ownership percentage falls at all",
-      "The shareholder ends up under 80% of their prior percentage and under 50% control",
-      "At least 20% of the shareholder's shares are redeemed, even if control stays above 50%",
-      "The corporation redeems shares from every shareholder pro rata"
-    ],
-    "answer": 1,
-    "explain": "Both tests must be met: the post-redemption percentage must be under 80% of the pre-redemption percentage, and the shareholder must hold under 50% of total voting power. A pro rata redemption fails and is treated as a dividend."
-  },
-  {
-    "id": "ccorp-12",
-    "section": "ccorp",
-    "topic": "Complete liquidation",
-    "difficulty": "medium",
-    "q": "A corporation completely liquidates and distributes assets to its individual shareholders. What does the corporation recognize?",
-    "choices": [
-      "Nothing, because the corporation is ceasing to exist",
-      "Gain but not loss, as with a nonliquidating distribution of property",
-      "Both gain and loss, as if the assets were sold at fair market value",
-      "Only recapture income"
-    ],
-    "answer": 2,
-    "explain": "Under section 336 a liquidating corporation recognizes both gain and loss as though it had sold the assets at fair market value, though losses on distributions to related parties can be limited. Shareholders separately compute capital gain or loss under section 331."
-  },
-  {
-    "id": "ccorp-13",
-    "section": "ccorp",
-    "topic": "Subsidiary liquidation",
-    "difficulty": "medium",
-    "q": "A parent owning 90% of a subsidiary liquidates it and receives the subsidiary's assets. What is the tax result to the parent?",
-    "choices": [
-      "Capital gain equal to the excess of asset value over stock basis",
-      "No gain or loss, with the subsidiary's asset bases carrying over",
-      "Ordinary income equal to the subsidiary's accumulated earnings",
-      "Gain only to the extent of liabilities assumed"
-    ],
-    "answer": 1,
-    "explain": "Section 332 gives nonrecognition to a parent owning at least 80% of a liquidating subsidiary, and section 334(b) carries over the subsidiary's asset bases. The subsidiary likewise recognizes no gain on distributions to that parent."
-  },
-  {
     "id": "ccorp-14",
     "section": "ccorp",
     "topic": "Accumulated earnings tax",
@@ -3191,38 +3008,143 @@ var FAR_QUESTIONS = [
     "explain": "The accumulated earnings tax is a penalty on accumulating earnings past reasonable business needs with the purpose of avoiding shareholder tax on dividends. The passive-asset test describes the separate personal holding company tax."
   },
   {
-    "id": "ccorp-15",
+    "id": "ccorp-17",
     "section": "ccorp",
-    "topic": "Personal holding company",
+    "topic": "Using a loss carryforward",
     "difficulty": "medium",
-    "q": "Which two conditions make a corporation a personal holding company?",
+    "q": "A corporation has $500,000 of taxable income before using a $600,000 net operating loss carryforward that arose in 2023. What NOL deduction may it claim this year?",
     "choices": [
-      "Five or fewer individuals own over 50% of the stock, and 60% of income is PHC income",
-      "The corporation has fewer than 100 shareholders and pays no dividends at all",
-      "Passive assets exceed half of total assets and earnings have accumulated",
-      "The corporation is closely held and reports a net operating loss"
+      "$400,000",
+      "$500,000",
+      "$600,000",
+      "$100,000"
     ],
     "answer": 0,
-    "explain": "Both an ownership test and an income test must be satisfied. PHC income means dividends, interest, rents, royalties, and certain personal service contract income, and the resulting penalty tax applies to undistributed PHC income."
+    "explain": "An NOL arising in a tax year beginning after 2017 may offset only 80% of taxable income computed without the NOL deduction, so the deduction is capped at $400,000 here. Losses arising after 2020 cannot be carried back, but the unused $200,000 carries forward indefinitely. Deducting $500,000 or $600,000 ignores the 80% limit."
   },
   {
-    "id": "ccorp-16",
+    "id": "ccorp-18",
     "section": "ccorp",
-    "topic": "Consolidated returns",
+    "topic": "Dividends-received deduction",
     "difficulty": "medium",
-    "q": "What ownership is required for a corporation to join in a consolidated federal return?",
+    "q": "A corporation's taxable income before the dividends-received deduction is $70,000, including an $80,000 dividend from a 10%-owned domestic corporation. What is its dividends-received deduction?",
     "choices": [
-      "More than 50% of the voting stock of each subsidiary",
-      "At least 80% of voting power and 80% of the value of the stock",
-      "At least 65% of voting power in each includible member",
-      "Any degree of common control by the same shareholders"
+      "$35,000",
+      "$40,000",
+      "$30,000",
+      "$80,000"
     ],
-    "answer": 1,
-    "explain": "An affiliated group needs a common parent owning at least 80% of the total voting power and 80% of the value of each includible subsidiary. The election is binding on all members and generally cannot be revoked without IRS consent."
+    "answer": 0,
+    "explain": "A 10% owner earns a 50% DRD, which would be $40,000 on an $80,000 dividend. Section 246(b) caps the deduction at the same 50% of taxable income before the DRD, or $35,000, unless the full deduction would create or increase an NOL; here taxable income after a full $40,000 DRD would still be positive, so the cap applies. The $30,000 answer is income after an uncapped deduction, not the deduction itself."
+  },
+  {
+    "id": "ccorp-19",
+    "section": "ccorp",
+    "topic": "Business interest limitation",
+    "difficulty": "medium",
+    "q": "A C corporation with average gross receipts well above the small-business exemption has $2 million of business interest expense. Under section 163(j), its deduction this year is limited to",
+    "choices": [
+      "Business interest income plus 30% of adjusted taxable income, with the excess carried forward indefinitely",
+      "Business interest income plus 50% of adjusted taxable income, with the excess carried forward five years",
+      "30% of taxable income, with the excess permanently disallowed",
+      "30% of adjusted taxable income, with the excess carried back three years"
+    ],
+    "answer": 0,
+    "explain": "Section 163(j) allows business interest expense up to the sum of business interest income, 30% of adjusted taxable income and any floor plan financing interest; since the OBBBA, adjusted taxable income is again computed before depreciation and amortization. Disallowed interest carries forward indefinitely, with no carryback. Businesses, other than tax shelters, whose three-year average gross receipts fall under the inflation-indexed section 448(c) threshold ($32 million for 2026) are exempt."
+  },
+  {
+    "id": "ccorp-20",
+    "section": "ccorp",
+    "topic": "Corporate estimated payments",
+    "difficulty": "medium",
+    "q": "A calendar-year corporation had taxable income over $1 million in one of the three preceding years. How may it compute its four required estimated tax installments to avoid a penalty?",
+    "choices": [
+      "Prior-year tax safe harbor for the first installment only, the rest on current-year tax",
+      "Prior-year tax safe harbor for all four installments, as any corporation may",
+      "Current-year tax only, because a large corporation has no safe harbor",
+      "110% of prior-year tax for all four installments"
+    ],
+    "answer": 0,
+    "explain": "Corporations pay estimated tax in four installments of 25% each, due the 15th day of the fourth, sixth, ninth and twelfth months, and most may base every installment on 100% of the prior year's tax. A large corporation, one with taxable income of $1 million or more in any of the three preceding years, may use the prior-year amount only for the first installment and must make up any shortfall in the second. The 110% rule belongs to high-income individuals, not corporations."
+  },
+  {
+    "id": "ccorp-21",
+    "section": "ccorp",
+    "topic": "Form 1120 deadlines",
+    "difficulty": "easy",
+    "q": "A calendar-year C corporation files Form 7004 for an automatic extension of its 2026 Form 1120. Which statement is correct?",
+    "choices": [
+      "The return is due October 15, 2027, but the tax was due April 15, 2027",
+      "Both the return and the tax are due October 15, 2027",
+      "The return is due September 15, 2027, and the tax was due March 15, 2027",
+      "The return is due September 15, 2027, and the tax was due April 15, 2027"
+    ],
+    "answer": 0,
+    "explain": "Form 1120 is due the 15th day of the fourth month after year end, April 15 for a calendar year, and Form 7004 adds an automatic six-month extension to October 15. The extension covers only the filing; the tax is still due April 15, and interest and the failure-to-pay penalty run from that date. March 15 and September 15 are the partnership and S corporation dates, and a June 30 year end follows its own schedule."
+  },
+  {
+    "id": "ccorp-22",
+    "section": "ccorp",
+    "topic": "Losing state nexus protection",
+    "difficulty": "medium",
+    "q": "An out-of-state seller's only State X activity is soliciting orders for goods, approved and shipped from elsewhere, so Public Law 86-272 bars State X's income tax. Which added activity would end that protection?",
+    "choices": [
+      "Performing paid installation and repair services for State X customers",
+      "Advertising in State X newspapers and on local radio stations",
+      "Salespeople checking customers' inventory to suggest reorders, at no charge",
+      "Shipping replacement goods from the home state after a customer complaint"
+    ],
+    "answer": 0,
+    "explain": "Public Law 86-272 shields a business from a state's net income tax only while its in-state activity is limited to soliciting orders for tangible personal property that are approved and filled from outside the state; services, intangibles and real property are not covered. Installation and repair performed in the state are services beyond solicitation, so they create nexus. Advertising, inventory checks that support selling, and shipments from outside the state remain within or ancillary to solicitation."
+  },
+  {
+    "id": "ccorp-23",
+    "section": "ccorp",
+    "topic": "Sales-based apportionment",
+    "difficulty": "easy",
+    "q": "State Y apportions business income using a single sales factor. A corporation has $5,000,000 of total sales, of which $1,250,000 are to State Y customers. What percentage of its business income does State Y tax?",
+    "choices": [
+      "25%",
+      "8.33%",
+      "75%",
+      "12.5%"
+    ],
+    "answer": 0,
+    "explain": "Under a single sales factor the apportionment percentage is simply in-state sales over total sales: $1,250,000 divided by $5,000,000 is 25%. Dividing that ratio by three (8.33%) wrongly treats the sales ratio as one of three equally weighted factors with the other two at zero. The property and payroll factors do not enter a single-sales-factor formula at all."
+  },
+  {
+    "id": "ccorp-25",
+    "section": "ccorp",
+    "topic": "Rent from investment property",
+    "difficulty": "medium",
+    "q": "A manufacturer commercially domiciled in State A owns an unrelated rental building in State B. For state income tax purposes, the rental income is",
+    "choices": [
+      "Allocated entirely to State B as nonbusiness income",
+      "Apportioned among all states along with the manufacturing income",
+      "Allocated entirely to State A, the commercial domicile",
+      "Excluded from every state's tax base because it is passive"
+    ],
+    "answer": 0,
+    "explain": "Under UDITPA, income from the regular course of the trade or business is business income and is apportioned by formula; income from an unrelated investment is nonbusiness income and is allocated to a single state. Nonbusiness income from real property goes to the state where the property sits, so State B taxes all of the rent. Nonbusiness interest and dividends, by contrast, are allocated to the commercial domicile."
+  },
+  {
+    "id": "ccorp-26",
+    "section": "ccorp",
+    "topic": "Research cost recovery",
+    "difficulty": "medium",
+    "q": "In 2026 a corporation pays $300,000 for research performed in its United States laboratory and $100,000 for research performed at its laboratory in Ireland. How are these costs treated?",
+    "choices": [
+      "Domestic costs deducted currently; foreign costs amortized over 15 years",
+      "Both deducted currently under section 174A",
+      "Both amortized, domestic over 5 years and foreign over 15 years",
+      "Domestic costs amortized over 5 years; foreign costs deducted currently"
+    ],
+    "answer": 0,
+    "explain": "The OBBBA added section 174A, which lets domestic research and experimental expenditures paid or incurred in tax years beginning after 2024 be deducted currently, with an election to capitalize and amortize them over at least 60 months instead. Foreign research stays under section 174 and must be amortized over 15 years. Amortizing domestic costs over 5 years was the 2022 to 2024 rule the Act ended."
   },
   {
     "id": "flowthru-1",
-    "section": "flowthru",
+    "section": "partner",
     "topic": "Partnership formation",
     "difficulty": "easy",
     "q": "A partner contributes appreciated land to a partnership in exchange for a partnership interest. What gain does the partner recognize?",
@@ -3237,7 +3159,7 @@ var FAR_QUESTIONS = [
   },
   {
     "id": "flowthru-2",
-    "section": "flowthru",
+    "section": "partner",
     "topic": "Partner's outside basis",
     "difficulty": "medium",
     "q": "A partner contributes property subject to a $30,000 liability, which the partnership assumes. The partner's share of that liability afterward is $10,000. What is the net effect of the liability on the partner's outside basis?",
@@ -3252,7 +3174,7 @@ var FAR_QUESTIONS = [
   },
   {
     "id": "flowthru-3",
-    "section": "flowthru",
+    "section": "partner",
     "topic": "Guaranteed payments",
     "difficulty": "medium",
     "q": "How are guaranteed payments to a partner for services treated?",
@@ -3267,7 +3189,7 @@ var FAR_QUESTIONS = [
   },
   {
     "id": "flowthru-4",
-    "section": "flowthru",
+    "section": "partner",
     "topic": "Current distributions",
     "difficulty": "medium",
     "q": "A partner with a $25,000 outside basis receives a $40,000 cash distribution that does not liquidate the interest. What is recognized?",
@@ -3281,23 +3203,8 @@ var FAR_QUESTIONS = [
     "explain": "A current distribution triggers gain only when cash exceeds outside basis, and the excess is capital gain. Basis drops to zero and property distributions never produce gain in a current distribution."
   },
   {
-    "id": "flowthru-5",
-    "section": "flowthru",
-    "topic": "Sale of contributed property",
-    "difficulty": "medium",
-    "q": "A partner contributes property with a $50,000 built-in gain. The partnership later sells it for $5,000 more than its contribution-date value. How is the gain allocated?",
-    "choices": [
-      "$50,000 to the contributing partner; $5,000 under the agreement",
-      "The entire gain under the partnership agreement",
-      "The entire gain to the contributing partner",
-      "The entire gain to the noncontributing partners"
-    ],
-    "answer": 0,
-    "explain": "Section 704(c) sends the built-in gain or loss that existed at contribution back to the contributing partner, so the $50,000 is allocated entirely to her. Only the $5,000 of appreciation after contribution is shared under the partnership agreement. Splitting the whole gain under the agreement would shift pre-contribution gain to partners who never bore it."
-  },
-  {
     "id": "flowthru-6",
-    "section": "flowthru",
+    "section": "partner",
     "topic": "Separately stated items",
     "difficulty": "medium",
     "q": "Why must a partnership separately state items like charitable contributions and capital gains rather than folding them into ordinary income?",
@@ -3312,37 +3219,142 @@ var FAR_QUESTIONS = [
   },
   {
     "id": "flowthru-7",
-    "section": "flowthru",
+    "section": "partner",
     "topic": "Basis adjustment ordering",
     "difficulty": "medium",
     "q": "In what order does a partner adjust outside basis during the year?",
     "choices": [
-      "Losses first, then distributions, then income",
       "Income items first, then distributions, then losses",
+      "Losses first, then distributions, then income",
       "Distributions first, then income, then losses",
-      "All adjustments are netted simultaneously"
-    ],
-    "answer": 1,
-    "explain": "Basis is increased for income and contributions, then decreased by distributions, and only then reduced by losses. That ordering can make a distribution taxable that would otherwise have been sheltered."
-  },
-  {
-    "id": "flowthru-8",
-    "section": "flowthru",
-    "topic": "Liquidating distributions",
-    "difficulty": "medium",
-    "q": "A partner receives only land in liquidation of her entire partnership interest. The land's inside basis is lower than her outside basis. What is her basis in the land?",
-    "choices": [
-      "Her full outside basis",
-      "The land's inside basis, carried over",
-      "The land's fair market value",
-      "The inside basis, with the difference recognized as a loss"
+      "Distributions first, then losses, then income"
     ],
     "answer": 0,
-    "explain": "In a liquidating distribution the partner's entire remaining outside basis is assigned to the property received, so the land takes her outside basis, not the partnership's inside basis. Carryover of inside basis applies to current, non-liquidating distributions. A loss is recognized in liquidation only when the partner receives solely cash, unrealized receivables and inventory, so none arises on land."
+    "explain": "Basis is increased for income and contributions, then decreased by distributions, and only then reduced by losses (Reg. 1.704-1(d)(2)). Applying distributions before losses preserves basis for the distributions: a distribution may remain nontaxable while some of the year's loss is suspended and carried forward."
+  },
+  {
+    "id": "partner-1",
+    "section": "partner",
+    "topic": "Ordinary business income",
+    "difficulty": "medium",
+    "q": "A partnership has $150,000 of service revenue and $50,000 of wages, rent and guaranteed payments. It also realized a capital gain and made a charitable contribution. What is its ordinary business income?",
+    "choices": [
+      "$100,000",
+      "$100,000 plus the capital gain",
+      "$100,000 less the charitable contribution",
+      "$100,000 plus the capital gain less the charitable contribution"
+    ],
+    "answer": 0,
+    "explain": "Ordinary business income on page 1 of Form 1065 is trade or business revenue less deductible operating costs, here $150,000 less $50,000. Wages, rent and guaranteed payments for services are deductible at the partnership level under section 707(c) and section 162. Capital gains and charitable contributions are separately stated under section 702(a) because their treatment depends on each partner, so they never enter ordinary income."
+  },
+  {
+    "id": "partner-2",
+    "section": "partner",
+    "topic": "Schedule K items",
+    "difficulty": "easy",
+    "q": "A partnership has ordinary service revenue, tax-exempt municipal bond interest, a charitable contribution and employee wages. Which two items must be separately stated on Schedule K rather than netted into ordinary income?",
+    "choices": [
+      "Tax-exempt interest and the charitable contribution",
+      "Service revenue and employee wages",
+      "Tax-exempt interest and employee wages",
+      "Service revenue and the charitable contribution"
+    ],
+    "answer": 0,
+    "explain": "Section 702(a) requires items whose character or deductibility depends on the partner to pass through separately: tax-exempt interest stays excludable in each partner's hands, and the charitable contribution is subject to each partner's own AGI limits. Service revenue and the wages paid to earn it are ordinary trade or business items that net into ordinary business income on page 1 of Form 1065."
+  },
+  {
+    "id": "partner-3",
+    "section": "partner",
+    "topic": "Partnership liabilities and basis",
+    "difficulty": "easy",
+    "q": "A partner's outside basis is $40,000 at the start of the year. During the year her share of partnership liabilities increases by $15,000. Before any other adjustment, what is her outside basis?",
+    "choices": [
+      "$55,000",
+      "$40,000",
+      "$25,000",
+      "$15,000"
+    ],
+    "answer": 0,
+    "explain": "Under section 752(a), an increase in a partner's share of partnership liabilities is treated as a cash contribution, so it raises outside basis to $55,000. A decrease in the share would be treated as a cash distribution and reduce basis instead. Her share of ordinary income would increase basis further, and a cash distribution would reduce it."
+  },
+  {
+    "id": "partner-4",
+    "section": "partner",
+    "topic": "Loss exceeding basis",
+    "difficulty": "medium",
+    "q": "A partner's share of partnership ordinary loss exceeds her outside basis by $6,000. She has ample at-risk basis and materially participates. What happens to the $6,000?",
+    "choices": [
+      "It is suspended and carried forward until her outside basis is restored",
+      "It is deducted this year because she is at risk and materially participates",
+      "It is permanently disallowed and never deducted",
+      "It is treated as a capital loss deductible against her other capital gains"
+    ],
+    "answer": 0,
+    "explain": "Section 704(d) limits a partner's deductible loss to her outside basis at year end; the excess is carried forward indefinitely and deducted when basis is restored by income allocations, contributions or an increased share of liabilities. The basis limit applies first, so at-risk and passive activity rules are only reached by losses that clear it. The loss keeps its ordinary character and is not lost permanently."
+  },
+  {
+    "id": "partner-5",
+    "section": "partner",
+    "topic": "Fixed payment for services",
+    "difficulty": "medium",
+    "q": "A partnership agreement pays a partner $60,000 a year for services, determined without regard to partnership income. The partnership reports a loss for the year. How does the partner report the $60,000?",
+    "choices": [
+      "As ordinary income subject to self-employment tax",
+      "As nothing, because the partnership had no income to distribute",
+      "As a return of capital that reduces her outside basis",
+      "As wages reported on Form W-2 and subject to FICA withholding"
+    ],
+    "answer": 0,
+    "explain": "A payment for services fixed without regard to partnership income is a guaranteed payment under section 707(c): the partner reports it as ordinary income and net earnings from self-employment in the year the partnership deducts it, even in a loss year. A distributive share, by contrast, depends on partnership results. A partner is not an employee, so the payment is not W-2 wages, and it is not a distribution reducing basis."
+  },
+  {
+    "id": "partner-6",
+    "section": "partner",
+    "topic": "Partners and SE tax",
+    "difficulty": "medium",
+    "q": "A limited partner who performs no services receives only a distributive share of a limited partnership's trade or business income. How is that share treated for self-employment tax?",
+    "choices": [
+      "Excluded from self-employment income, unlike a general partner's share",
+      "Included in self-employment income, like a general partner's share",
+      "Included only to the extent it exceeds the Social Security wage base",
+      "Included in self-employment income only if the partnership distributes it"
+    ],
+    "answer": 0,
+    "explain": "A general partner's distributive share of trade or business income is net earnings from self-employment, but section 1402(a)(13) excludes a limited partner's share, except guaranteed payments for services. The exclusion turns on function, not the label: in Renkemeyer (LLP partners), Castigliola (PLLC members) and Soroban, affirmed by the Second Circuit in 2026, partners who manage and run the business were taxed like general partners. Distribution timing is irrelevant."
+  },
+  {
+    "id": "partner-7",
+    "section": "partner",
+    "topic": "Partnership filing and reporting",
+    "difficulty": "easy",
+    "q": "A calendar-year partnership earned income in 2026 but distributed nothing to its partners. Which statement about its return and the partners' reporting is correct?",
+    "choices": [
+      "Form 1065 is due March 15, 2027, and partners report their K-1 shares for 2026 anyway",
+      "Form 1065 is due April 15, 2027, and partners report nothing until cash is distributed",
+      "Form 1065 is due March 15, 2027, and partners report income only when it is distributed",
+      "Form 1065 is due April 15, 2027, and partners report their K-1 shares for 2026 anyway"
+    ],
+    "answer": 0,
+    "explain": "Form 1065 is due the 15th day of the third month after year end (section 6072(b)), March 15 for a calendar year, with a six-month extension available. The partnership pays no income tax; it issues each partner a Schedule K-1, and under section 702 each partner reports the distributive share for the year it is earned, whether or not any cash is distributed. April 15 is the individual and C corporation date."
+  },
+  {
+    "id": "partner-8",
+    "section": "partner",
+    "topic": "Interest received for property",
+    "difficulty": "medium",
+    "q": "A partner contributes investment land she has held for three years, with a $20,000 basis and a $50,000 value, for a partnership interest. What are her basis and holding period in the interest?",
+    "choices": [
+      "$20,000 basis; holding period includes the three years",
+      "$50,000 basis; holding period begins at contribution",
+      "$20,000 basis; holding period begins at contribution",
+      "$50,000 basis; holding period includes the three years"
+    ],
+    "answer": 0,
+    "explain": "Under section 722, a partner's basis in an interest received for property is the adjusted basis of the property contributed plus any cash, here $20,000; no gain is recognized under section 721, so the value is irrelevant. Section 1223(1) tacks the holding period when the contributed property is a capital or section 1231 asset, so she is already long term. Contributed inventory or cash would start a new holding period."
   },
   {
     "id": "flowthru-9",
-    "section": "flowthru",
+    "section": "scorp",
     "topic": "S corporation shareholders",
     "difficulty": "easy",
     "q": "Which shareholder makes a corporation ineligible for S status?",
@@ -3357,7 +3369,7 @@ var FAR_QUESTIONS = [
   },
   {
     "id": "flowthru-10",
-    "section": "flowthru",
+    "section": "scorp",
     "topic": "One class of stock",
     "difficulty": "medium",
     "q": "Which arrangement violates the S corporation one-class-of-stock requirement?",
@@ -3372,7 +3384,7 @@ var FAR_QUESTIONS = [
   },
   {
     "id": "flowthru-11",
-    "section": "flowthru",
+    "section": "scorp",
     "topic": "S election timing",
     "difficulty": "medium",
     "q": "A calendar-year corporation wants S status effective January 1 of the current year. By when must Form 2553 be filed?",
@@ -3387,7 +3399,7 @@ var FAR_QUESTIONS = [
   },
   {
     "id": "flowthru-12",
-    "section": "flowthru",
+    "section": "scorp",
     "topic": "Termination by passive income",
     "difficulty": "medium",
     "q": "An S corporation with accumulated earnings and profits from prior C years has passive investment income exceeding 25% of gross receipts. When does the election terminate?",
@@ -3402,7 +3414,7 @@ var FAR_QUESTIONS = [
   },
   {
     "id": "flowthru-13",
-    "section": "flowthru",
+    "section": "scorp",
     "topic": "AAA and distributions",
     "difficulty": "medium",
     "q": "An S corporation with accumulated earnings and profits from C years makes a distribution. How is it sourced?",
@@ -3417,7 +3429,7 @@ var FAR_QUESTIONS = [
   },
   {
     "id": "flowthru-14",
-    "section": "flowthru",
+    "section": "scorp",
     "topic": "S corporation basis and debt",
     "difficulty": "medium",
     "q": "How does an S corporation shareholder's basis differ from a partner's?",
@@ -3431,23 +3443,8 @@ var FAR_QUESTIONS = [
     "explain": "An S corporation shareholder gets no basis for corporate borrowings, only for stock investment and loans made personally to the corporation. A guarantee alone does not create basis, which is why partnerships often allow larger loss deductions."
   },
   {
-    "id": "flowthru-15",
-    "section": "flowthru",
-    "topic": "Asset sales after a C-to-S conversion",
-    "difficulty": "medium",
-    "q": "A C corporation converts to S status and sells appreciated property two years later. What is the consequence?",
-    "choices": [
-      "No entity-level tax, because S corporations are pass-throughs",
-      "A corporate-level built-in gains tax on the appreciation existing at conversion",
-      "The election terminates automatically",
-      "The gain is taxed twice, at both entity and shareholder level, without limit"
-    ],
-    "answer": 1,
-    "explain": "The built-in gains tax imposes the 21% corporate rate on net recognized built-in gain during the five-year recognition period following conversion. Gain accruing after conversion escapes the entity-level tax."
-  },
-  {
     "id": "flowthru-16",
-    "section": "flowthru",
+    "section": "scorp",
     "topic": "Reasonable compensation",
     "difficulty": "medium",
     "q": "A sole shareholder-employee of a profitable S corporation takes no salary and only distributions. What is the IRS's likely position?",
@@ -3461,64 +3458,139 @@ var FAR_QUESTIONS = [
     "explain": "An S corporation must pay reasonable compensation to a shareholder who performs services, and the IRS routinely recharacterizes distributions as wages when it does not. That produces employment tax plus penalties and interest."
   },
   {
-    "id": "estates-17",
-    "section": "estates",
-    "topic": "Fiduciary exemption",
-    "difficulty": "easy",
-    "q": "A trust is required by its governing instrument to distribute all of its income currently. What exemption may it claim on Form 1041?",
-    "choices": [
-      "$0",
-      "$100",
-      "$300",
-      "$600"
-    ],
-    "answer": 2,
-    "explain": "Section 642(b) allows $600 for an estate, $300 for a trust required to distribute all of its income currently, and $100 for any other trust; none is indexed for inflation. Zeroing out the individual personal exemption did not reach the fiduciary exemption, and $600 belongs to estates, not trusts."
-  },
-  {
-    "id": "estates-18",
-    "section": "estates",
-    "topic": "Timing of trust distributions",
+    "id": "scorp-1",
+    "section": "scorp",
+    "topic": "Schedule K reporting",
     "difficulty": "medium",
-    "q": "A complex trust's trustee pays $10,000 to a beneficiary on February 20 of Year 2. Can the trust treat the payment as a Year 1 distribution?",
+    "q": "An S corporation reports sales, salaries, a section 179 expense, interest income and a long-term capital gain. Which items are separately stated on Schedule K rather than netted into ordinary business income?",
     "choices": [
-      "Yes, if the trustee elects that treatment on the Year 1 return",
-      "Yes, automatically, because it was paid before the Year 1 return was due",
-      "Yes, but only if the trust instrument required the payment in Year 1",
-      "No, a distribution is deductible only in the year it is actually paid"
+      "The section 179 expense, interest income and the capital gain",
+      "Interest income and the capital gain only",
+      "Salaries, the section 179 expense and interest income",
+      "The section 179 expense and the capital gain only"
     ],
     "answer": 0,
-    "explain": "Section 663(b) lets an estate or complex trust elect to treat amounts paid in the first 65 days of a tax year as paid on the last day of the prior year, and February 20 is day 51. The election is made on the Year 1 Form 1041 rather than applying on its own, and a simple trust cannot use it because it is deemed to distribute all income anyway."
+    "explain": "Under section 1366 an item is separately stated when its character could change a shareholder's tax result: the section 179 deduction is limited again at the shareholder level, interest income is portfolio income, and the capital gain enters the shareholder's own capital gain netting. Sales and salaries are ordinary operating items that combine into ordinary business income on page 1 of Form 1120-S. Leaving out the section 179 expense is the common slip."
   },
   {
-    "id": "estates-19",
-    "section": "estates",
-    "topic": "Post-death receipts",
+    "id": "scorp-2",
+    "section": "scorp",
+    "topic": "Stock basis adjustments",
     "difficulty": "medium",
-    "q": "A cash-basis employee died on December 28. In January the employer paid her final wages to her estate. How is that payment taxed?",
+    "q": "In one year an S corporation shareholder has income items, a distribution, nondeductible expenses and an allocated loss. In what order are these applied to stock basis?",
     "choices": [
-      "As ordinary income on the decedent's final Form 1040, because it was earned before death",
-      "As ordinary income to the estate when received, with no basis step-up",
-      "As capital gain to the estate, measured against a date-of-death basis",
-      "It escapes income tax because the right to the wages takes a date-of-death basis"
+      "Income items, then the distribution, then nondeductible expenses, then the loss",
+      "Income items, then the loss, then nondeductible expenses, then the distribution",
+      "The distribution, then income items, then the loss, then nondeductible expenses",
+      "Income items, then nondeductible expenses, then the loss, then the distribution"
+    ],
+    "answer": 0,
+    "explain": "Reg. 1.1367-1(f) sets the order: increase basis for all income items, including tax-exempt income; then reduce it for distributions; then for nondeductible, noncapital expenses; and last for losses and deductions. Taking the distribution before the loss means more of the distribution is a tax-free return of basis, with any excess loss suspended rather than the distribution becoming gain. Applying the loss first would overstate the taxable distribution."
+  },
+  {
+    "id": "scorp-3",
+    "section": "scorp",
+    "topic": "Basis restoration order",
+    "difficulty": "medium",
+    "q": "Losses reduced an S corporation shareholder's stock basis to zero and then reduced his basis in loans he made to the corporation. The corporation now has net income. What does that income restore first?",
+    "choices": [
+      "Debt basis, up to the earlier reduction, before stock basis",
+      "Stock basis, because debt basis is restored only when the loan is repaid",
+      "Stock basis and debt basis pro rata to their original amounts",
+      "Neither; net income increases AAA and basis rises only when distributed"
+    ],
+    "answer": 0,
+    "explain": "Section 1366(d) lets losses beyond stock basis be deducted against the shareholder's basis in direct loans to the corporation. Section 1367(b)(2)(B) then requires a later year's net increase to restore that debt basis first, to the extent it was reduced, before any increase goes to stock basis. Restoring debt basis first matters because repayment of a loan whose basis is below face produces gain. There is no pro rata rule, and basis rises with income whether or not it is distributed."
+  },
+  {
+    "id": "scorp-4",
+    "section": "scorp",
+    "topic": "Cash distributions",
+    "difficulty": "easy",
+    "q": "An S corporation that has never been a C corporation distributes $50,000 cash to its sole shareholder, whose stock basis is $35,000. How is the distribution taxed to the shareholder?",
+    "choices": [
+      "$35,000 tax-free return of basis and $15,000 capital gain",
+      "$50,000 tax-free, because S corporation income has already been taxed",
+      "$50,000 dividend income, because the distribution exceeds basis",
+      "$35,000 tax-free return of basis and $15,000 ordinary income"
+    ],
+    "answer": 0,
+    "explain": "Section 1368(b) governs an S corporation with no accumulated earnings and profits: the distribution first reduces stock basis tax-free, and the excess over basis is treated as gain from the sale of the stock, a capital gain. Dividend treatment arises only from E&P carried over from C corporation years, which this corporation never had. Basis already measures what has been taxed, so a distribution beyond it cannot be wholly tax-free."
+  },
+  {
+    "id": "scorp-5",
+    "section": "scorp",
+    "topic": "Shareholder-level accounts",
+    "difficulty": "medium",
+    "q": "This year an S corporation earns ordinary income plus $5,000 of municipal bond interest, and distributes $20,000 to its shareholders. Which item is excluded from its accumulated adjustments account?",
+    "choices": [
+      "The $5,000 municipal interest, which is tracked in the other adjustments account",
+      "The $20,000 distribution, which reduces only the shareholders' stock basis",
+      "The ordinary income, which is recorded only in retained earnings",
+      "None of them; income, exempt interest and distributions all adjust the account"
+    ],
+    "answer": 0,
+    "explain": "Under Reg. 1.1368-2 the AAA is increased by taxable income items and decreased by losses, deductions and distributions, so the ordinary income and the $20,000 distribution both adjust it. Tax-exempt income and the expenses related to it are kept out of AAA and tracked in the other adjustments account (OAA) instead. The exempt interest still increases shareholder stock basis under section 1367, so basis and AAA diverge by that amount."
+  },
+  {
+    "id": "scorp-6",
+    "section": "scorp",
+    "topic": "Shareholder reporting",
+    "difficulty": "easy",
+    "q": "A calendar-year S corporation earns $120,000 and distributes nothing. Its two equal shareholders held their stock all year. What does each shareholder report for the year?",
+    "choices": [
+      "$60,000 of ordinary income from a Schedule K-1",
+      "$60,000 of dividend income from a Form 1099-DIV",
+      "Nothing, because no distribution was made",
+      "Nothing, because the corporation pays tax at the entity level"
+    ],
+    "answer": 0,
+    "explain": "Section 6072(b) makes Form 1120-S due on the 15th day of the third month after year end, March 15 for a calendar year, with a six-month extension available. The corporation issues each shareholder a Schedule K-1, and under section 1366 each reports a pro rata share of income for the days held, here $60,000, whether or not anything was distributed. An S corporation generally pays no entity-level income tax."
+  },
+  {
+    "id": "scorp-7",
+    "section": "scorp",
+    "topic": "Shareholder-employee benefits",
+    "difficulty": "medium",
+    "q": "An S corporation pays $9,000 of health insurance premiums under its employee plan for its 60% shareholder, who is also an employee. How is the payment treated?",
+    "choices": [
+      "Included in her W-2 wages, exempt from FICA, and deductible by her as self-employed health insurance",
+      "Excluded from her W-2 wages as a tax-free fringe benefit and deducted by the corporation",
+      "Included in her W-2 wages, subject to FICA, and deductible by her only as an itemized medical expense",
+      "Treated as a nondeductible distribution to her that reduces her stock basis"
+    ],
+    "answer": 0,
+    "explain": "Section 1372 treats a more-than-2% shareholder like a partner for fringe benefits, so the section 106 exclusion is lost and the premiums are compensation reported in Box 1 of her W-2 and deducted by the corporation as wages. Because the premiums are paid under a plan for employees generally, they are not FICA wages (Rev. Rul. 91-26). Notice 2008-1 then lets the shareholder deduct the amount above the line as self-employed health insurance under section 162(l), while rank-and-file employees keep the tax-free exclusion."
+  },
+  {
+    "id": "scorp-8",
+    "section": "scorp",
+    "topic": "Allocation when stock changes hands",
+    "difficulty": "medium",
+    "q": "A 50% shareholder of a calendar-year S corporation sells all her stock on March 31. Absent any special election, how is the year's ordinary income allocated to her?",
+    "choices": [
+      "Her 50% share of the year's income, prorated for the 90 days she held the stock",
+      "Her 50% share of the income the corporation actually earned through March 31",
+      "Nothing, because she owned no stock on the last day of the tax year",
+      "Her 50% share of the full year's income, since she was a shareholder during the year"
+    ],
+    "answer": 0,
+    "explain": "Section 1377(a)(1) allocates every S corporation item pro rata per share, per day, so a selling shareholder picks up her share of the whole year's income multiplied by the fraction of the year she held the stock. Allocating income actually earned through the sale date is available only if the corporation and all affected shareholders elect to close the books under section 1377(a)(2) when a shareholder's entire interest terminates. Ownership on the last day of the year is irrelevant."
+  },
+  {
+    "id": "entity-3",
+    "section": "estates",
+    "topic": "Entity classification",
+    "difficulty": "medium",
+    "q": "A domestic LLC with two members makes no entity classification election. How is it treated for federal tax purposes?",
+    "choices": [
+      "As a C corporation",
+      "As a partnership",
+      "As a disregarded entity",
+      "As an S corporation"
     ],
     "answer": 1,
-    "explain": "Wages a cash-basis decedent earned but never received are income in respect of a decedent: whoever collects them reports ordinary income in the year received, with the character the decedent would have had. Section 1014(c) denies IRD any basis step-up, and the final Form 1040 picks up only what was actually received before death."
-  },
-  {
-    "id": "estates-20",
-    "section": "estates",
-    "topic": "Distribution deduction",
-    "difficulty": "medium",
-    "q": "A simple trust's distributable net income of $40,000 includes $5,000 of tax-exempt interest. It distributes all of its accounting income. What is the trust's distribution deduction?",
-    "choices": [
-      "$35,000",
-      "$40,000",
-      "$45,000",
-      "$5,000"
-    ],
-    "answer": 0,
-    "explain": "The distribution deduction cannot exceed DNI reduced by the tax-exempt income included in it, so $40,000 less $5,000 leaves $35,000. The trust was never taxed on the exempt interest, so it receives no deduction for passing it out. The beneficiary reports $35,000 of taxable income and treats the $5,000 as tax-exempt interest in her hands."
+    "explain": "Under the check-the-box rules, a multi-member domestic LLC defaults to partnership treatment and a single-member LLC defaults to a disregarded entity. Either may elect corporate treatment on Form 8832."
   },
   {
     "id": "estates-21",
@@ -3566,111 +3638,6 @@ var FAR_QUESTIONS = [
     "explain": "Intervening in a campaign for or against a candidate is an absolute bar for a 501(c)(3): the exemption is at risk, and section 4955 adds an excise tax on the political expenditure. The substantial-part and expenditure tests govern lobbying on legislation, not candidate endorsements, and the funding source is irrelevant."
   },
   {
-    "id": "estates-24",
-    "section": "estates",
-    "topic": "Fiduciary return deadline",
-    "difficulty": "easy",
-    "q": "Absent an extension, when must a calendar-year estate file its Form 1041?",
-    "choices": [
-      "March 15 of the following year",
-      "April 15 of the following year",
-      "September 30 of the following year",
-      "October 15 of the following year"
-    ],
-    "answer": 1,
-    "explain": "Form 1041 is due on the 15th day of the fourth month after the tax year ends, so April 15 for a calendar-year estate or trust. Form 7004 gives an automatic 5½-month extension to September 30, but it extends the filing, not the payment; March 15 is the partnership and S corporation date."
-  },
-  {
-    "id": "estates-25",
-    "section": "estates",
-    "topic": "Character of distributions",
-    "difficulty": "medium",
-    "q": "A complex trust's $60,000 distributable net income is three-quarters taxable interest and one-quarter qualified dividends; the instrument allocates no class of income. It distributes $20,000 to its sole beneficiary. What does she report?",
-    "choices": [
-      "$15,000 of taxable interest and $5,000 of qualified dividends",
-      "$20,000 of taxable interest",
-      "$5,000 of taxable interest and $15,000 of qualified dividends",
-      "$20,000 of qualified dividends"
-    ],
-    "answer": 0,
-    "explain": "Unless the instrument allocates specific classes of income, a distribution carries out each class of DNI pro rata. Three-quarters of the $20,000 is taxable interest, $15,000, and one-quarter is qualified dividends, $5,000. No ordering rule fills the distribution with one class first, and the beneficiary is taxed on the $20,000 distributed, not on the trust's entire $60,000 of DNI."
-  },
-  {
-    "id": "estates-10",
-    "section": "estates",
-    "topic": "Distributable net income",
-    "difficulty": "medium",
-    "q": "What role does distributable net income play for a trust?",
-    "choices": [
-      "It fixes the trust's taxable income, including capital gains allocated to corpus",
-      "It limits and characterizes the distribution deduction and beneficiary income",
-      "It determines whether the trust is treated as a grantor trust",
-      "It sets the amount of the trust's required estimated payments"
-    ],
-    "answer": 1,
-    "explain": "DNI caps the distribution deduction the fiduciary may claim and the amount beneficiaries report, and it carries the character of the underlying income through to them. It also generally excludes capital gains allocated to corpus."
-  },
-  {
-    "id": "estates-11",
-    "section": "estates",
-    "topic": "Simple trusts",
-    "difficulty": "medium",
-    "q": "Which feature disqualifies a trust from being a simple trust for the year?",
-    "choices": [
-      "Holding tax-exempt bonds",
-      "Making a charitable contribution",
-      "Having more than one beneficiary",
-      "Earning capital gains allocated to corpus"
-    ],
-    "answer": 1,
-    "explain": "A simple trust must distribute all income currently, make no charitable contributions, and distribute no corpus during the year. Making a charitable gift makes it a complex trust for that year."
-  },
-  {
-    "id": "estates-12",
-    "section": "estates",
-    "topic": "Grantor trusts",
-    "difficulty": "medium",
-    "q": "A grantor retains the power to revoke the trust. Who reports the trust's income?",
-    "choices": [
-      "The trust, on Form 1041",
-      "The beneficiaries, on their individual returns",
-      "The grantor, on their individual return",
-      "The trust and grantor split it equally"
-    ],
-    "answer": 2,
-    "explain": "Retained powers such as revocation, control over beneficial enjoyment, or certain administrative powers make the grantor the owner for income tax purposes. All items of income, deduction, and credit are then reported on the grantor's own return."
-  },
-  {
-    "id": "estates-13",
-    "section": "estates",
-    "topic": "Fiduciary tax years",
-    "difficulty": "medium",
-    "q": "Which statement about tax years for fiduciary entities is correct?",
-    "choices": [
-      "Estates and trusts must both use a calendar year",
-      "An estate may elect a fiscal year; a trust generally must use a calendar year",
-      "Trusts may elect a fiscal year; an estate generally must use a calendar year",
-      "Both may elect any 52-53 week year"
-    ],
-    "answer": 1,
-    "explain": "An estate may adopt a fiscal year ending on the last day of any month, which can defer income to beneficiaries. Trusts other than certain tax-exempt and charitable trusts must use the calendar year."
-  },
-  {
-    "id": "estates-14",
-    "section": "estates",
-    "topic": "Form 1041 filing",
-    "difficulty": "easy",
-    "q": "When must the fiduciary of a domestic estate file Form 1041?",
-    "choices": [
-      "When gross income is $600 or more",
-      "Only when the estate owes tax",
-      "When total assets exceed $5,000",
-      "Whenever the decedent filed a return in the prior year"
-    ],
-    "answer": 0,
-    "explain": "An estate files when it has $600 or more of gross income, or any beneficiary is a nonresident alien. Trusts file at a lower threshold — any taxable income, or $600 of gross income."
-  },
-  {
     "id": "estates-15",
     "section": "estates",
     "topic": "Exempt organizations",
@@ -3686,18 +3653,63 @@ var FAR_QUESTIONS = [
     "explain": "Private inurement — any part of net earnings benefiting an insider beyond reasonable compensation — is fatal to exemption. Reasonable salaries, program fees, and investment holdings are all permissible."
   },
   {
-    "id": "estates-16",
+    "id": "llc-1",
     "section": "estates",
-    "topic": "Exempt organizations' commercial activity",
+    "topic": "Single-member LLC",
     "difficulty": "medium",
-    "q": "A tax-exempt museum operates a parking garage open to the general public year round. How is that income treated?",
+    "q": "A domestic LLC with one individual owner makes no classification election and runs a retail store with several employees. How is it treated for federal tax purposes?",
     "choices": [
-      "Exempt, because the museum is a 501(c)(3)",
-      "Subject to unrelated business income tax, less a specific deduction",
-      "Exempt, because income spent on exempt activities is substantially related",
-      "Taxable only if it exceeds half the museum's revenue"
+      "Disregarded for income tax, with the store on the owner's Schedule C, but a separate entity for employment taxes",
+      "A partnership, with the owner receiving a Schedule K-1 and the LLC filing Form 1065 for the store",
+      "Disregarded for all federal taxes, so payroll taxes are reported under the owner's Social Security number",
+      "A C corporation filing Form 1120 unless it files Form 8832 to be disregarded"
     ],
-    "answer": 1,
-    "explain": "Income from a trade or business regularly carried on and not substantially related to the exempt purpose is taxed at corporate rates, reduced by a $1,000 specific deduction. Using the profits for exempt purposes does not change the analysis."
+    "answer": 0,
+    "explain": "Under Reg. 301.7701-3(b) a single-member domestic LLC that makes no election is disregarded, so the store's results go on the owner's Schedule C (Schedule E for rental property). Reg. 301.7701-2(c)(2)(iv) nonetheless treats the LLC as a corporation for employment taxes and certain excise taxes, so it reports payroll under its own EIN. A partnership needs two or more members, and corporate treatment requires an election."
+  },
+  {
+    "id": "llc-2",
+    "section": "estates",
+    "topic": "Classification election timing",
+    "difficulty": "medium",
+    "q": "An LLC files Form 8832 on June 1 electing to be taxed as a corporation. What is the earliest and the latest effective date it may choose?",
+    "choices": [
+      "75 days before filing through 12 months after filing",
+      "The first day of the current tax year through the last day of that year",
+      "The filing date through 12 months after filing",
+      "The first day of the following tax year only"
+    ],
+    "answer": 0,
+    "explain": "Reg. 301.7701-3(c)(1)(iii) lets the election take effect on a date no more than 75 days before and no more than 12 months after the form is filed; a date outside the window is moved to the nearest boundary, and a blank date means the filing date. An LLC that wants S status skips Form 8832 and files only Form 2553, which is deemed to include the corporate election. Once effective, the classification generally cannot be changed again by election for 60 months."
+  },
+  {
+    "id": "llc-3",
+    "section": "estates",
+    "topic": "Donor treatment of payments",
+    "difficulty": "medium",
+    "q": "A business owner pays $500 of annual dues to a chamber of commerce and gives $500 to a civic league that lobbies for zoning reform. Which payment is a charitable contribution?",
+    "choices": [
+      "Neither; only gifts to 501(c)(3) organizations and a few other listed donees qualify",
+      "Only the civic league gift, because 501(c)(4) organizations are tax-exempt",
+      "Only the chamber dues, because a business league is tax-exempt under 501(c)(6)",
+      "Both, because each organization is exempt from tax under section 501(c)"
+    ],
+    "answer": 0,
+    "explain": "Section 170(c) limits the charitable deduction to gifts to 501(c)(3) organizations, governmental units and a few others such as veterans' organizations. A chamber of commerce is a 501(c)(6) business league and a civic league is a 501(c)(4) social welfare organization, which may lobby without limit; both are exempt from tax, but contributions to them are not charitable. The chamber dues may still be an ordinary business expense under section 162, except for any portion spent on lobbying."
+  },
+  {
+    "id": "llc-4",
+    "section": "estates",
+    "topic": "Club income",
+    "difficulty": "medium",
+    "q": "A country club exempt under section 501(c)(7) receives greens fees from members, $8,000 of interest on its reserve fund and $6,000 from nonmember banquets. Which amounts are taxable?",
+    "choices": [
+      "The $8,000 interest and the $6,000 nonmember receipts",
+      "Only the $6,000 nonmember receipts",
+      "Only the $8,000 interest income",
+      "Nothing, because the club is exempt on all of its receipts"
+    ],
+    "answer": 0,
+    "explain": "Section 512(a)(3) defines a social club's unrelated business taxable income as all gross income other than exempt function income, meaning dues, fees and charges paid by members for club services. Investment income and receipts from nonmembers are therefore both taxed, unlike a 501(c)(3) charity, whose passive investment income is excluded under section 512(b). The members' greens fees stay exempt."
   }
 ];
