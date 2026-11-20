@@ -1,12 +1,11 @@
 /* TCP Blitz service worker — cache-first so the app works offline (bump VERSION on deploys). */
 
-var VERSION = 'tcpblitz-v1';
+var VERSION = 'tcpblitz-v2';
 var ASSETS = [
   './',
   './index.html',
   './styles.css',
   './app.js',
-  './telemetry.js',
   './data/questions.js',
   './manifest.webmanifest',
   './icons/icon.svg',
